@@ -1,0 +1,380 @@
+* {
+  margin: 0 auto;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Banner__naga {
+  width: 100%;
+  height: auto;
+}
+
+.Banner__body-background {
+  background: #ffffff;
+  position: relative;
+  width: 100%;
+  z-index: -20;
+}
+
+.Banner__body-background {
+  background: #ffffff;
+  width: 100%;
+}
+
+.Banner__jssor_1 {
+  position: relative;
+  width: 1519px;
+  height: 679px;
+  overflow: hidden;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.Banner__jssorl-009-spin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: -1000px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.Banner__slides {
+  cursor: default;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 1519px;
+  height: 679px;
+  overflow: hidden;
+}
+
+.Banner__spin-img {
+  margin-top: -19px;
+  position: relative;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+}
+
+/*jssor slider loading skin spin css*/
+
+.jssorl-009-spin img {
+  animation-name: jssorl-009-spin;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*jssor slider bullet skin 032 css*/
+
+.jssorb032 {
+  position: absolute;
+}
+
+.jssorb032 .i {
+  position: absolute;
+  cursor: pointer;
+}
+
+.jssorb032 .i .b {
+  fill: #fff;
+  fill-opacity: 0.7;
+  stroke: #000;
+  stroke-width: 1200;
+  stroke-miterlimit: 10;
+  stroke-opacity: 0.25;
+}
+
+.jssorb032 .i:hover .b {
+  fill: #000;
+  fill-opacity: 0.6;
+  stroke: #fff;
+  stroke-opacity: 0.35;
+}
+
+.jssorb032 .iav .b {
+  fill: #000;
+  fill-opacity: 1;
+  stroke: #fff;
+  stroke-opacity: 0.35;
+}
+
+.jssorb032 .i.idn {
+  opacity: 0.3;
+}
+
+/*jssor slider arrow skin 051 css*/
+
+.jssora051 {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.jssora051 .a {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 360;
+  stroke-miterlimit: 10;
+}
+
+.jssora051:hover {
+  opacity: 0.8;
+}
+
+.jssora051.jssora051dn {
+  opacity: 0.5;
+}
+
+.jssora051.jssora051ds {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.cover {
+  width: 200;
+  background-color: #ffffff;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.b:link {
+  line-height: 15px;
+  font-weight: 700;
+  font-family: 微軟正黑體;
+  color: #ffffff;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.b:visited {
+  line-height: 15px;
+  font-weight: 700;
+  font-family: 微軟正黑體;
+  color: #ffffff;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.b:hover {
+  line-height: 15px;
+  font-weight: 700;
+  font-family: 微軟正黑體;
+  color: #ffffff;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.b:active {
+  line-height: 15px;
+  font-weight: 700px;
+  font-family: 微軟正黑體;
+  color: #ffffff;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.Gtitle {
+  text-align: center;
+  line-height: 35px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 30px;
+  vertical-align: 0;
+}
+
+.Top {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.Top__logo img {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 90px;
+}
+
+.Top__nav {
+  display: flex;
+  position: absolute;
+  right: 8px;
+  height: 45px;
+  margin: 30px;
+  margin: 0;
+  padding: 0;
+  font-family: 微軟正黑體;
+  font-size: 13px;
+  font-weight: 700;
+  color: #5d5d5d;
+  ul {
+    height: 24px;
+    line-height: 24px;
+    list-style: none;
+  }
+  &_col {
+    float: left;
+    position: relative;
+    width: 100px;
+    text-align: center;
+    list-style: none;
+    height: 30px;
+    font-family: 微軟正黑體;
+    font-size: 13px;
+    font-weight: 700;
+    color: #5d5d5d;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    &:hover {
+      transition: 0.5s;
+      .Top__nav_subtitle {
+        display: block;
+        width: 100px;
+        border: 1px solid #ccc;
+        background-color: #ffffff;
+        a {
+          text-decoration: none;
+          color: #5d5d5d;
+          transition: 0.5s;
+          &:hover {
+            color: #177cc4;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+  &_title {
+  }
+
+  &_subtitle {
+    display: none;
+  }
+}
+
+.main {
+  width: 973px;
+}
+
+.main__nav {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.main__nav-a {
+  text-decoration-line: none;
+  width: 25%;
+  line-height: 30px;
+  font-family: "微軟正黑體";
+  font-weight: 700;
+  color: #444;
+  font-size: 13px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  transition: 0.5s;
+}
+
+.main__nav-a:hover {
+  color: #177cc4;
+  background: #f7f7f7;
+  transition: 0.5s;
+}
+
+.main_nav-eng {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.discover {
+  padding: 20px 0 20px 0;
+  &__title {
+    padding: 10px 0 10px 0;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: #444;
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 30px;
+  }
+  &__subtitle {
+    padding: 10px 0 20px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    line-height: 28px;
+    font-family: 微軟正黑體, sans-serif;
+    font-style: normal;
+    font-weight: 1000;
+    color: #5d5d5d;
+    background-color: transparent;
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 30px;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-size: cover;
+      width: 225px;
+      height: 225px;
+      background-color: #c0e5ff;
+      font-family: 微軟正黑體, sans-serif;
+      font-weight: 700;
+      .atoppadding {
+        display: flex;
+        text-align: center;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #5d5d5d;
+        margin: 5px;
+      }
+      .apadding {
+        display: flex;
+        float: left;
+        margin-left: 0;
+        text-align: center;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #177cc4;
+      }
+    }
+  }
+}
