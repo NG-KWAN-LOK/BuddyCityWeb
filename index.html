@@ -24,54 +24,38 @@
     <a href="#" id="toTop" style="display: none;">
         <span id="toTopHover"></span>To Top</a>
     <!--メインビジュアルのスライド-->
-    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
-    <script type="text/javascript">jssor_1_slider_init = function () {
-
+    <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function () {
             var jssor_1_options = {
-
                 $AutoPlay: 1,
-                $SlideDuration: 800,
-                $SlideEasing: $Jease$.$OutQuint,
+                $LazyLoading: 1,
                 $ArrowNavigatorOptions: {
                     $Class: $JssorArrowNavigator$
-                }
-
-                ,
+                },
                 $BulletNavigatorOptions: {
-                    $Class: $JssorBulletNavigator$
+                    $Class: $JssorBulletNavigator$,
+                    $SpacingX: 20,
+                    $SpacingY: 20
                 }
-            }
-
-                ;
-
+            };
             var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-            /*#region responsive code begi1n*/
-
-            var MAX_WIDTH = 3000;
-
+            var MAX_WIDTH = 1600;
             function ScaleSlider() {
                 var containerElement = jssor_1_slider.$Elmt.parentNode;
                 var containerWidth = containerElement.clientWidth;
-
                 if (containerWidth) {
-
                     var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
                     jssor_1_slider.$ScaleWidth(expectedWidth);
                 }
-
                 else {
                     window.setTimeout(ScaleSlider, 30);
                 }
             }
-
             ScaleSlider();
-
             $Jssor$.$AddEvent(window, "load", ScaleSlider);
             $Jssor$.$AddEvent(window, "resize", ScaleSlider);
             $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-            /*#endregion responsive code end*/
         };
     </script>
 </head>
@@ -103,113 +87,109 @@
         </div>
     </div>
     <!--Banner-->
-    <div class="Banner__naga">
-        <div id="body-background" class="Banner__body-background">
-            <div id="jssor_1" class="Banner__jssor_1">
-                <!-- Loading Screen -->
-                <div data-u="loading" class="Banner__jssorl-009-spin">
-                    <img class="Banner__spin-img" src="svg/loading/static-svg/spin.svg" />
-                </div>
-                <div data-u="slides" class="Banner__slides">
-                    <div>
-                        <img data-u="image" src="image/photo/001.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/002.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/003.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/004.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/005.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/006.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/007.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/008.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/009.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/010.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/011.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/012.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/013.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/014.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/015.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/016.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/017.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/018.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/019.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/020.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/021.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/022.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/023.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="image/photo/024.jpg" />
-                    </div>
-                </div>
-                <!-- Bullet Navigator -->
-                <div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;right:12px;"
-                    data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
-                    <div data-u="prototype" class="i" style="width:16px;height:16px;">
-                        <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                            <circle class="b" cx="8000" cy="8000" r="5800"></circle>
-                        </svg>
-                    </div>
-                </div>
-                <!-- Arrow Navigator -->
-                <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;"
-                    data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
-                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                        <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
-                    </svg>
-                </div>
-                <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;"
-                    data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                        <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
-                    </svg>
-                </div>
-            </div>
-            <script type="text/javascript">jssor_1_slider_init();</script>
-            <!-- #endregion Jssor Slider End -->
+    <div id="jssor_1" class="jssor_1">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin">
+            <img class="loading-img" src="img/spin.svg" />
         </div>
+        <div data-u="slides" class="slides">
+            <div>
+                <img data-u="image" data-src="image/photo/001.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/002.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/003.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/004.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/005.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/006.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/007.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/008.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/009.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/010.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/011.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/012.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/013.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/014.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/015.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/016.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/017.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/018.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/019.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/020.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/021.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/022.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/023.jpg" />
+            </div>
+            <div>
+                <img data-u="image" data-src="image/photo/024.jpg" />
+            </div>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb132" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i">
+                <svg class="svg_div" viewbox="0 0 16000 16000">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="left:25px;" data-autocenter="2" data-scale="0.75"
+            data-scale-left="0.75">
+            <svg class="svg_div" viewbox="0 0 16000 16000">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="right:25px;" data-autocenter="2" data-scale="0.75"
+            data-scale-right="0.75">
+            <svg class="svg_div" viewbox="0 0 16000 16000">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+    <script type="text/javascript">jssor_1_slider_init();
+    </script>
     </div>
     <!--main-->
     <div class="main">

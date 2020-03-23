@@ -53,55 +53,23 @@ a {
   outline: none;
 }
 
-.Banner__naga {
-  width: 100%;
-  height: auto;
-}
-
-.Banner__body-background {
-  background: #ffffff;
-  position: relative;
-  width: 100%;
-  z-index: -20;
-}
-
-.Banner__jssor_1 {
-  position: relative;
-  width: 1519px;
-  height: 679px;
-  overflow: hidden;
-  visibility: hidden;
-  z-index: -1;
-}
-
-.Banner__jssorl-009-spin {
+.jssorl-009-spin {
   position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 100%;
   text-align: center;
-  top: -1000px;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.Banner__slides {
-  cursor: default;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  width: 1519px;
-  height: 679px;
-  overflow: hidden;
-}
-
-.Banner__spin-img {
+.loading-img {
   margin-top: -19px;
   position: relative;
   top: 50%;
   width: 38px;
   height: 38px;
 }
-
-/*jssor slider loading skin spin css*/
 
 .jssorl-009-spin img {
   animation-name: jssorl-009-spin;
@@ -120,50 +88,56 @@ a {
   }
 }
 
-/*jssor slider bullet skin 032 css*/
-
-.jssorb032 {
+.jssorb132 {
   position: absolute;
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
 }
 
-.jssorb032 .i {
+.jssorb132 .i {
+  width: 12px;
+  height: 12px;
   position: absolute;
   cursor: pointer;
 }
 
-.jssorb032 .i .b {
+.jssorb132 .i .b {
   fill: #fff;
-  fill-opacity: 0.7;
+  fill-opacity: 0.8;
   stroke: #000;
-  stroke-width: 1200;
+  stroke-width: 1600;
   stroke-miterlimit: 10;
-  stroke-opacity: 0.25;
+  stroke-opacity: 0.7;
 }
 
-.jssorb032 .i:hover .b {
+.jssorb132 .i:hover .b {
   fill: #000;
-  fill-opacity: 0.6;
+  fill-opacity: 0.7;
   stroke: #fff;
-  stroke-opacity: 0.35;
+  stroke-width: 2000;
+  stroke-opacity: 0.8;
 }
 
-.jssorb032 .iav .b {
+.jssorb132 .iav .b {
   fill: #000;
-  fill-opacity: 1;
   stroke: #fff;
-  stroke-opacity: 0.35;
+  stroke-width: 2400;
+  fill-opacity: 0.8;
+  stroke-opacity: 1;
 }
 
-.jssorb032 .i.idn {
+.jssorb132 .i.idn {
   opacity: 0.3;
 }
-
-/*jssor slider arrow skin 051 css*/
 
 .jssora051 {
   display: block;
   position: absolute;
   cursor: pointer;
+  width: 55px;
+  height: 55px;
+  top: 0px;
 }
 
 .jssora051 .a {
@@ -184,6 +158,35 @@ a {
 .jssora051.jssora051ds {
   opacity: 0.3;
   pointer-events: none;
+}
+
+.jssor_1 {
+  position: relative;
+  margin: 0 auto;
+  top: 0px;
+  left: 0px;
+  width: 1600px;
+  height: 716px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.slides {
+  cursor: default;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 1600px;
+  height: 716px;
+  overflow: hidden;
+}
+
+.svg_div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .cover {
