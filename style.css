@@ -13,9 +13,48 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+#toTop {
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  overflow: hidden;
+  width: 43px;
+  height: 43px;
+  border: none;
+  text-indent: 100%;
+  z-index: 999;
+  background: #282A2B url(image/totop.png) no-repeat left top;
+  background-size: contain;
+  border-radius: 0px;
+}
+
+#toTopHover {
+  background: #282A2B url(image/totop.png) no-repeat left top;
+  background-size: contain;
+  width: 43px;
+  height: 43px;
+  display: block;
+  overflow: hidden;
+  float: left;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#toTop:active,
+#toTop:focus {
+  outline: none;
 }
 
 .Banner__naga {
@@ -72,42 +111,40 @@ body {
 }
 
 /*jssor slider loading skin spin css*/
-
 .jssorl-009-spin img {
   -webkit-animation-name: jssorl-009-spin;
-  animation-name: jssorl-009-spin;
+          animation-name: jssorl-009-spin;
   -webkit-animation-duration: 1.6s;
-  animation-duration: 1.6s;
+          animation-duration: 1.6s;
   -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @-webkit-keyframes jssorl-009-spin {
   from {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes jssorl-009-spin {
   from {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 /*jssor slider bullet skin 032 css*/
-
 .jssorb032 {
   position: absolute;
 }
@@ -145,7 +182,6 @@ body {
 }
 
 /*jssor slider arrow skin 051 css*/
-
 .jssora051 {
   display: block;
   position: absolute;
@@ -236,10 +272,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .Top__logo img {
@@ -247,8 +283,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 300px;
   height: 90px;
 }
@@ -328,14 +364,14 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
 .main__nav-a {
   -webkit-text-decoration-line: none;
-  text-decoration-line: none;
+          text-decoration-line: none;
   width: 25%;
   line-height: 30px;
   font-family: "微軟正黑體";
@@ -361,7 +397,7 @@ body {
 }
 
 .discover {
-  padding: 20px 0 20px 0;
+  padding: 20px 0 0 0;
 }
 
 .discover__title {
@@ -379,15 +415,15 @@ body {
 }
 
 .discover__subtitle {
-  padding: 10px 0 20px 0;
+  padding: 40px 0 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   line-height: 28px;
   font-family: 微軟正黑體, sans-serif;
   font-style: normal;
@@ -404,8 +440,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0;
 }
 
@@ -415,20 +451,23 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-size: cover;
   width: 225px;
   height: 225px;
   background-color: #c0e5ff;
   font-family: 微軟正黑體, sans-serif;
+  font-size: 15px;
   font-weight: 700;
+  line-height: 15px;
+  vertical-align: 0;
 }
 
 .discover__content__text .atoppadding {
@@ -436,22 +475,43 @@ body {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  width: -webkit-fill-available;
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #5d5d5d;
   margin: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .discover__content__text .apadding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  opacity: 0;
   float: left;
   margin-left: 0;
   text-align: center;
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #177cc4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
+.discover__content__text:hover .atoppadding {
+  color: #177cc4;
+}
+
+.discover__content__text:hover .apadding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  float: left;
+  margin-left: 0;
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #177cc4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 /*# sourceMappingURL=style.css.map */
