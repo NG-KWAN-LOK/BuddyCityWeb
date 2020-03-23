@@ -34,13 +34,13 @@ a {
   border: none;
   text-indent: 100%;
   z-index: 999;
-  background: #282A2B url(image/totop.png) no-repeat left top;
+  background: #282a2b url(image/totop.png) no-repeat left top;
   background-size: contain;
   border-radius: 0px;
 }
 
 #toTopHover {
-  background: #282A2B url(image/totop.png) no-repeat left top;
+  background: #282a2b url(image/totop.png) no-repeat left top;
   background-size: contain;
   width: 43px;
   height: 43px;
@@ -67,11 +67,6 @@ a {
   position: relative;
   width: 100%;
   z-index: -20;
-}
-
-.Banner__body-background {
-  background: #ffffff;
-  width: 100%;
 }
 
 .Banner__jssor_1 {
@@ -253,20 +248,6 @@ body {
   text-decoration: none;
 }
 
-.Gtitle {
-  text-align: center;
-  line-height: 35px;
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: transparent;
-  text-decoration: none;
-  font-variant: normal;
-  font-size: 30px;
-  vertical-align: 0;
-}
-
 .Top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,8 +382,8 @@ body {
 }
 
 .discover__title {
-  padding: 10px 0 10px 0;
   display: block;
+  padding: 10px 0 10px 0;
   text-align: center;
   line-height: 35px;
   font-family: sans-serif;
@@ -415,10 +396,10 @@ body {
 }
 
 .discover__subtitle {
-  padding: 40px 0 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 40px 0 40px 0;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-pack: justify;
@@ -471,9 +452,7 @@ body {
 }
 
 .discover__content__text .atoppadding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: flow-root;
   text-align: center;
   width: -webkit-fill-available;
   padding: 5px;
@@ -513,5 +492,38 @@ body {
   color: #177cc4;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.reality-project {
+  background-color: #333;
+  width: 100%;
+  margin: 60px 0;
+}
+
+.reality-project__title {
+  display: block;
+  text-align: center;
+  line-height: 35px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 30px;
+  padding: 30px 0;
+}
+
+.reality-project__image {
+  display: block;
+}
+
+.reality-project__image__box {
+  display: block;
+  background-size: cover;
+  width: 274px;
+  height: 144px;
+  background-color: #c0e5ff;
 }
 /*# sourceMappingURL=style.css.map */
