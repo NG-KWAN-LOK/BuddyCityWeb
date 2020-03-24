@@ -525,24 +525,121 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: auto;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1600px;
   margin: 30px auto;
 }
 
 .reality-project__image__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  padding: 10px;
+  margin: 20px auto;
 }
 
 .reality-project__image__box__image {
-  max-width: 100%;
-  max-height: auto;
+  width: 274px;
+  height: 144px;
 }
 
 .reality-project__image__box__text {
+  opacity: 0;
   position: absolute;
   z-index: 1;
-  top: 10px;
-  left: 10px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #177cc4;
+  text-align: center;
+  font-family: 微軟正黑體, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  padding: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.reality-project__image__box:hover .reality-project__image__box__text {
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #177cc4;
+  text-align: center;
+  font-family: 微軟正黑體, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  padding: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  width: 100%;
+}
+
+.footer__content {
+  padding: 50px;
+}
+
+.footer__content__weblogo {
+  display: inline-block;
+  width: 30%;
+  height: auto;
+}
+
+.footer__content__weblogo__image {
+  width: 100%;
+  right: 0px;
+}
+
+.footer__content__box {
+  display: inline-block;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  font-family: 微軟正黑體, sans-serif;
+  line-height: 25px;
+  font-style: normal;
+  color: #444;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.footer__content__box__btn__text {
+  display: inline;
+  margin-right: 30px;
+  color: #444;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer__content__box__btn__text:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer__content__box__copyright {
+  padding: 10px 0;
+}
+
+::-moz-selection {
+  background-color: #666;
+  color: #FFF;
+}
+
+::selection {
+  background-color: #666;
+  color: #FFF;
 }
 /*# sourceMappingURL=style.css.map */
