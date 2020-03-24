@@ -503,7 +503,7 @@ body {
 .reality-project {
   background-color: #333;
   width: 100%;
-  margin: 60px 0;
+  margin: 60px 0 0 0;
 }
 
 .reality-project__title {
@@ -522,14 +522,27 @@ body {
 }
 
 .reality-project__image {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  margin: 30px auto;
 }
 
 .reality-project__image__box {
-  display: block;
-  background-size: cover;
-  width: 274px;
-  height: 144px;
-  background-color: #c0e5ff;
+  position: relative;
+  padding: 10px;
+}
+
+.reality-project__image__box__image {
+  max-width: 100%;
+  max-height: auto;
+}
+
+.reality-project__image__box__text {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
 }
 /*# sourceMappingURL=style.css.map */
