@@ -437,7 +437,7 @@ body {
   font-size: 30px;
 }
 
-.discover .discover__subtitle {
+.discover__subtitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,7 +458,7 @@ body {
   font-size: 30px;
 }
 
-.discover .discover__content {
+.discover__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,30 +470,30 @@ body {
       flex-wrap: wrap;
 }
 
-.discover .discover__content .discover__content__card {
+.discover__content__card {
   margin-bottom: 10px;
   width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
-  .discover .discover__content .discover__content__card {
+  .discover__content__card {
     width: 50%;
   }
-  .discover .discover__content .discover__content__card .discover__content__text .apadding {
+  .discover__content__card .discover__content__text .apadding {
     opacity: 1;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .discover .discover__content .discover__content__card {
+  .discover__content__card {
     width: 25%;
   }
-  .discover .discover__content .discover__content__card .discover__content__text .apadding {
+  .discover__content__card .discover__content__text .apadding {
     opacity: 0;
   }
 }
 
-.discover .discover__content .discover__content__text {
+.discover__content__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,7 +520,7 @@ body {
   vertical-align: 0;
 }
 
-.discover .discover__content .discover__content__text .atoppadding {
+.discover__content__text .atoppadding {
   display: flow-root;
   text-align: center;
   padding: 5px;
@@ -531,7 +531,7 @@ body {
   transition: 0.5s;
 }
 
-.discover .discover__content .discover__content__text .apadding {
+.discover__content__text .apadding {
   opacity: 1;
   float: left;
   margin-left: 0;
@@ -543,11 +543,11 @@ body {
   width: 100%;
 }
 
-.discover .discover__content .discover__content__text:hover .atoppadding {
+.discover__content__text:hover .atoppadding {
   color: #177cc4;
 }
 
-.discover .discover__content .discover__content__text:hover .apadding {
+.discover__content__text:hover .apadding {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -593,6 +593,18 @@ body {
           justify-content: space-between;
   max-width: 1600px;
   margin: 30px auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .reality-project__image .reality-project__image__box__text {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .reality-project__image .reality-project__image__box__text {
+    opacity: 0;
+  }
 }
 
 .reality-project__image a {
