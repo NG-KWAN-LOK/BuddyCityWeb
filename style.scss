@@ -236,7 +236,17 @@ body {
   font-size: 13px;
   text-decoration: none;
 }
-
+.PhoneTop {
+  display: none;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #ccc;
+  @media only screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
+}
 .Top {
   display: flex;
   flex-wrap: nowrap;
@@ -261,13 +271,19 @@ body {
 }
 
 .Top__nav {
-  display: flex;
+  display: none;
   position: relative;
   z-index: 1;
   font-family: 微軟正黑體;
   font-size: 13px;
   font-weight: 700;
   color: #5d5d5d;
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+  @media only screen and (min-width: 1024px) {
+    display: flex;
+  }
   ul {
     height: 24px;
     line-height: 24px;
