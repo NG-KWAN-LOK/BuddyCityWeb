@@ -61,6 +61,11 @@
     <script>
         function menu_burger(x) {
             x.classList.toggle("change");
+            if (PhoneTop__mainnav__container.style.display === "flex") {
+                PhoneTop__mainnav__container.style.display = "none";
+            } else {
+                PhoneTop__mainnav__container.style.display = "flex";
+            }
         }
     </script>
 </head>
@@ -80,11 +85,40 @@
         <div class="PhoneTop__logo">
             <img class="PhoneTop__logo__image" src="image/logo.png">
         </div>
-        <div class="PhoneTop__topnav">
-            <div class="PhoneTop__topnav__icon">
-                <img class="PhoneTop__topnav__icon__image" src="image/global.png">
+        <div class="PhoneTop__mainnav__container" id="PhoneTop__mainnav__container">
+            <div class="PhoneTop__mainnav__container__col">
+                <a class="PhoneTop__mainnav__container__col__a" href="#">
+                    <div class="PhoneTop__mainnav__container__col__a__eng">HOME</div>
+                    <div class="PhoneTop__mainnav__container__col__a__chi">回到首頁</div>
+                </a>
+                <a class="PhoneTop__mainnav__container__col__a" href="map.html" target="_blank">
+                    <div class="PhoneTop__mainnav__container__col__a__eng">ONLINE MAP</div>
+                    <div class="PhoneTop__mainnav__container__col__a__chi">打開網上地圖</div>
+                </a>
+                <a class="PhoneTop__mainnav__container__col__a" href="building_list/">
+                    <div class="PhoneTop__mainnav__container__col__a__eng">CITY BUILDING LIST</div>
+                    <div class="PhoneTop__mainnav__container__col__a__chi">查看城市建築物名冊</div>
+                </a>
+                <a class="PhoneTop__mainnav__container__col__a" href="resident/resident.html">
+                    <div class="PhoneTop__mainnav__container__col__a__eng">CITY RESIDENT LIST</div>
+                    <div class="PhoneTop__mainnav__container__col__a__chi">查看居民名冊</div>
+                </a>
+                <a class="PhoneTop__mainnav__container__col__a" href="resident/resident.html">
+                    <div class="PhoneTop__mainnav__container__col__a__eng">BCCTB</div>
+                    <div class="PhoneTop__mainnav__container__col__a__chi">Buddy市觀光局</div>
+                </a>
+            </div>
+            <div class="PhoneTop__mainnav__container__col__line"></div>
+            <div class="PhoneTop__mainnav__container__col">
+                <a class="PhoneTop__mainnav__container__col__a" href="#">
+                    <div class="PhoneTop__mainnav__container__col__a__eng">ENGLISH</div>
+                </a>
+                <a class="PhoneTop__mainnav__container__col__a" href="map.html" target="_blank">
+                    <div class="PhoneTop__mainnav__container__col__a__eng">日本語</div>
+                </a>
             </div>
         </div>
+    </div>
     </div>
     <!--Top-->
     <div class="Top">

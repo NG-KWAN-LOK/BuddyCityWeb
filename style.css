@@ -247,11 +247,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   z-index: 2;
   width: 100%;
-  height: 60px;
   border-bottom: 3px solid #ccc;
   background-color: #fff;
 }
@@ -274,9 +273,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  right: 0;
+  width: 69px;
+  height: 60px;
 }
 
 .PhoneTop .PhoneTop__mainnav .PhoneTop__mainnav__icon {
@@ -310,6 +315,67 @@ body {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
+.PhoneTop .PhoneTop__mainnav .break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 0;
+}
+
+.PhoneTop .PhoneTop__mainnav__container,
+.PhoneTop #PhoneTop__mainnav__container {
+  display: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col,
+.PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col {
+  width: 50%;
+}
+
+.PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a,
+.PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  width: 100%;
+  font-family: "微軟正黑體";
+  color: #444;
+  font-size: 13px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__eng,
+.PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__eng {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 767px) {
+  .PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__eng,
+  .PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__eng {
+    font-size: 15px;
+  }
+}
+
+.PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col__line,
+.PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col__line {
+  width: 1px;
+  height: 80%;
+  margin: 0 20px;
+  background-color: #444;
+}
+
 .PhoneTop .PhoneTop__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,30 +387,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
+  width: 100%;
+  height: 60px;
 }
 
 .PhoneTop .PhoneTop__logo .PhoneTop__logo__image {
-  width: 50%;
-}
-
-.PhoneTop .PhoneTop__topnav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.PhoneTop .PhoneTop__topnav .PhoneTop__topnav__icon {
-  display: block;
-  cursor: pointer;
-  margin: 10px 15px;
-}
-
-.PhoneTop .PhoneTop__topnav .PhoneTop__topnav__icon .PhoneTop__topnav__icon__image {
-  max-width: 39px;
-  max-height: 39px;
+  max-height: 60px;
+  overflow: hidden;
 }
 
 .Top {
