@@ -532,7 +532,7 @@ body {
 }
 
 .discover .discover__content .discover__content__text .apadding {
-  opacity: 0;
+  opacity: 1;
   float: left;
   margin-left: 0;
   padding: 5px;
@@ -613,7 +613,7 @@ body {
 }
 
 .reality-project__image__box__text {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   z-index: 1;
   bottom: 0px;
