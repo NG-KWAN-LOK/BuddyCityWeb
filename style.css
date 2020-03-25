@@ -224,47 +224,36 @@ body {
   overflow-x: hidden;
 }
 
-.b:link {
-  line-height: 15px;
-  font-weight: 700;
-  font-family: 微軟正黑體;
-  color: #ffffff;
-  font-size: 13px;
-  text-decoration: none;
+.PaddingTop {
+  line-height: 85px;
 }
 
-.b:visited {
-  line-height: 15px;
-  font-weight: 700;
-  font-family: 微軟正黑體;
-  color: #ffffff;
-  font-size: 13px;
-  text-decoration: none;
+@media only screen and (min-width: 768px) {
+  .PaddingTop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
-.b:hover {
-  line-height: 15px;
-  font-weight: 700;
-  font-family: 微軟正黑體;
-  color: #ffffff;
-  font-size: 13px;
-  text-decoration: none;
-}
-
-.b:active {
-  line-height: 15px;
-  font-weight: 700px;
-  font-family: 微軟正黑體;
-  color: #ffffff;
-  font-size: 13px;
-  text-decoration: none;
+@media only screen and (min-width: 1024px) {
+  .PaddingTop {
+    display: none;
+  }
 }
 
 .PhoneTop {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  border-bottom: 1px solid #ccc;
+  z-index: 2;
+  width: 100%;
+  height: 85px;
+  border-bottom: 3px solid #ccc;
+  background-color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -281,6 +270,83 @@ body {
   }
 }
 
+.PhoneTop .PhoneTop__mainnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.PhoneTop .PhoneTop__mainnav .PhoneTop__mainnav__icon {
+  display: block;
+  cursor: pointer;
+  margin: 10px 15px;
+}
+
+.PhoneTop .PhoneTop__mainnav .bar1,
+.PhoneTop .PhoneTop__mainnav .bar2,
+.PhoneTop .PhoneTop__mainnav .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #5d5d5d;
+  margin: 6px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.PhoneTop .PhoneTop__mainnav .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.PhoneTop .PhoneTop__mainnav .change .bar2 {
+  opacity: 0;
+}
+
+.PhoneTop .PhoneTop__mainnav .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.PhoneTop .PhoneTop__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.PhoneTop .PhoneTop__logo .PhoneTop__logo__image {
+  width: 50%;
+}
+
+.PhoneTop .PhoneTop__topnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.PhoneTop .PhoneTop__topnav .PhoneTop__topnav__icon {
+  display: block;
+  cursor: pointer;
+  margin: 10px 15px;
+}
+
+.PhoneTop .PhoneTop__topnav .PhoneTop__topnav__icon .PhoneTop__topnav__icon__image {
+  max-width: 39px;
+  max-height: 39px;
+}
+
 .Top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -292,14 +358,31 @@ body {
           justify-content: space-between;
 }
 
+@media only screen and (min-width: 768px) {
+  .Top .Top__logo img {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Top .Top__logo img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Top .Top__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .Top__logo {
   margin: 0 auto;
 }
 
 .Top__logo img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -321,20 +404,6 @@ body {
   font-size: 13px;
   font-weight: 700;
   color: #5d5d5d;
-}
-
-@media only screen and (min-width: 768px) {
-  .Top__nav {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .Top__nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 .Top__nav ul {
