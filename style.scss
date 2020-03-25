@@ -374,7 +374,7 @@ body {
     font-variant: normal;
     font-size: 30px;
   }
-  &__subtitle {
+  .discover__subtitle {
     display: flex;
     padding: 40px 0 40px 0;
     flex-wrap: nowrap;
@@ -389,22 +389,28 @@ body {
     font-variant: normal;
     font-size: 30px;
   }
-  &__content {
+  .discover__content {
     display: flex;
     justify-content: space-between;
     margin: 0;
     flex-wrap: wrap;
-    &__card {
+    .discover__content__card {
       margin-bottom: 10px;
       width: 100%;
       @media only screen and (min-width: 768px) {
         width: 50%;
+        .discover__content__text .apadding {
+          opacity: 1;
+        }
       }
       @media only screen and (min-width: 1024px) {
         width: 25%;
+        .discover__content__text .apadding {
+          opacity: 0;
+        }
       }
     }
-    &__text {
+    .discover__content__text {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -423,7 +429,6 @@ body {
       .atoppadding {
         display: flow-root;
         text-align: center;
-        width: -webkit-fill-available;
         padding: 5px;
         background-color: rgba(255, 255, 255, 0.8);
         color: #5d5d5d;
@@ -437,7 +442,7 @@ body {
         padding: 5px;
         background-color: rgba(255, 255, 255, 0.8);
         color: #177cc4;
-        transition: 0.5s;
+        transition: opacity 0.5s ease;
         width: 100%;
       }
       &:hover {
@@ -452,7 +457,7 @@ body {
           padding: 5px;
           background-color: rgba(255, 255, 255, 0.8);
           color: #177cc4;
-          transition: 0.5s;
+          transition: opacity 0.5s ease;
         }
       }
     }

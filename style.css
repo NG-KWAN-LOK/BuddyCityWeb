@@ -437,7 +437,7 @@ body {
   font-size: 30px;
 }
 
-.discover__subtitle {
+.discover .discover__subtitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,7 +458,7 @@ body {
   font-size: 30px;
 }
 
-.discover__content {
+.discover .discover__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,24 +470,30 @@ body {
       flex-wrap: wrap;
 }
 
-.discover__content__card {
+.discover .discover__content .discover__content__card {
   margin-bottom: 10px;
   width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
-  .discover__content__card {
+  .discover .discover__content .discover__content__card {
     width: 50%;
+  }
+  .discover .discover__content .discover__content__card .discover__content__text .apadding {
+    opacity: 1;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .discover__content__card {
+  .discover .discover__content .discover__content__card {
     width: 25%;
+  }
+  .discover .discover__content .discover__content__card .discover__content__text .apadding {
+    opacity: 0;
   }
 }
 
-.discover__content__text {
+.discover .discover__content .discover__content__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,10 +520,9 @@ body {
   vertical-align: 0;
 }
 
-.discover__content__text .atoppadding {
+.discover .discover__content .discover__content__text .atoppadding {
   display: flow-root;
   text-align: center;
-  width: -webkit-fill-available;
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #5d5d5d;
@@ -526,23 +531,23 @@ body {
   transition: 0.5s;
 }
 
-.discover__content__text .apadding {
+.discover .discover__content .discover__content__text .apadding {
   opacity: 0;
   float: left;
   margin-left: 0;
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #177cc4;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
   width: 100%;
 }
 
-.discover__content__text:hover .atoppadding {
+.discover .discover__content .discover__content__text:hover .atoppadding {
   color: #177cc4;
 }
 
-.discover__content__text:hover .apadding {
+.discover .discover__content .discover__content__text:hover .apadding {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -552,8 +557,8 @@ body {
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #177cc4;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .reality-project {
