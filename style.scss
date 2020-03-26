@@ -288,7 +288,11 @@ body {
           font-size: 10px;
           font-weight: bold;
         }
-        @media only screen and (max-width: 767px) {
+        .PhoneTop__mainnav__container__col__a__chi {
+          font-size: 10px;
+          font-weight: bold;
+        }
+        @media only screen and (min-width: 767px) {
           .PhoneTop__mainnav__container__col__a__eng {
             font-size: 15px;
           }
@@ -499,6 +503,12 @@ body {
 .discover__content__card {
   margin-bottom: 10px;
   width: 100%;
+  @media only screen and (min-width: 550px) {
+    width: 50%;
+    .discover__content__text .apadding {
+      opacity: 1;
+    }
+  }
   @media only screen and (min-width: 768px) {
     width: 50%;
     .discover__content__text .apadding {
