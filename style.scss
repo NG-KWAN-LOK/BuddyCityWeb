@@ -692,6 +692,19 @@ body {
       }
     }
   }
+  @media only screen and (max-width: 411px) {
+    .footer__content {
+      padding: 20px;
+    }
+    .footer__content__text__adress,
+    .footer__content__links {
+      font-size: 14px;
+    }
+    .footer__content__box__copyright {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
 }
 .footer__content__text__adress {
   margin-bottom: 10px;
