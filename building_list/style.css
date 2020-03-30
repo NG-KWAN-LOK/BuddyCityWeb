@@ -426,6 +426,131 @@ body {
   font-weight: bold;
 }
 
+.main__content {
+  padding: 20px;
+}
+
+.main__content .NowIn {
+  display: block;
+  padding: 40px 0px 0px 0px;
+}
+
+.main__content .NowIn .NowIn__content {
+  line-height: 15px;
+  font-family: 微軟正黑體, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #5d5d5d;
+  font-variant: normal;
+  font-size: 15px;
+  text-decoration: underline;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main__content .NowIn .NowIn__content:hover {
+  color: #177cc4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main__content .BuildingList {
+  display: block;
+}
+
+.main__content .BuildingList .BuildingList__title {
+  padding: 20px 0;
+  text-align: center;
+  line-height: 35px;
+  font-family: 微軟正黑體, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #444;
+  background-color: transparent;
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 30px;
+  vertical-align: 0;
+}
+
+@media only screen and (max-width: 320px) {
+  .main__content .BuildingList .BuildingList__title {
+    font-size: 28px;
+  }
+}
+
+.main__content #district .district__subTitle {
+  padding: 25px 0;
+  line-height: 30px;
+  font-family: 微軟正黑體, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #444;
+  background-color: transparent;
+  text-decoration: underline;
+  font-variant: normal;
+  font-size: 25px;
+  vertical-align: 0;
+}
+
+.main__content #district .district__building .district__building__name {
+  margin: 10px 0;
+  line-height: 20px;
+  font-family: 微軟正黑體;
+  font-style: normal;
+  font-weight: 700;
+  color: #5d5d5d;
+  font-variant: normal;
+  font-size: 17px;
+  vertical-align: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main__content #district .district__building .district__building__name:hover {
+  color: #177cc4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.data__title {
+  padding: 20px 0;
+  text-align: center;
+  line-height: 35px;
+  font-family: 微軟正黑體, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #444;
+  background-color: transparent;
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 30px;
+  vertical-align: 0;
+}
+
+.data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px;
+}
+
+.data .data__table {
+  line-height: 15px;
+  font-family: 微軟正黑體, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #5d5d5d;
+  font-variant: normal;
+  font-size: 15px;
+  vertical-align: inherit;
+}
+
+.data .data__table .data__table__datainfo {
+  width: 60%;
+  height: 38.38px;
+}
+
 .footer {
   background-color: #f2f2f2;
   width: 100%;

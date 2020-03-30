@@ -78,7 +78,7 @@
                         <div class="Top__nav_title">ABOUT</div>
                         <div class="Top__nav_subtitle"><a href="/page/bcctb-about-us.html">Buddy市觀光局</a></div>
                         <div class="Top__nav_subtitle"><a href="map.html" target=_blank>網上地圖</a></div>
-                        <div class="Top__nav_subtitle"><a href="#">城市建築物名冊</a></div>
+                        <div class="Top__nav_subtitle"><a href=".building_list/">城市建築物名冊</a></div>
                         <div class="Top__nav_subtitle"><a href=".resident/resident.html">居民名冊</a></div>
 
                     </li>
@@ -92,35 +92,82 @@
     </div>
     <!--main-->
     <div class="main">
-        <!-- body_nav -->
-        <div class="main__nav">
-            <a class="main__nav-a" href="../#">
-                <div class="main_nav-eng">HOME</div>
-                <div class="main_nav-chi">回到首頁</div>
-            </a>
-            <a class="main__nav-a" href="map.html" target="_blank">
-                <div class="main_nav-eng">ONLINE MAP</div>
-                <div class="main_nav-chi">打開網上地圖</div>
-            </a>
-            <a class="main__nav-a" href="building_list/">
-                <div class="main_nav-eng">CITY BUILDING LIST</div>
-                <div class="main_nav-chi">查看城市建築物名冊</div>
-            </a>
-            <a class="main__nav-a" href="resident/resident.html">
-                <div class="main_nav-eng">CITY RESIDENT LIST</div>
-                <div class="main_nav-chi">查看居民名冊</div>
-            </a>
-        </div>
-        <!-- main_content -->
         <div class="main__content">
+            <!-- body_nav -->
+            <div class="main__nav">
+                <a class="main__nav-a" href="../#">
+                    <div class="main_nav-eng">HOME</div>
+                    <div class="main_nav-chi">回到首頁</div>
+                </a>
+                <a class="main__nav-a" href="map.html" target="_blank">
+                    <div class="main_nav-eng">ONLINE MAP</div>
+                    <div class="main_nav-chi">打開網上地圖</div>
+                </a>
+                <a class="main__nav-a" href="building_list/">
+                    <div class="main_nav-eng">CITY BUILDING LIST</div>
+                    <div class="main_nav-chi">查看城市建築物名冊</div>
+                </a>
+                <a class="main__nav-a" href="resident/resident.html">
+                    <div class="main_nav-eng">CITY RESIDENT LIST</div>
+                    <div class="main_nav-chi">查看居民名冊</div>
+                </a>
+            </div>
+            <!-- main_content -->
             <div class="NowIn">
                 <a href="../#" class="NowIn__content">Home</a>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;
-                <a href="#" class="NowIn__content">城市建築物名冊</a>
+                <a href="building_list/#" class="NowIn__content">城市建築物名冊</a>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;
+                <a href="#" id='data_building_ahref' class="NowIn__content"></a>
             </div>
-            <div class="BuildingList">
-                <div class="BuildingList__title">城市建築物名冊一覽表</div>
-                <div id="district">
-                </div>
+            <div id="data_building_title" class="data__title"></div>
+            <div class="data">
+                <table class="data__table">
+                    <tr>
+                        <td class="data__table__datatitle">
+                            建築物名稱
+                        </td>
+                        <td id="data_buildingName" class="data__table__datainfo">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="data__table__datatitle">
+                            區域
+                        </td>
+                        <td id="data_district" class="data__table__datainfo">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="data__table__datatitle">
+                            地址
+                        </td>
+                        <td class="data__table__datainfo" id="data_adress">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="data__table__datatitle">
+                            用途
+                        </td>
+                        <td class="data__table__datainfo" id="data_Utilization">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="data__table__datatitle">
+                            是否有內裝？
+                        </td>
+                        <td class="data__table__datainfo" id="data_inside">
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--map-->
+            <div id="address_map" style="position:relative; height:500px;top:70px;">
+                <p class="title">Map</p>
+                <iframe id="data_address_map" width="100%" height="440px"></iframe>
+                ><a class="map" id="data_address_link" target="blank">網上地圖</a>
             </div>
         </div>
     </div>
@@ -171,12 +218,12 @@
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
-<script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 
+<script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
         apiKey: "AIzaSyD8rlfI1ia02uVCyn4HigEgKnqSVppm96c",
@@ -191,26 +238,32 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+    //Get characterId
+    let searchParams = new URLSearchParams(window.location.search);
+    let districtId = searchParams.get('districtId');
+    let buildingId = searchParams.get('buildingId');
+    console.log(districtId);
+    console.log(buildingId);
     //Get Data
-    //Get Data
-    var userDataRef = firebase.database().ref("building");
+    var userDataRef = firebase.database().ref("/building/" + districtId + "/" + buildingId);
     userDataRef.once("value").then(
         res => {
-            res.forEach((districtSh, buildingIndex) => {
-                let districtInfo = districtSh.child("0").val();
-                console.log(districtInfo.district_chi);
-                var districtString = `<div class="district__subTitle">${districtInfo.district_chi}</div>`;
-                $('#data_district_name').html(districtInfo.district_chi);
-                districtSh.forEach((citySH, buildingIndex) => {
-                    let cityInfo = citySH.val();
-                    console.log(cityInfo.name_chi);
-                    districtString += `<a target="_blank" href="building.html?districtId=${districtSh.key}&buildingId=${citySH.key}" class="district__building"><div class="district__building__name">${cityInfo.name_chi}</div></a>`;
-                })
-                $('#district').append(districtString);
-            })
+            let buildingInfo = res.val();
+            $('.data_link_eng').attr("href", `../eng/building_list/building.html?districtId=${districtId}&buildingId=${buildingId}`);
+            $('.data_link_jp').attr("href", `../jp/building_list/building.html?districtId=${districtId}&buildingId=${buildingId}`);
+            $('#data_building_ahref').html(buildingInfo.name_chi);
+            $('#data_building_title').html(buildingInfo.name_chi);
+            $('#data_buildingName').html(buildingInfo.name_chi);
+            $('#data_district').html(buildingInfo.district_chi);
+            $('#data_adress').html(buildingInfo.adress_chi);
+            $('#data_Utilization').html(buildingInfo.用途);
+            $('#data_inside').html(buildingInfo.內裝);
+            $('#data_address_map').attr("src", `https://buddycityinfo.sgngs.com/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingInfo.x}&y=${buildingInfo.y}&z=${buildingInfo.z}`);
+            $('#data_address_link').attr("href", `https://buddycityinfo.sgngs.com/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingInfo.x}&y=${buildingInfo.y}&z=${buildingInfo.z}`);
+            document.title = `${buildingInfo.name_chi}` + `丨城市建築物名冊丨Buddy-INFO Buddy市指南)`;
         },
         rej => {
-            console.log(rej);
+
         }
     );
 </script>
