@@ -498,11 +498,14 @@ body {
   font-family: 微軟正黑體, sans-serif;
   font-style: normal;
   font-weight: bold;
-  color: #444;
+  color: #5d5d5d;
   background-color: transparent;
   font-variant: normal;
   font-size: 25px;
   vertical-align: 0;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .main__content #resident .resident__box .resident__box__character {
@@ -522,16 +525,14 @@ body {
   font-family: 微軟正黑體;
   font-style: normal;
   font-weight: 700;
-  color: #5d5d5d;
   font-variant: normal;
   font-size: 17px;
   vertical-align: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
-.main__content #resident .resident__box .resident__box__character .resident__box__character__title:hover {
+.main__content #resident .resident__box:hover {
   color: #177cc4;
+  background-color: #f7f7f7;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -540,6 +541,150 @@ body {
   .main__content #resident .resident__box {
     width: 50%;
   }
+}
+
+.main__content #residentPopUpLayer {
+  display: none;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000d8;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container {
+  display: block;
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container #data_username_title {
+  padding: 20px 0;
+  text-align: center;
+  line-height: 35px;
+  font-family: 微軟正黑體, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #444;
+  background-color: transparent;
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 30px;
+  vertical-align: 0;
+}
+
+@media only screen and (max-width: 320px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container #data_username_title {
+    font-size: 28px;
+  }
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  height: 88%;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__img #data_face_img {
+  width: 100%;
+  height: 100%;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
+  line-height: 15px;
+  font-family: 微軟正黑體, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #5d5d5d;
+  font-variant: normal;
+  font-size: 15px;
+  vertical-align: inherit;
+  width: 100%;
+  text-align: center;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table .data__table__datainfo {
+  width: 60%;
+  height: 38.38px;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table #data_project {
+  overflow: auto;
+  max-height: 10%;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer {
+  position: absolute;
+  cursor: pointer;
+  right: 30px;
+  top: 30px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:hover {
+  opacity: 1;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:before, .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #fff;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .data__title {
@@ -557,31 +702,6 @@ body {
   vertical-align: 0;
 }
 
-.data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 60px;
-}
-
-.data .data__table {
-  line-height: 15px;
-  font-family: 微軟正黑體, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  color: #5d5d5d;
-  font-variant: normal;
-  font-size: 15px;
-  vertical-align: inherit;
-  width: 100%;
-  text-align: center;
-}
-
-.data .data__table .data__table__datainfo {
-  width: 60%;
-  height: 38.38px;
-}
-
 @media only screen and (max-width: 500px) {
   .data {
     padding: 20px;
@@ -589,45 +709,6 @@ body {
   .data__title {
     font-size: 20px;
   }
-}
-
-.address__map {
-  display: block;
-}
-
-.address__map .address__map__title {
-  padding: 20px 0;
-  text-align: center;
-  line-height: 35px;
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  color: #444;
-  background-color: transparent;
-  text-decoration: none;
-  font-variant: normal;
-  font-size: 30px;
-  vertical-align: 0;
-}
-
-.address__map .address__map__link {
-  text-align: center;
-  line-height: 15px;
-  font-family: 微軟正黑體, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  color: #5d5d5d;
-  font-variant: normal;
-  font-size: 15px;
-  vertical-align: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.address__map .address__map__link:hover {
-  color: #177cc4;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .footer {

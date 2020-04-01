@@ -122,7 +122,62 @@
             <div class="ResidentList">
                 <div class="ResidentList__title">居民一覽表</div>
                 <div id="resident">
+                </div>
+                <div id="residentPopUpLayer">
+                    <div class="residentPopUpLayer__container">
+                        <div class="residentPopUpLayer_closeLayer" onclick="closeLayer(this)"></div>
+                        <div id="data_username_title"></div>
+                        <div class="residentPopUpLayer__container__main">
+                            <div class="residentPopUpLayer__container__data">
+                                <div class="residentPopUpLayer__container__data__img">
+                                    <img id="data_face_img">
+                                </div>
+                                <div class="residentPopUpLayer__container__data__table">
+                                    <table class="data__table">
+                                        <tr>
+                                            <td class="data__table__datatitle">
+                                                名稱
+                                            </td>
+                                            <td id="data_username" class="data__table__datainfo">
 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="data__table__datatitle">
+                                                稱號
+                                            </td>
+                                            <td class="data__table__datainfo" id="data_nickname">
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="data__table__datatitle">
+                                                入籍年份
+                                            </td>
+                                            <td class="data__table__datainfo" id="data_participate_year">
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="data__table__datatitle">
+                                                地址
+                                            </td>
+                                            <td class="datainfo" id="data_address" style="width:60%;">
+
+                                            </td>
+                                        </tr>
+                                        <tr class="data_project_row">
+                                            <td class="data__table__datatitle">
+                                                曾參與過建築項目
+                                            </td>
+                                            <td class="data__table__datainfo" id="data_project">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -170,6 +225,10 @@
             PhoneTop__mainnav__container.style.display = "flex";
         }
     }
+    function closeLayer(x) {
+        x.classList.toggle("change");
+        residentPopUpLayer.style.display = "none";
+    }
 </script>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -200,10 +259,11 @@
             res.forEach((characterSh, index) => {
                 var character = characterSh.val();
                 var characterString =
-                    `<a target="_blank" class="resident__box" href="character.html?characterId=${characterSh.key}">` +
+                    `<div target="_blank" class="resident__box" id="characterId=${characterSh.key}" onclick="chooseCharacter(${characterSh.key})">` +
                     `<div class="resident__box__character" id="${character.user_name}">` +
                     `<img class="resident__box__character__image" src="image/${character.face}.png">` +
                     `<div class="resident__box__character__title">${character.user_name}</div>` +
+                    `</div>` +
                     `</div>` +
                     `</a>`;
                 $('#resident').append(characterString);
@@ -213,6 +273,28 @@
             console.log(rej);
         }
     );
+    function chooseCharacter(characterId) {
+        residentPopUpLayer.style.display = "flex";
+        var userDataRef = firebase.database().ref("/resident/" + characterId);
+        console.log(characterId);
+        userDataRef.once("value").then(
+            res => {
+                let characteInfo = res.val();
+                $('#data_username_title').html(characteInfo.user_name);
+                $('#data_face_img').attr("src", `image/${characteInfo.face}1.png`);
+                $('#data_username').html(characteInfo.user_name);
+                $('#data_nickname').html(characteInfo.nickname_chi);
+                $('#data_participate_year').html(characteInfo.participate_year);
+                $('#data_address').html(characteInfo.address_CHI);
+                $('#data_project').html(characteInfo.project_CHI);
+                $('#data_address_map').attr("src", `../map.html?worldname=world&mapname=flat&zoom=6&x=${characteInfo.x}&y=${characteInfo.y}&z=${characteInfo.z}`);
+                $('#data_address_link').attr("href", `../map.html?worldname=world&mapname=flat&zoom=6&x=${characteInfo.x}&y=${characteInfo.y}&z=${characteInfo.z}`);
+            },
+            rej => {
+
+            }
+        );
+    }
 </script>
 
 </html>
