@@ -337,9 +337,9 @@ body {
       }
     }
   }
-  .BuildingList {
+  .ResidentList {
     display: block;
-    .BuildingList__title {
+    .ResidentList__title {
       padding: 20px 0;
       text-align: center;
       line-height: 35px;
@@ -354,42 +354,58 @@ body {
       vertical-align: 0;
     }
     @media only screen and (max-width: 320px) {
-      .BuildingList__title {
+      .ResidentList__title {
         font-size: 28px;
       }
     }
   }
 
-  #district {
-    .district__subTitle {
+  #resident {
+    margin: 0 auto;
+    .resident__box {
+      display: inline-flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
       padding: 25px 0;
+      width: 20%;
       line-height: 30px;
       font-family: 微軟正黑體, sans-serif;
       font-style: normal;
       font-weight: bold;
       color: #444;
       background-color: transparent;
-      text-decoration: underline;
       font-variant: normal;
       font-size: 25px;
       vertical-align: 0;
-    }
-    .district__building {
-      .district__building__name {
-        margin: 10px 0;
-        line-height: 20px;
-        font-family: 微軟正黑體;
-        font-style: normal;
-        font-weight: 700;
-        color: #5d5d5d;
-        font-variant: normal;
-        font-size: 17px;
-        vertical-align: 0;
-        transition: 0.5s;
-        &:hover {
-          color: #177cc4;
-          transition: 0.5s;
+      .resident__box__character {
+        display: block;
+        text-align: center;
+        width: 100%;
+        .resident__box__character__image {
+          width: auto;
+          height: auto;
         }
+        .resident__box__character__title {
+          margin: 10px 0;
+          line-height: 20px;
+          font-family: 微軟正黑體;
+          font-style: normal;
+          font-weight: 700;
+          color: #5d5d5d;
+          font-variant: normal;
+          font-size: 17px;
+          vertical-align: 0;
+          transition: 0.5s;
+          &:hover {
+            color: #177cc4;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      .resident__box {
+        width: 50%;
       }
     }
   }

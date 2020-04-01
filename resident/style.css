@@ -454,11 +454,11 @@ body {
   transition: 0.5s;
 }
 
-.main__content .BuildingList {
+.main__content .ResidentList {
   display: block;
 }
 
-.main__content .BuildingList .BuildingList__title {
+.main__content .ResidentList .ResidentList__title {
   padding: 20px 0;
   text-align: center;
   line-height: 35px;
@@ -474,26 +474,49 @@ body {
 }
 
 @media only screen and (max-width: 320px) {
-  .main__content .BuildingList .BuildingList__title {
+  .main__content .ResidentList .ResidentList__title {
     font-size: 28px;
   }
 }
 
-.main__content #district .district__subTitle {
+.main__content #resident {
+  margin: 0 auto;
+}
+
+.main__content #resident .resident__box {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 25px 0;
+  width: 20%;
   line-height: 30px;
   font-family: 微軟正黑體, sans-serif;
   font-style: normal;
   font-weight: bold;
   color: #444;
   background-color: transparent;
-  text-decoration: underline;
   font-variant: normal;
   font-size: 25px;
   vertical-align: 0;
 }
 
-.main__content #district .district__building .district__building__name {
+.main__content #resident .resident__box .resident__box__character {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.main__content #resident .resident__box .resident__box__character .resident__box__character__image {
+  width: auto;
+  height: auto;
+}
+
+.main__content #resident .resident__box .resident__box__character .resident__box__character__title {
   margin: 10px 0;
   line-height: 20px;
   font-family: 微軟正黑體;
@@ -507,10 +530,16 @@ body {
   transition: 0.5s;
 }
 
-.main__content #district .district__building .district__building__name:hover {
+.main__content #resident .resident__box .resident__box__character .resident__box__character__title:hover {
   color: #177cc4;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media only screen and (max-width: 500px) {
+  .main__content #resident .resident__box {
+    width: 50%;
+  }
 }
 
 .data__title {
