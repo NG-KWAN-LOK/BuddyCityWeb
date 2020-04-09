@@ -212,6 +212,13 @@ body {
   }
 }
 
+.PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a:hover,
+.PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #177cc4;
+}
+
 .PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col__line,
 .PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col__line {
   width: 1px;
@@ -244,11 +251,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  z-index: 2;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 3px solid #ccc;
+  width: 100%;
+  background-color: #fff;
 }
 
 @media only screen and (min-width: 768px) {

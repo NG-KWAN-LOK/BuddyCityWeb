@@ -225,20 +225,12 @@ body {
 }
 
 .PaddingTop {
-  line-height: 60px;
+  line-height: 90px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .PaddingTop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .PaddingTop {
-    display: none;
+    line-height: 60px;
   }
 }
 
@@ -374,6 +366,13 @@ body {
   }
 }
 
+.PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a:hover,
+.PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #177cc4;
+}
+
 .PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col__line,
 .PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col__line {
   width: 1px;
@@ -406,11 +405,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  z-index: 2;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 3px solid #ccc;
+  width: 100%;
+  background-color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -521,8 +525,26 @@ body {
 
 .main {
   width: 100%;
-  max-width: 1000px;
+  max-width: calc(225px + 40px);
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 550px) {
+  .main {
+    max-width: calc((225px * 2) + 60px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    max-width: calc((225px * 2) + 60px);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    max-width: 1000px;
+  }
 }
 
 .main__nav {
@@ -627,6 +649,13 @@ body {
   font-size: 30px;
 }
 
+@media only screen and (max-width: 550px) {
+  .discover__subtitle {
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+  }
+}
+
 .discover__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -634,7 +663,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0;
+  margin: 0 -10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -646,7 +675,7 @@ body {
 
 @media only screen and (min-width: 550px) {
   .discover__content__card {
-    width: 50%;
+    width: calc(100% / 2);
   }
   .discover__content__card .discover__content__text .apadding {
     opacity: 1;
@@ -655,7 +684,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .discover__content__card {
-    width: 50%;
+    width: calc(100% / 2);
   }
   .discover__content__card .discover__content__text .apadding {
     opacity: 1;
@@ -664,7 +693,7 @@ body {
 
 @media only screen and (min-width: 1024px) {
   .discover__content__card {
-    width: 25%;
+    width: calc(100% / 4);
   }
   .discover__content__card .discover__content__text .apadding {
     opacity: 0;

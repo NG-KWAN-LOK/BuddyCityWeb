@@ -154,6 +154,10 @@ body {
             font-size: 15px;
           }
         }
+        &:hover {
+          transition: 0.5s;
+          color: #177cc4;
+        }
       }
     }
     .PhoneTop__mainnav__container__col__line {
@@ -178,8 +182,13 @@ body {
 }
 .Top {
   display: flex;
+  position: fixed;
+  z-index: 2;
   flex-wrap: nowrap;
   justify-content: space-between;
+  border-bottom: 3px solid #ccc;
+  width: 100%;
+  background-color: #fff;
   @media only screen and (min-width: 768px) {
     .Top__logo img {
       display: none;

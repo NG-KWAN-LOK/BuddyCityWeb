@@ -201,12 +201,9 @@ body {
   overflow-x: hidden;
 }
 .PaddingTop {
-  line-height: 60px;
-  @media only screen and (min-width: 768px) {
-    display: flex;
-  }
-  @media only screen and (min-width: 1024px) {
-    display: none;
+  line-height: 90px;
+  @media only screen and (max-width: 1024px) {
+    line-height: 60px;
   }
 }
 .PhoneTop {
@@ -297,6 +294,10 @@ body {
             font-size: 15px;
           }
         }
+        &:hover {
+          transition: 0.5s;
+          color: #177cc4;
+        }
       }
     }
     .PhoneTop__mainnav__container__col__line {
@@ -321,8 +322,13 @@ body {
 }
 .Top {
   display: flex;
+  position: fixed;
+  z-index: 2;
   flex-wrap: nowrap;
   justify-content: space-between;
+  border-bottom: 3px solid #ccc;
+  width: 100%;
+  background-color: #fff;
   @media only screen and (min-width: 768px) {
     .Top__logo img {
       display: none;
@@ -413,8 +419,17 @@ body {
 
 .main {
   width: 100%;
-  max-width: 1000px;
+  max-width: calc(225px + 40px);
   margin: 0 auto;
+  @media only screen and (min-width: 550px) {
+    max-width: calc((225px * 2) + 60px);
+  }
+  @media only screen and (min-width: 768px) {
+    max-width: calc((225px * 2) + 60px);
+  }
+  @media only screen and (min-width: 1024px) {
+    max-width: 1000px;
+  }
 }
 
 .main__nav {
@@ -491,12 +506,16 @@ body {
   text-decoration: none;
   font-variant: normal;
   font-size: 30px;
+  @media only screen and (max-width: 550px) {
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+  }
 }
 
 .discover__content {
   display: flex;
   justify-content: space-between;
-  margin: 0;
+  margin: 0 -10px;
   flex-wrap: wrap;
 }
 
@@ -504,19 +523,19 @@ body {
   margin-bottom: 10px;
   width: 100%;
   @media only screen and (min-width: 550px) {
-    width: 50%;
+    width: calc(100% / 2);
     .discover__content__text .apadding {
       opacity: 1;
     }
   }
   @media only screen and (min-width: 768px) {
-    width: 50%;
+    width: calc(100% / 2);
     .discover__content__text .apadding {
       opacity: 1;
     }
   }
   @media only screen and (min-width: 1024px) {
-    width: 25%;
+    width: calc(100% / 4);
     .discover__content__text .apadding {
       opacity: 0;
     }
