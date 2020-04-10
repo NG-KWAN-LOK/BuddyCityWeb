@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #fbfbfb;
 }
 
 a {
@@ -326,7 +327,6 @@ body {
   z-index: 2;
   flex-wrap: nowrap;
   justify-content: space-between;
-  border-bottom: 3px solid #ccc;
   width: 100%;
   background-color: #fff;
   @media only screen and (min-width: 768px) {
@@ -419,16 +419,21 @@ body {
 
 .main {
   width: 100%;
-  max-width: calc(225px + 40px);
   margin: 0 auto;
   @media only screen and (min-width: 550px) {
-    max-width: calc((225px * 2) + 60px);
+    max-width: calc((225px * 2) + 50px);
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
   }
   @media only screen and (min-width: 768px) {
-    max-width: calc((225px * 2) + 60px);
+    max-width: calc((225px * 2) + 50px);
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
   }
   @media only screen and (min-width: 1024px) {
     max-width: 1000px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
   }
 }
 
@@ -476,9 +481,13 @@ body {
 }
 
 .discover {
-  padding: 20px;
 }
-
+.discover__box {
+  padding: 36px 0 0 0;
+  @media only screen and (max-width: 550px) {
+    padding: 36px 30px;
+  }
+}
 .discover__title {
   display: block;
   padding: 10px 0 10px 0;
@@ -494,9 +503,10 @@ body {
 }
 .discover__subtitle {
   display: flex;
-  padding: 40px 0 40px 0;
   flex-wrap: nowrap;
   justify-content: space-between;
+  margin-bottom: 11px;
+  margin-left: 12.5px;
   line-height: 28px;
   font-family: 微軟正黑體, sans-serif;
   font-style: normal;
@@ -505,23 +515,30 @@ body {
   background-color: transparent;
   text-decoration: none;
   font-variant: normal;
-  font-size: 30px;
+  font-size: 25px;
   @media only screen and (max-width: 550px) {
     font-size: 24px;
-    padding: 20px 0 20px 0;
+    margin-left: 0px;
   }
 }
 
 .discover__content {
   display: flex;
   justify-content: space-between;
-  margin: 0 -10px;
   flex-wrap: wrap;
 }
 
 .discover__content__card {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   width: 100%;
+  @media only screen and (max-width: 550px) {
+    .discover__content__text {
+      width: 100%;
+    }
+    .discover__content__text .apadding {
+      opacity: 1;
+    }
+  }
   @media only screen and (min-width: 550px) {
     width: calc(100% / 2);
     .discover__content__text .apadding {
@@ -594,9 +611,23 @@ body {
 }
 
 .reality-project {
+  .reality-project__box {
+    width: 100%;
+    max-width: calc(225px + 40px);
+    margin: 0 auto;
+    @media only screen and (min-width: 550px) {
+      max-width: calc((225px * 2) + 60px);
+    }
+    @media only screen and (min-width: 768px) {
+      max-width: calc((225px * 2) + 60px);
+    }
+    @media only screen and (min-width: 1024px) {
+      max-width: 1000px;
+    }
+  }
   background-color: #333;
   width: 100%;
-  margin: 60px 0 0 0;
+  margin: 0;
   &__title {
     display: block;
     text-align: center;
@@ -616,7 +647,7 @@ body {
     flex-flow: wrap;
     justify-content: space-between;
     max-width: 1600px;
-    margin: 30px auto;
+    margin: 0 -10px;
     @media only screen and (min-width: 768px) {
       .reality-project__image__box__text {
         opacity: 1;
@@ -635,8 +666,8 @@ body {
       position: relative;
       margin: 20px auto;
       &__image {
-        width: 274px;
-        height: 144px;
+        width: 320px;
+        height: 168.1px;
       }
       &__text {
         opacity: 1;
