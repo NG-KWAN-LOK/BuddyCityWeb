@@ -63,20 +63,12 @@ body {
 }
 
 .PaddingTop {
-  line-height: 60px;
+  line-height: 90px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .PaddingTop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .PaddingTop {
-    display: none;
+    line-height: 60px;
   }
 }
 

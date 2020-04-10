@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #fbfbfb;
 }
 
 a {
@@ -58,12 +59,9 @@ body {
   overflow-x: hidden;
 }
 .PaddingTop {
-  line-height: 60px;
-  @media only screen and (min-width: 768px) {
-    display: flex;
-  }
-  @media only screen and (min-width: 1024px) {
-    display: none;
+  line-height: 90px;
+  @media only screen and (max-width: 1024px) {
+    line-height: 60px;
   }
 }
 .PhoneTop {
@@ -280,6 +278,22 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  background-color: #fff;
+  @media only screen and (min-width: 550px) {
+    max-width: calc((225px * 2) + 50px);
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  @media only screen and (min-width: 768px) {
+    max-width: calc((225px * 2) + 50px);
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  @media only screen and (min-width: 1024px) {
+    max-width: 1000px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
 }
 
 .main__nav {
