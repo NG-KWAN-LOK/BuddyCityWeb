@@ -18,7 +18,6 @@ Gitbub page = https://ng-kwan-lok.github.io/BuddyCityWeb/
 網頁之結構
 >>為目錄 ->為檔案
 
->>
   >>image [放圖]
   >>js [javascript]
   ->index.html [mainpage]
