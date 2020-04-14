@@ -16,7 +16,7 @@ Gitbub page = https://ng-kwan-lok.github.io/BuddyCityWeb/
 所以我們決定把這兩個網頁做一個mix版。
 
 網頁之結構
-* Top
+* ./
   * image [放圖]
   * js [javascript]
   * index.html [mainpage]
