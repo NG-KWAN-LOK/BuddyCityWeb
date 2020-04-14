@@ -6,7 +6,7 @@ Gitbub page = https://ng-kwan-lok.github.io/BuddyCityWeb/
 2. Live Sass Compiler [巢狀架構之css，增加可讀性，語法與css一樣，可以參考已有的檔案。]
   1. 使用scss時，於視窗最低部藍色bar有 Watch Sass 的按鈕，按一下 Watching 代表開啟scss compiler
 3. SCSS Formatter [自動排位]
-  1. 在Settings search ->Format On Save，打勾。表示VS code會在save時自己啟用Formatter。(VS code沒有自帶SCSS的Formatter，必須自己下載)
+  1. 在Settings search Format On Save - [x] Format On Save 表示VS code會在save時自己啟用Formatter。(VS code沒有自帶SCSS的Formatter，必須自己下載)
 
 網頁參考網站：https://osaka-info.jp/
             https://web.archive.org/web/20170901153842/http://www.osaka-info.jp/jp
