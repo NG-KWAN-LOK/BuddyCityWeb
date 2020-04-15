@@ -431,6 +431,7 @@ body {
 }
 
 .Top__area {
+  position: relative;
   width: 100%;
   margin: 0 auto;
   background-color: #fff;
@@ -458,19 +459,27 @@ body {
     border-right: 1px solid #ccc;
   }
   .Top__area .Top__logo img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: inline-block;
   }
-  .Top__area .Top__nav {
+  .Top__area .Top__nav_about {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: absolute;
+  }
+  .Top__area .Top__nav_language {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
   }
 }
 
 .Top__logo {
   margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,15 +494,10 @@ body {
   height: 90px;
 }
 
-.Top__nav_container {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.Top__nav {
+.Top__nav_about {
+  top: 25%;
+  left: -1px;
   display: none;
-  position: relative;
   z-index: 1;
   font-family: 微軟正黑體;
   font-size: 13px;
@@ -501,9 +505,28 @@ body {
   color: #5d5d5d;
 }
 
-.Top__nav ul {
-  height: 24px;
-  line-height: 24px;
+.Top__nav_about ul {
+  height: 40px;
+  line-height: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Top__nav_language {
+  top: 25%;
+  right: -1px;
+  display: none;
+  z-index: 1;
+  font-family: 微軟正黑體;
+  font-size: 13px;
+  font-weight: 700;
+  color: #5d5d5d;
+}
+
+.Top__nav_language ul {
+  height: 40px;
+  line-height: 40px;
   list-style: none;
   margin: 0;
   padding: 0;

@@ -348,6 +348,7 @@ body {
 }
 
 .Top__area {
+  position: relative;
   width: 100%;
   margin: 0 auto;
   background-color: #fff;
@@ -369,16 +370,22 @@ body {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     .Top__logo img {
-      display: flex;
+      display: inline-block;
     }
-    .Top__nav {
+    .Top__nav_about {
       display: flex;
+      position: absolute;
+    }
+    .Top__nav_language {
+      display: flex;
+      position: absolute;
     }
   }
 }
 
 .Top__logo {
   margin: 0 auto;
+  width: fit-content;
   display: flex;
   justify-content: center;
 }
@@ -389,68 +396,83 @@ body {
   height: 90px;
 }
 
-.Top__nav_container {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .Top__nav {
-  display: none;
-  position: relative;
-  z-index: 1;
-  font-family: 微軟正黑體;
-  font-size: 13px;
-  font-weight: 700;
-  color: #5d5d5d;
-  ul {
-    height: 24px;
-    line-height: 24px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  &_col {
-    float: left;
-    position: relative;
-    width: 100px;
-    text-align: center;
-    list-style: none;
-    height: 30px;
+  &_about {
+    top: 25%;
+    left: -1px;
+    display: none;
+    //position: relative;
+    z-index: 1;
     font-family: 微軟正黑體;
     font-size: 13px;
     font-weight: 700;
     color: #5d5d5d;
-    &:hover {
-      transition: 0.5s;
-      .Top__nav_subtitle {
-        display: block;
+    ul {
+      height: 40px;
+      line-height: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &_language {
+    top: 25%;
+    right: -1px;
+    display: none;
+    //position: relative;
+    z-index: 1;
+    font-family: 微軟正黑體;
+    font-size: 13px;
+    font-weight: 700;
+    color: #5d5d5d;
+    ul {
+      height: 40px;
+      line-height: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+.Top__nav_col {
+  float: left;
+  position: relative;
+  width: 100px;
+  text-align: center;
+  list-style: none;
+  height: 30px;
+  font-family: 微軟正黑體;
+  font-size: 13px;
+  font-weight: 700;
+  color: #5d5d5d;
+  &:hover {
+    transition: 0.5s;
+    .Top__nav_subtitle {
+      display: block;
 
-        border: 1px solid #ccc;
-        background-color: #ffffff;
-        box-sizing: border-box;
-        a {
-          text-decoration: none;
-          color: #5d5d5d;
+      border: 1px solid #ccc;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      a {
+        text-decoration: none;
+        color: #5d5d5d;
+        transition: 0.5s;
+        &:hover {
+          color: #177cc4;
           transition: 0.5s;
-          &:hover {
-            color: #177cc4;
-            transition: 0.5s;
-          }
         }
       }
     }
   }
-  &_title {
-    box-sizing: content-box;
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-  }
-  &_subtitle {
-    display: none;
-  }
 }
-
+.Top__nav_title {
+  box-sizing: content-box;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+.Top__nav_subtitle {
+  display: none;
+}
 .main {
   width: 100%;
   margin: 0 auto;
