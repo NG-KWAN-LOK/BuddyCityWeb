@@ -332,6 +332,7 @@ body {
   .Top__container {
     width: 1000px;
     display: flex;
+    align-items: center;
     flex-wrap: nowrap;
     margin: 0 auto;
   }
@@ -368,7 +369,7 @@ body {
   font-size: 13px;
   font-weight: 700;
   color: #5d5d5d;
-  height: 30px;
+  height: 40px;
   ul {
     height: 24px;
     line-height: 24px;
@@ -382,16 +383,17 @@ body {
     align-items: center;
     position: relative;
     text-align: center;
-    width: 120px;
+    width: 140px;
     list-style: none;
-    height: 30px;
+    height: 40px;
     background-color: #444;
     border-radius: 7px;
     a {
       color: #5d5d5d;
     }
     &:hover {
-      transition: 0.5s;
+      background-color: #177cc4;
+      transition: 0.3s;
       .Top__nav_title_under {
         display: block;
         .Top__nav_subtitle {
@@ -428,6 +430,7 @@ body {
     font-family: 微軟正黑體;
     font-size: 15px;
     font-weight: 700;
+    line-height: 40px;
     color: #fff;
     text-align: center;
     cursor: pointer;
@@ -449,8 +452,6 @@ body {
 
 .Top__nav_container__language {
   position: relative;
-  top: 25px;
-  align-self: start;
   .Top__nav {
     right: 0;
     text-align: right;
@@ -458,9 +459,7 @@ body {
 }
 
 .Top__nav_container__menu {
-  position: absolute;
-  width: 20%;
-  top: 25px;
+  position: relative;
 }
 .main {
   width: 100%;
