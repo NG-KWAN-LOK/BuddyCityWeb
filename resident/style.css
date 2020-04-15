@@ -14,8 +14,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
   background-color: #fbfbfb;
 }
@@ -79,7 +79,7 @@ body {
   display: flex;
   position: fixed;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   z-index: 2;
   width: 100%;
   border-bottom: 3px solid #ccc;
@@ -106,10 +106,10 @@ body {
   display: flex;
   position: absolute;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   right: 0;
   width: 69px;
   height: 60px;
@@ -148,7 +148,7 @@ body {
 
 .PhoneTop .PhoneTop__mainnav .break {
   -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
+      flex-basis: 100%;
   height: 0;
 }
 
@@ -156,10 +156,10 @@ body {
 .PhoneTop #PhoneTop__mainnav__container {
   display: none;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   width: 100%;
   background-color: #ccc;
@@ -173,7 +173,7 @@ body {
 .PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a,
 .PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a {
   -webkit-text-decoration-line: none;
-  text-decoration-line: none;
+          text-decoration-line: none;
   width: 100%;
   font-family: "微軟正黑體";
   color: #444;
@@ -183,48 +183,24 @@ body {
   -webkit-transition: background-color 0.5s ease, color 0.5s ease;
   transition: background-color 0.5s ease, color 0.5s ease;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.PhoneTop
-  .PhoneTop__mainnav__container
-  .PhoneTop__mainnav__container__col
-  .PhoneTop__mainnav__container__col__a
-  .PhoneTop__mainnav__container__col__a__eng,
-.PhoneTop
-  #PhoneTop__mainnav__container
-  .PhoneTop__mainnav__container__col
-  .PhoneTop__mainnav__container__col__a
-  .PhoneTop__mainnav__container__col__a__eng {
+.PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__eng,
+.PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__eng {
   font-size: 10px;
   font-weight: bold;
 }
 
-.PhoneTop
-  .PhoneTop__mainnav__container
-  .PhoneTop__mainnav__container__col
-  .PhoneTop__mainnav__container__col__a
-  .PhoneTop__mainnav__container__col__a__chi,
-.PhoneTop
-  #PhoneTop__mainnav__container
-  .PhoneTop__mainnav__container__col
-  .PhoneTop__mainnav__container__col__a
-  .PhoneTop__mainnav__container__col__a__chi {
+.PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__chi,
+.PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__chi {
   font-size: 10px;
   font-weight: bold;
 }
 
 @media only screen and (min-width: 767px) {
-  .PhoneTop
-    .PhoneTop__mainnav__container
-    .PhoneTop__mainnav__container__col
-    .PhoneTop__mainnav__container__col__a
-    .PhoneTop__mainnav__container__col__a__eng,
-  .PhoneTop
-    #PhoneTop__mainnav__container
-    .PhoneTop__mainnav__container__col
-    .PhoneTop__mainnav__container__col__a
-    .PhoneTop__mainnav__container__col__a__eng {
+  .PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__eng,
+  .PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__eng {
     font-size: 15px;
   }
 }
@@ -249,11 +225,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   width: 100%;
   height: 60px;
@@ -271,10 +247,10 @@ body {
   position: fixed;
   z-index: 2;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   background-color: #fff;
 }
@@ -305,8 +281,8 @@ body {
 .Top__logo img {
   display: none;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 300px;
   height: 90px;
 }
@@ -358,7 +334,7 @@ body {
   border: 1px solid #ccc;
   background-color: #ffffff;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .Top__nav_col:hover .Top__nav_subtitle a {
@@ -376,7 +352,7 @@ body {
 
 .Top__nav_title {
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
 }
@@ -419,11 +395,11 @@ body {
 .main__nav {
   display: none;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 768px) {
@@ -442,7 +418,7 @@ body {
 
 .main__nav-a {
   -webkit-text-decoration-line: none;
-  text-decoration-line: none;
+          text-decoration-line: none;
   width: 100%;
   line-height: 30px;
   font-family: "微軟正黑體";
@@ -454,7 +430,7 @@ body {
   -webkit-transition: background-color 0.5s ease, color 0.5s ease;
   transition: background-color 0.5s ease, color 0.5s ease;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media only screen and (min-width: 768px) {
@@ -541,10 +517,10 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 25px 0;
   width: 20%;
   line-height: 30px;
@@ -600,11 +576,11 @@ body {
   display: none;
   position: fixed;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 2;
   top: 0;
   left: 0;
@@ -654,55 +630,37 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   width: 100%;
 }
 
-.main__content
-  #residentPopUpLayer
-  .residentPopUpLayer__container
-  .residentPopUpLayer__container__data
-  .residentPopUpLayer__container__data__img {
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 20%;
 }
 
-.main__content
-  #residentPopUpLayer
-  .residentPopUpLayer__container
-  .residentPopUpLayer__container__data
-  .residentPopUpLayer__container__data__img
-  #data_face_img {
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__img #data_face_img {
   width: 100%;
   height: 100%;
 }
 
-.main__content
-  #residentPopUpLayer
-  .residentPopUpLayer__container
-  .residentPopUpLayer__container__data
-  .residentPopUpLayer__container__data__table {
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 80%;
 }
 
-.main__content
-  #residentPopUpLayer
-  .residentPopUpLayer__container
-  .residentPopUpLayer__container__data
-  .residentPopUpLayer__container__data__table
-  .data__table {
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
   line-height: 15px;
   font-family: 微軟正黑體, sans-serif;
   font-style: normal;
@@ -715,24 +673,12 @@ body {
   text-align: center;
 }
 
-.main__content
-  #residentPopUpLayer
-  .residentPopUpLayer__container
-  .residentPopUpLayer__container__data
-  .residentPopUpLayer__container__data__table
-  .data__table
-  .data__table__datainfo {
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table .data__table__datainfo {
   width: 60%;
   height: 38.38px;
 }
 
-.main__content
-  #residentPopUpLayer
-  .residentPopUpLayer__container
-  .residentPopUpLayer__container__data
-  .residentPopUpLayer__container__data__table
-  .data__table
-  #data_project {
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table #data_project {
   overflow: auto;
   max-height: 10%;
 }
@@ -751,8 +697,7 @@ body {
   opacity: 1;
 }
 
-.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:before,
-.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:after {
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:before, .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:after {
   position: absolute;
   left: 15px;
   content: " ";
@@ -763,12 +708,12 @@ body {
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:before {
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer:after {
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .data__title {
@@ -806,13 +751,13 @@ body {
   display: flex;
   padding: 40px;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer__content__links {
@@ -820,7 +765,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
@@ -837,7 +782,7 @@ body {
 
 .footer__content__box {
   -ms-flex-flow: wrap;
-  flex-flow: wrap;
+      flex-flow: wrap;
   font-family: 微軟正黑體, sans-serif;
   line-height: 25px;
   font-style: normal;
