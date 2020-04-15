@@ -367,8 +367,6 @@ body {
   }
   @media only screen and (min-width: 1024px) {
     max-width: 1000px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
     .Top__logo img {
       display: inline-block;
     }
@@ -402,35 +400,50 @@ body {
     left: -1px;
     display: none;
     //position: relative;
+    border: 1px solid #313131;
+    border-radius: 5px;
+    float: left;
     z-index: 1;
     font-family: 微軟正黑體;
     font-size: 13px;
     font-weight: 700;
-    color: #5d5d5d;
+    background-color: #313131;
     ul {
-      height: 40px;
-      line-height: 40px;
+      height: 30px;
+      line-height: 30px;
       list-style: none;
       margin: 0;
       padding: 0;
+    }
+
+    &:hover {
+      transition: 0.1s;
+      background-color: rgb(165, 51, 51);
     }
   }
   &_language {
     top: 25%;
     right: -1px;
     display: none;
+    border: 1px solid #313131;
+    border-radius: 5px;
+    float: left;
     //position: relative;
     z-index: 1;
     font-family: 微軟正黑體;
     font-size: 13px;
     font-weight: 700;
-    color: #5d5d5d;
+    background-color: #313131;
     ul {
-      height: 40px;
-      line-height: 40px;
+      height: 30px;
+      line-height: 30px;
       list-style: none;
       margin: 0;
       padding: 0;
+    }
+    &:hover {
+      transition: 0.1s;
+      background-color: rgb(165, 51, 51);
     }
   }
 }
@@ -444,7 +457,8 @@ body {
   font-family: 微軟正黑體;
   font-size: 13px;
   font-weight: 700;
-  color: #5d5d5d;
+  color: #fff;
+
   &:hover {
     transition: 0.5s;
     .Top__nav_subtitle {
@@ -538,8 +552,6 @@ body {
   font-weight: bold;
 }
 
-.discover {
-}
 .discover__box {
   padding: 36px 0 0 0;
   @media only screen and (max-width: 550px) {

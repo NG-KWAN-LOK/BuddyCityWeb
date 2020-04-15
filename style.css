@@ -455,8 +455,6 @@ body {
 @media only screen and (min-width: 1024px) {
   .Top__area {
     max-width: 1000px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
   }
   .Top__area .Top__logo img {
     display: inline-block;
@@ -498,38 +496,56 @@ body {
   top: 25%;
   left: -1px;
   display: none;
+  border: 1px solid #313131;
+  border-radius: 5px;
+  float: left;
   z-index: 1;
   font-family: 微軟正黑體;
   font-size: 13px;
   font-weight: 700;
-  color: #5d5d5d;
+  background-color: #313131;
 }
 
 .Top__nav_about ul {
-  height: 40px;
-  line-height: 40px;
+  height: 30px;
+  line-height: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.Top__nav_about:hover {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background-color: #a53333;
 }
 
 .Top__nav_language {
   top: 25%;
   right: -1px;
   display: none;
+  border: 1px solid #313131;
+  border-radius: 5px;
+  float: left;
   z-index: 1;
   font-family: 微軟正黑體;
   font-size: 13px;
   font-weight: 700;
-  color: #5d5d5d;
+  background-color: #313131;
 }
 
 .Top__nav_language ul {
-  height: 40px;
-  line-height: 40px;
+  height: 30px;
+  line-height: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.Top__nav_language:hover {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background-color: #a53333;
 }
 
 .Top__nav_col {
@@ -542,7 +558,7 @@ body {
   font-family: 微軟正黑體;
   font-size: 13px;
   font-weight: 700;
-  color: #5d5d5d;
+  color: #fff;
 }
 
 .Top__nav_col:hover {
