@@ -30,7 +30,7 @@ a {
   border: none;
   text-indent: 100%;
   z-index: 999;
-  background: #282a2b url(image/totop.png) no-repeat left top;
+  background: #282a2b url(../image/totop.png) no-repeat left top;
   background-size: contain;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -38,7 +38,7 @@ a {
 }
 
 #toTopHover {
-  background: #282a2b url(image/totop.png) no-repeat left top;
+  background: #282a2b url(../image/totop.png) no-repeat left top;
   background-size: contain;
   width: 43px;
   height: 43px;
@@ -317,7 +317,7 @@ body {
     height: 60px;
     .PhoneTop__logo__image {
       max-width: 320px;
-      max-height: 45px;
+      max-height: 40px;
       padding: 0 80px;
       height: auto;
       justify-content: center;
@@ -336,7 +336,8 @@ body {
   height: 90px;
   background-color: rgba(255, 255, 255, 0.918);
   .Top__container {
-    width: 1000px;
+    max-width: 1280px;
+    width: 90%;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -368,7 +369,7 @@ body {
 .Top__logo img {
   display: none;
   max-width: 100%;
-  max-height: 45px;
+  max-height: 40px;
   height: auto;
   justify-content: center;
   width: auto;
@@ -382,7 +383,7 @@ body {
   font-size: 13px;
   font-weight: 700;
   color: #5d5d5d;
-  height: 40px;
+  height: 38px;
   ul {
     height: 24px;
     line-height: 24px;
@@ -476,6 +477,7 @@ body {
     box-sizing: border-box;
     .ion-android-arrow-dropdown {
       line-height: inherit;
+      padding-right: 5px;
       ::before {
         content: "\f35f";
       }
@@ -495,22 +497,32 @@ body {
   position: relative;
 }
 .main {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   padding-bottom: 30px;
   background-color: #fff;
+  @media only screen and (max-width: 550px) {
+    max-width: 320px;
+    width: 90%;
+  }
   @media only screen and (min-width: 550px) {
-    max-width: calc((225px * 2) + 50px);
+    max-width: 480px;
+    width: 90%;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
   }
   @media only screen and (min-width: 768px) {
-    max-width: calc((225px * 2) + 50px);
+    max-width: 720px;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
   }
   @media only screen and (min-width: 1024px) {
-    max-width: 1000px;
+    max-width: 980px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  @media only screen and (min-width: 1280px) {
+    max-width: 1280px;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
   }
@@ -525,7 +537,7 @@ body {
     display: none;
   }
   @media only screen and (min-width: 1024px) {
-    display: flex;
+    display: none;
   }
 }
 
@@ -633,29 +645,37 @@ body {
   @media only screen and (min-width: 1024px) {
     width: calc(100% / 4);
     .discover__content__text .apadding {
+      opacity: 1;
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    width: calc(100% / 4);
+    .discover__content__text .apadding {
       opacity: 0;
     }
   }
 }
-.discover__content__text {
+.discover__content__box {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   margin: 0 auto;
-  width: 225px;
-  height: 225px;
   font-family: 微軟正黑體, sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 15px;
   vertical-align: 0;
+  margin: 0 12.5px;
+  .discover__content__text__image {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
   .atoppadding {
-    display: flow-root;
-    width: calc(100% * 0.85);
+    z-index: 1;
+    position: absolute;
     text-align: center;
     padding: 6px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -665,25 +685,25 @@ body {
   }
   .apadding {
     opacity: 1;
-    float: left;
-    margin-left: 0;
-    padding: 5px;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 6px;
+    bottom: 0px;
     background-color: rgba(255, 255, 255, 0.8);
     color: #177cc4;
     transition: opacity 0.5s ease;
-    width: 100%;
   }
   &:hover {
     .atoppadding {
+      position: absolute;
+      z-index: 1;
       color: #177cc4;
     }
     .apadding {
-      display: flex;
       opacity: 1;
-      float: left;
-      margin-left: 0;
-      padding: 5px;
-      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
       color: #177cc4;
       transition: opacity 0.5s ease;
     }
@@ -691,23 +711,35 @@ body {
 }
 
 .reality-project {
+  padding: 25px 0;
   .reality-project__box {
     width: 100%;
     margin: 0 auto;
+    @media only screen and (max-width: 550px) {
+      max-width: 320px;
+      width: 90%;
+    }
     @media only screen and (min-width: 550px) {
-      max-width: calc((225px * 2) + 60px);
+      max-width: 480px;
+      width: 90%;
     }
     @media only screen and (min-width: 768px) {
-      max-width: calc((225px * 2) + 60px);
+      max-width: 720px;
+      width: 90%;
     }
     @media only screen and (min-width: 1024px) {
-      max-width: 1000px;
+      max-width: 980px;
+      width: 90%;
+    }
+    @media only screen and (min-width: 1280px) {
+      max-width: 1280px;
+      width: 90%;
     }
   }
   background-color: #333;
   width: 100%;
   margin: 0;
-  &__title {
+  .reality-project__title {
     display: block;
     text-align: center;
     line-height: 35px;
@@ -719,9 +751,9 @@ body {
     text-decoration: none;
     font-variant: normal;
     font-size: 25px;
-    padding: 10px 0;
+    padding: 20px 0;
   }
-  &__image {
+  .reality-project__image {
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
@@ -738,12 +770,13 @@ body {
     & a {
       margin: 0 auto;
     }
-    &__box {
+    .reality-project__image__box {
       display: flex;
       position: relative;
-      margin: 20px auto;
+      object-fit: fill;
+      margin: 30px auto;
       &__image {
-        width: 308.5px;
+        position: relative;
         height: auto;
       }
       &__text {
@@ -781,6 +814,9 @@ body {
     }
   }
   @media only screen and (max-width: 550px) {
+    .reality-project__image__box {
+      width: 100%;
+    }
     .reality-project__image a {
       width: 100%;
       padding: 0 30px;
@@ -790,7 +826,36 @@ body {
       height: auto;
     }
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (min-width: 550px) {
+    .reality-project__image__box {
+      width: calc(100% / 2);
+    }
+    .reality-project__image a {
+      width: 100%;
+      padding: 0 12.5px;
+    }
+    .reality-project__image__box__image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .reality-project__image__box {
+      width: calc(100% / 2);
+    }
+    .reality-project__image a {
+      width: 100%;
+      padding: 0 12.5px;
+    }
+    .reality-project__image__box__image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .reality-project__image__box {
+      width: calc(100% / 3);
+    }
     .reality-project__image a {
       width: 100%;
       padding: 0 12.5px;
