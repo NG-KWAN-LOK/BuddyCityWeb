@@ -547,6 +547,18 @@ body {
   transition: 0.5s;
 }
 
+.Top__nav_col:hover .Top__nav_title_under .Top__nav_subtitle:hover .ion-android-arrow-dropdown:before {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.Top__nav_col:hover .Top__nav_title_under .Top__nav_subtitle .ion-android-arrow-dropdown:before {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .Top__nav .Top__nav_col__burger__icon {
   display: inline-block;
   margin-top: -2.6px;
@@ -891,7 +903,7 @@ body {
   padding: 6px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #5d5d5d;
-  margin: 10px;
+  margin: 10px 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
