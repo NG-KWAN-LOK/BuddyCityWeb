@@ -548,15 +548,17 @@ body {
 
 .Top__nav .Top__nav_col__burger__icon {
   display: inline-block;
+  margin-top: -2.6px;
+  padding-right: 0.5px;
 }
 
 .Top__nav .Top__nav_col__burger__icon .bar1,
 .Top__nav .Top__nav_col__burger__icon .bar2,
 .Top__nav .Top__nav_col__burger__icon .bar3 {
-  width: 15px;
+  width: 14px;
   height: 2px;
   background-color: #fff;
-  margin: 2px 0;
+  margin-top: 2.6px;
   border-radius: 2px;
 }
 
@@ -565,12 +567,26 @@ body {
   padding-top: 15px;
 }
 
+.Top__nav .Top__nav_title_under ::after {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #e1e1e1;
+  -webkit-transform: translateY(680%);
+          transform: translateY(680%);
+}
+
 .Top__nav .Top__nav_title {
   height: 100%;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   font-family: 微軟正黑體;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 40px;
   color: #fff;
@@ -591,6 +607,14 @@ body {
   text-align: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.Top__nav_subtitle .ion-android-arrow-dropdown {
+  line-height: inherit;
+}
+
+.Top__nav_subtitle .ion-android-arrow-dropdown ::before {
+  content: "\f35f";
 }
 
 .Top__nav_container__language {
