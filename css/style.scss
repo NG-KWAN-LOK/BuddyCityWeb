@@ -626,31 +626,31 @@ body {
     .discover__content__text {
       width: 100%;
     }
-    .discover__content__text .apadding {
+    .discover__content__box .apadding {
       opacity: 1;
     }
   }
   @media only screen and (min-width: 550px) {
     width: calc(100% / 2);
-    .discover__content__text .apadding {
+    .discover__content__box .apadding {
       opacity: 1;
     }
   }
   @media only screen and (min-width: 768px) {
     width: calc(100% / 2);
-    .discover__content__text .apadding {
+    .discover__content__box .apadding {
       opacity: 1;
     }
   }
   @media only screen and (min-width: 1024px) {
     width: calc(100% / 4);
-    .discover__content__text .apadding {
-      opacity: 1;
+    .discover__content__box .apadding {
+      opacity: 0;
     }
   }
   @media only screen and (min-width: 1280px) {
     width: calc(100% / 4);
-    .discover__content__text .apadding {
+    .discover__content__box .apadding {
       opacity: 0;
     }
   }
@@ -780,7 +780,7 @@ body {
         height: auto;
       }
       &__text {
-        opacity: 1;
+        opacity: 0;
         position: absolute;
         z-index: 1;
         bottom: 0px;
