@@ -91,6 +91,7 @@ body {
       cursor: pointer;
       margin: 10px 15px;
     }
+
     .bar1,
     .bar2,
     .bar3 {
@@ -480,8 +481,8 @@ body {
 
         .residentPopUpLayer__container__data__img {
           position: fixed; /*固定位置定位*/
-          top: 40%; /*距離上方的位置*/
-          left: 20%; /*距離左方的位置*/
+          top: 30%; /*距離上方的位置*/
+          left: 25%; /*距離左方的位置*/
           display: block;
           width: 20%;
           #data_face_img {
@@ -492,6 +493,9 @@ body {
 
         .residentPopUpLayer__container__data__table {
           display: block;
+          position: relative;
+          padding: 90px;
+          left: 10%;
           width: 50%;
           .data__table {
             line-height: 40px;
@@ -500,11 +504,12 @@ body {
             font-weight: bold;
             color: #2c2a2a;
             font-variant: normal;
-            font-size: 15px;
+            font-size: 20px;
             width: 100%;
             text-align: center;
             .data__table__datatitle {
             }
+
             .data__table__datainfo {
               width: 60%;
               height: 38.38px;
@@ -513,6 +518,28 @@ body {
               overflow: auto;
               max-height: 10%;
             }
+          }
+          @media only screen and (max-width: 1280px) {
+            .data__table {
+              font-size: 15px;
+            }
+          }
+          @media only screen and (max-width: 500px) {
+            .data__table {
+              font-size: 12px;
+            }
+          }
+          @media only screen and (max-width: 400px) {
+            .data__table {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+      @media only screen and (max-width: 1919px) {
+        .residentPopUpLayer__container__data {
+          .residentPopUpLayer__container__data__table {
+            padding: 0px;
           }
         }
       }
@@ -531,12 +558,15 @@ body {
           }
           .residentPopUpLayer__container__data__table {
             display: block;
+            position: static;
+            left: 0%;
             flex: 3 1 20%;
             order: 2;
             line-height: 20px;
           }
         }
       }
+
       .residentPopUpLayer_closeLayer {
         position: absolute;
         cursor: pointer;

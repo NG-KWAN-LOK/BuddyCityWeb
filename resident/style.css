@@ -640,9 +640,9 @@ body {
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__img {
   position: fixed;
   /*固定位置定位*/
-  top: 40%;
+  top: 30%;
   /*距離上方的位置*/
-  left: 20%;
+  left: 25%;
   /*距離左方的位置*/
   display: block;
   width: 20%;
@@ -655,6 +655,9 @@ body {
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
   display: block;
+  position: relative;
+  padding: 90px;
+  left: 10%;
   width: 50%;
 }
 
@@ -665,7 +668,7 @@ body {
   font-weight: bold;
   color: #2c2a2a;
   font-variant: normal;
-  font-size: 15px;
+  font-size: 20px;
   width: 100%;
   text-align: center;
 }
@@ -678,6 +681,30 @@ body {
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table #data_project {
   overflow: auto;
   max-height: 10%;
+}
+
+@media only screen and (max-width: 1280px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 1919px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
+    padding: 0px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -705,6 +732,8 @@ body {
   }
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
     display: block;
+    position: static;
+    left: 0%;
     -webkit-box-flex: 3;
         -ms-flex: 3 1 20%;
             flex: 3 1 20%;
