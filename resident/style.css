@@ -446,7 +446,7 @@ body {
 }
 
 .main__nav-a:hover {
-  color: #177cc4;
+  color: #33729e;
   background-color: #f7f7f7;
 }
 
@@ -591,15 +591,14 @@ body {
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container {
   display: block;
-  width: 80%;
-  height: 80%;
-  background-color: #fff;
+  width: 75%;
+  height: 75%;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container #data_username_title {
-  padding: 20px 0;
+  padding: 30px 0;
   text-align: center;
-  line-height: 35px;
   font-family: 微軟正黑體, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -609,23 +608,21 @@ body {
   font-variant: normal;
   font-size: 30px;
   vertical-align: 0;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 320px) {
   .main__content #residentPopUpLayer .residentPopUpLayer__container #data_username_title {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-items: center;
-  height: 88%;
+  height: 65%;
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data {
+  padding: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -637,38 +634,35 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   width: 20%;
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__img #data_face_img {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 60%;
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 80%;
+  display: block;
+  width: 50%;
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
-  line-height: 15px;
+  line-height: 40px;
   font-family: 微軟正黑體, sans-serif;
   font-style: normal;
   font-weight: 700;
-  color: #5d5d5d;
+  color: #2c2a2a;
   font-variant: normal;
   font-size: 15px;
-  vertical-align: inherit;
   width: 100%;
   text-align: center;
 }
@@ -681,6 +675,36 @@ body {
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table #data_project {
   overflow: auto;
   max-height: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__img {
+    display: block;
+    -webkit-box-flex: 3;
+        -ms-flex: 3 1 20%;
+            flex: 3 1 20%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 40%;
+  }
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
+    display: block;
+    -webkit-box-flex: 3;
+        -ms-flex: 3 1 20%;
+            flex: 3 1 20%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    line-height: 20px;
+  }
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer_closeLayer {

@@ -330,7 +330,7 @@ body {
 }
 
 .main__nav-a:hover {
-  color: #177cc4;
+  color: #33729e;
   background-color: #f7f7f7;
 }
 
@@ -445,13 +445,12 @@ body {
     background-color: #000000d8;
     .residentPopUpLayer__container {
       display: block;
-      width: 80%;
-      height: 80%;
-      background-color: #fff;
+      width: 75%;
+      height: 75%;
+      background-color: rgba(255, 255, 255, 0.85);
       #data_username_title {
-        padding: 20px 0;
+        padding: 30px 0;
         text-align: center;
-        line-height: 35px;
         font-family: 微軟正黑體, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -461,44 +460,45 @@ body {
         font-variant: normal;
         font-size: 30px;
         vertical-align: 0;
+        text-transform: uppercase;
       }
       @media only screen and (max-width: 320px) {
         #data_username_title {
-          font-size: 28px;
+          font-size: 20px;
         }
       }
       .residentPopUpLayer__container__main {
-        display: flex;
-        justify-items: center;
-        height: 88%;
+        height: 65%;
       }
       .residentPopUpLayer__container__data {
+        padding: 40px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
-        text-align: center;
+        justify-content: center;
         width: 100%;
+
         .residentPopUpLayer__container__data__img {
-          display: flex;
+          display: block;
           width: 20%;
           #data_face_img {
-            width: 100%;
-            height: 100%;
+            width: 60%;
+            height: 60%;
           }
         }
+
         .residentPopUpLayer__container__data__table {
-          display: flex;
-          width: 80%;
+          display: block;
+          width: 50%;
           .data__table {
-            line-height: 15px;
+            line-height: 40px;
             font-family: 微軟正黑體, sans-serif;
             font-style: normal;
             font-weight: 700;
-            color: #5d5d5d;
+            color: #2c2a2a;
             font-variant: normal;
             font-size: 15px;
-            vertical-align: inherit;
             width: 100%;
             text-align: center;
             .data__table__datatitle {
@@ -511,6 +511,24 @@ body {
               overflow: auto;
               max-height: 10%;
             }
+          }
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .residentPopUpLayer__container__data {
+          padding: 0;
+          flex-direction: column;
+          .residentPopUpLayer__container__data__img {
+            display: block;
+            flex: 3 1 20%;
+            order: 1;
+            width: 40%;
+          }
+          .residentPopUpLayer__container__data__table {
+            display: block;
+            flex: 3 1 20%;
+            order: 2;
+            line-height: 20px;
           }
         }
       }
