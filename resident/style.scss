@@ -514,11 +514,12 @@ body {
           }
         }
       }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 768px) {
         .residentPopUpLayer__container__data {
           padding: 0;
           flex-direction: column;
           .residentPopUpLayer__container__data__img {
+            margin-left: 65px;
             display: block;
             flex: 3 1 20%;
             order: 1;

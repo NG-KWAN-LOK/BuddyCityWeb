@@ -677,7 +677,7 @@ body {
   max-height: 10%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data {
     padding: 0;
     -webkit-box-orient: vertical;
@@ -686,6 +686,7 @@ body {
             flex-direction: column;
   }
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__img {
+    margin-left: 65px;
     display: block;
     -webkit-box-flex: 3;
         -ms-flex: 3 1 20%;
