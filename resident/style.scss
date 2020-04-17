@@ -450,7 +450,7 @@ body {
       overflow-y: scroll;
       background-color: rgba(255, 255, 255, 0.85);
       #data_username_title {
-        padding-top: 30px 0;
+        padding-top: 30px;
         text-align: center;
         font-family: 微軟正黑體, sans-serif;
         font-style: normal;
@@ -497,6 +497,7 @@ body {
             line-height: 40px;
             font-family: 微軟正黑體, sans-serif;
             font-style: normal;
+            font-weight: bold;
             color: #2c2a2a;
             font-variant: normal;
             font-size: 15px;
