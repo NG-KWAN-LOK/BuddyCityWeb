@@ -447,9 +447,10 @@ body {
       display: block;
       width: 75%;
       height: 75%;
+      overflow-y: scroll;
       background-color: rgba(255, 255, 255, 0.85);
       #data_username_title {
-        padding: 30px 0;
+        padding-top: 30px 0;
         text-align: center;
         font-family: 微軟正黑體, sans-serif;
         font-style: normal;
@@ -468,18 +469,19 @@ body {
         }
       }
       .residentPopUpLayer__container__main {
-        height: 65%;
+        height: 86.5%;
       }
       .residentPopUpLayer__container__data {
-        padding: 40px;
+        padding: 60px;
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        width: 100%;
 
         .residentPopUpLayer__container__data__img {
+          position: fixed; /*固定位置定位*/
+          top: 40%; /*距離上方的位置*/
+          left: 20%; /*距離左方的位置*/
           display: block;
           width: 20%;
           #data_face_img {
@@ -495,7 +497,6 @@ body {
             line-height: 40px;
             font-family: 微軟正黑體, sans-serif;
             font-style: normal;
-            font-weight: 700;
             color: #2c2a2a;
             font-variant: normal;
             font-size: 15px;
@@ -519,7 +520,9 @@ body {
           padding: 0;
           flex-direction: column;
           .residentPopUpLayer__container__data__img {
-            margin-left: 65px;
+            position: relative;
+            top: 40%; /*距離上方的位置*/
+            left: 10%; /*距離左方的位置*/
             display: block;
             flex: 3 1 20%;
             order: 1;
