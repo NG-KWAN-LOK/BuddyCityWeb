@@ -496,6 +496,10 @@ body {
   vertical-align: 0;
 }
 
+.main__content #district .district__building {
+  cursor: pointer;
+}
+
 .main__content #district .district__building .district__building__name {
   margin: 10px 0;
   line-height: 20px;

@@ -169,6 +169,10 @@
             PhoneTop__mainnav__container.style.display = "flex";
         }
     }
+    function closeLayer(x) {
+        x.classList.toggle("change");
+        residentPopUpLayer.style.display = "none";
+    }
 </script>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -201,12 +205,16 @@
             res.forEach((districtSh, buildingIndex) => {
                 let districtInfo = districtSh.child("0").val();
                 console.log(districtInfo.district_chi);
-                var districtString = `<div class="district__subTitle">${districtInfo.district_chi}</div>`;
+                var districtString =
+                    `<div class="district__subTitle">${districtInfo.district_chi}</div>`;
                 $('#data_district_name').html(districtInfo.district_chi);
                 districtSh.forEach((citySH, buildingIndex) => {
                     let cityInfo = citySH.val();
                     console.log(cityInfo.name_chi);
-                    districtString += `<a target="_blank" href="building.html?districtId=${districtSh.key}&buildingId=${citySH.key}" class="district__building"><div class="district__building__name">${cityInfo.name_chi}</div></a>`;
+                    districtString +=
+                        `<div target="_blank" class="district__building" id="districtId=${districtSh.key}&buildingId=${citySH.key}" onClick="chooseBuilding('${districtSh.key}', ${citySH.key})">` +
+                        `<div class="district__building__name">${cityInfo.name_chi}</div>
+                        </a>`;
                 })
                 $('#district').append(districtString);
             })
@@ -215,6 +223,10 @@
             console.log(rej);
         }
     );
+    function chooseBuilding(districtId, buildingId) {
+        console.log(districtId + " " + buildingId);
+    }
+
 </script>
 
 </html>
