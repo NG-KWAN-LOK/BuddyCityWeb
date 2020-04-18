@@ -123,6 +123,65 @@
                 <div class="BuildingList__title">城市建築物名冊一覽表</div>
                 <div id="district">
                 </div>
+                <div id="buildingPopUpLayer">
+                    <div class="buildingPopUpLayer__container">
+                        <div class="buildingPopUpLayer_closeLayer" onclick="closeLayer(this)"></div>
+                        <div id="data_building_title" class="data__title"></div>
+                        <div class="buildingPopUpLayer__container__main">
+                            <div class="data">
+                                <table class="data__table">
+                                    <tr>
+                                        <td class="data__table__datatitle">
+                                            建築物名稱
+                                        </td>
+                                        <td id="data_buildingName" class="data__table__datainfo">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="data__table__datatitle">
+                                            區域
+                                        </td>
+                                        <td id="data_district" class="data__table__datainfo">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="data__table__datatitle">
+                                            地址
+                                        </td>
+                                        <td class="data__table__datainfo" id="data_adress">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="data__table__datatitle">
+                                            用途
+                                        </td>
+                                        <td class="data__table__datainfo" id="data_Utilization">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="data__table__datatitle">
+                                            是否有內裝？
+                                        </td>
+                                        <td class="data__table__datainfo" id="data_inside">
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--map-->
+                            <div id="address_map" class="address__map">
+                                <div class="address__map__title">MAP</div>
+                                <iframe id="data_address_map" class="address__map__iframe" width="100%"
+                                    height="440px"></iframe>
+                                ><a class="address__map__link" id="data_address_link" target="blank">網上地圖</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -171,7 +230,7 @@
     }
     function closeLayer(x) {
         x.classList.toggle("change");
-        residentPopUpLayer.style.display = "none";
+        buildingPopUpLayer.style.display = "none";
     }
 </script>
 
@@ -205,18 +264,19 @@
             res.forEach((districtSh, buildingIndex) => {
                 let districtInfo = districtSh.child("0").val();
                 console.log(districtInfo.district_chi);
-                var districtString =
+                var districtTitleString =
                     `<div class="district__subTitle">${districtInfo.district_chi}</div>`;
                 $('#data_district_name').html(districtInfo.district_chi);
+                $('#district').append(districtTitleString);
                 districtSh.forEach((citySH, buildingIndex) => {
                     let cityInfo = citySH.val();
                     console.log(cityInfo.name_chi);
-                    districtString +=
+                    var districtString =
                         `<div target="_blank" class="district__building" id="districtId=${districtSh.key}&buildingId=${citySH.key}" onClick="chooseBuilding('${districtSh.key}', ${citySH.key})">` +
                         `<div class="district__building__name">${cityInfo.name_chi}</div>
                         </a>`;
+                    $('#district').append(districtString);
                 })
-                $('#district').append(districtString);
             })
         },
         rej => {
@@ -224,7 +284,30 @@
         }
     );
     function chooseBuilding(districtId, buildingId) {
+        buildingPopUpLayer.style.display = "flex";
         console.log(districtId + " " + buildingId);
+        var userDataRef = firebase.database().ref("/building/" + districtId + "/" + buildingId);
+        userDataRef.once("value").then(
+            res => {
+                let buildingInfo = res.val();
+                $('.data_link_eng').attr("href", `../eng/building_list/building.html?districtId=${districtId}&buildingId=${buildingId}`);
+                $('.data_link_jp').attr("href", `../jp/building_list/building.html?districtId=${districtId}&buildingId=${buildingId}`);
+                $('#data_building_ahref').html(buildingInfo.name_chi);
+                $('#data_building_title').html(buildingInfo.name_chi);
+                $('#data_buildingName').html(buildingInfo.name_chi);
+                $('#data_district').html(buildingInfo.district_chi);
+                $('#data_adress').html(buildingInfo.adress_chi);
+                $('#data_Utilization').html(buildingInfo.用途);
+                $('#data_inside').html(buildingInfo.內裝);
+                $('#data_address_map').attr("src", `https://buddycityinfo.sgngs.com/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingInfo.x}&y=${buildingInfo.y}&z=${buildingInfo.z}`);
+                $('#data_address_link').attr("href", `https://buddycityinfo.sgngs.com/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingInfo.x}&y=${buildingInfo.y}&z=${buildingInfo.z}`);
+                document.title = `${buildingInfo.name_chi}` + `丨城市建築物名冊丨Buddy-INFO Buddy市指南)`;
+            },
+            rej => {
+
+            }
+        );
+
     }
 
 </script>
