@@ -244,6 +244,30 @@ body {
   }
 }
 
+@media only screen and (min-width: 550px) {
+  .main__content #resident .resident__box {
+    width: calc(100% / 2);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main__content #resident .resident__box {
+    width: calc(100% / 3);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main__content #resident .resident__box {
+    width: calc(100% / 4);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .main__content #resident .resident__box {
+    width: calc(100% / 5);
+  }
+}
+
 .main__content #residentPopUpLayer {
   display: none;
   position: fixed;
