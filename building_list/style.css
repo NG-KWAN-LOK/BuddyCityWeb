@@ -65,8 +65,9 @@ body {
 
 .main__banner {
   background-image: url("image/001.jpg");
+  background-size: 100vw;
   width: 100%;
-  height: 550px;
+  height: calc(100vw / 3.49);
   background-position: center;
 }
 
@@ -206,13 +207,10 @@ body {
 .main__content #district__image .district__image__box .district__image__box__shadow {
   opacity: 0;
   position: absolute;
-  width: calc(100% - 25px);
-  height: 100%;
-  top: 0;
-  left: 12.5px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(35%, rgba(0, 0, 0, 0.37)), to(rgba(0, 0, 0, 0.8)));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 35%, rgba(0, 0, 0, 0.8) 100%);
   border-radius: 5px;
+  top: 0px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -223,7 +221,6 @@ body {
   display: flex;
   position: absolute;
   z-index: 1;
-  left: 20px;
   bottom: 30px;
   color: #fff;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
@@ -238,7 +235,6 @@ body {
 .main__content #district__image .district__image__box:hover .district__image__box__text {
   position: absolute;
   z-index: 1;
-  bottom: 0px;
   left: 20px;
   bottom: 30px;
   text-align: center;
@@ -264,6 +260,12 @@ body {
 }
 
 @media only screen and (max-width: 550px) {
+  .main__content #district__image .district__image__box:hover .district__image__box__text {
+    left: 50px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
   .main__content .district__image__box {
     width: 100%;
   }
@@ -277,7 +279,8 @@ body {
   }
   .main__content .district__image__box__shadow {
     width: calc(100% - 60px);
-    left: 60px;
+    height: 100%;
+    left: 30px;
   }
   .main__content .district__image__box__text {
     left: 50px;
@@ -296,19 +299,13 @@ body {
     width: 100%;
     height: auto;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  .main__content .district__image__box {
-    width: calc(100% / 2);
+  .main__content .district__image__box__shadow {
+    width: calc(100% - 25px);
+    height: 100%;
+    left: 12.5px;
   }
-  .main__content .district__image__box__content {
-    width: 100%;
-    padding: 0 12.5px;
-  }
-  .main__content .district__image__box__image {
-    width: 100%;
-    height: auto;
+  .main__content .district__image__box__text {
+    left: 20px;
   }
 }
 
@@ -323,6 +320,14 @@ body {
   .main__content .district__image__box__image {
     width: 100%;
     height: auto;
+  }
+  .main__content .district__image__box__shadow {
+    width: calc(100% - 25px);
+    height: 100%;
+    left: 12.5px;
+  }
+  .main__content .district__image__box__text {
+    left: 20px;
   }
 }
 
