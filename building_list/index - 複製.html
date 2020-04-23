@@ -145,7 +145,7 @@
             </div>
             <div class="BuildingList">
                 <div class="BuildingList__title">城市建築物名冊一覽表</div>
-                <div id="district__image">
+                <div id="district">
                 </div>
                 <div id="buildingPopUpLayer">
                     <div class="buildingPopUpLayer__container">
@@ -287,24 +287,26 @@
         res => {
             res.forEach((districtSh, buildingIndex) => {
                 let districtInfo = districtSh.child("0").val();
-                console.log(districtInfo.district_chi, districtSh.key);
+                console.log(districtInfo.district_chi);
                 var districtTitleString =
-                    `<div class="district__image__box" onClick="chooseDistrict('${districtSh.key}')">
-                        <img class="district__image__box__image" src="image/${districtSh.key}.png">
-                        <div class="district__image__box__text">${districtInfo.district_chi}</div>
-                    </div>`;
-                $('#district__image').append(districtTitleString);
+                    `<div class="district__subTitle">${districtInfo.district_chi}</div>`;
+                $('#data_district_name').html(districtInfo.district_chi);
+                $('#district').append(districtTitleString);
+                districtSh.forEach((citySH, buildingIndex) => {
+                    let cityInfo = citySH.val();
+                    console.log(cityInfo.name_chi);
+                    var districtString =
+                        `<div target="_blank" class="district__building" id="districtId=${districtSh.key}&buildingId=${citySH.key}" onClick="chooseBuilding('${districtSh.key}', ${citySH.key})">` +
+                        `<div class="district__building__name">${cityInfo.name_chi}</div>
+                        </a>`;
+                    $('#district').append(districtString);
+                })
             })
         },
         rej => {
             console.log(rej);
         }
     );
-
-    function chooseDistrict(districtId) {
-        console.log(districtId);
-    }
-
     function chooseBuilding(districtId, buildingId) {
         buildingPopUpLayer.style.display = "flex";
         console.log(districtId + " " + buildingId);
