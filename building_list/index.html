@@ -135,6 +135,8 @@
             </div>
         </div>
     </div>
+    <div class="main__banner">
+    </div>
     <!--main-->
     <div class="main">
         <!-- main_content -->
@@ -150,9 +152,13 @@
                 <div id="buildingPopUpLayer">
                     <div class="buildingPopUpLayer__container">
                         <div class="buildingPopUpLayer_closeLayer" onclick="closeLayer(this)"></div>
-                        <div id="data_building_title" class="data__title"></div>
                         <div class="buildingPopUpLayer__container__main">
-                            <div class="data">
+                            <div id="districtData">
+                                <div id="data_district_title" class="data__title"></div>
+                                <div id="building" class="districtData"></div>
+                            </div>
+                            <div id="buildingData">
+                                <div id="data_building_title" class="data__title"></div>
                                 <table class="data__table">
                                     <tr>
                                         <td class="data__table__datatitle">
@@ -195,13 +201,13 @@
                                         </td>
                                     </tr>
                                 </table>
-                            </div>
-                            <!--map-->
-                            <div id="address_map" class="address__map">
-                                <div class="address__map__title">MAP</div>
-                                <iframe id="data_address_map" class="address__map__iframe" width="100%"
-                                    height="440px"></iframe>
-                                ><a class="address__map__link" id="data_address_link" target="blank">網上地圖</a>
+                                <!--map-->
+                                <div id="address_map" class="address__map">
+                                    <div class="address__map__title">MAP</div>
+                                    <iframe id="data_address_map" class="address__map__iframe" width="100%"
+                                        height="440px"></iframe>
+                                    ><a class="address__map__link" id="data_address_link" target="blank">網上地圖</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -289,9 +295,13 @@
                 let districtInfo = districtSh.child("0").val();
                 console.log(districtInfo.district_chi, districtSh.key);
                 var districtTitleString =
-                    `<div class="district__image__box" onClick="chooseDistrict('${districtSh.key}')">
-                        <img class="district__image__box__image" src="image/${districtSh.key}.png">
+                    `<div class="district__image__box" background-image: url("paper.gif"); onClick="chooseDistrict('${districtSh.key}')">
+                    <div class="district__image__box__content">
+                        <img class="district__image__box__image" src="image/${districtSh.key}.jpg">
+                        <div class="district__image__box__toptext">查看更多</div>
+                        <div class="district__image__box__shadow"></div>
                         <div class="district__image__box__text">${districtInfo.district_chi}</div>
+                    </div>
                     </div>`;
                 $('#district__image').append(districtTitleString);
             })
@@ -302,11 +312,37 @@
     );
 
     function chooseDistrict(districtId) {
+        buildingPopUpLayer.style.display = "flex";
+        buildingData.style.display = "none";
+        districtData.style.display = "block";
         console.log(districtId);
+        $("#building").empty();
+        var userDataRef = firebase.database().ref("/building/" + districtId);
+        userDataRef.once("value").then(
+            res => {
+                res.forEach((buildingIndex, index) => {
+                    let cityInfo = buildingIndex.val();
+                    console.log(cityInfo.name_chi);
+                    var buildingString =
+                        `<div target="_blank" class="district__building" id="districtId=${districtId}&buildingId=${buildingIndex}" onClick="chooseBuilding('${districtId}', ${buildingIndex.key})">` +
+                        `<div class="district__building__name">${cityInfo.name_chi}</div>
+                        </a>`;
+                    $('#building').append(buildingString);
+                });
+                let districtInfo = res.child("0").val();
+                $('#data_district_title').html(districtInfo.district_chi);
+                console.log(districtInfo.district_chi);
+            },
+            rej => {
+                console.log(rej);
+            }
+        );
     }
 
     function chooseBuilding(districtId, buildingId) {
         buildingPopUpLayer.style.display = "flex";
+        buildingData.style.display = "block";
+        districtData.style.display = "none";
         console.log(districtId + " " + buildingId);
         var userDataRef = firebase.database().ref("/building/" + districtId + "/" + buildingId);
         userDataRef.once("value").then(
@@ -326,7 +362,7 @@
                 document.title = `${buildingInfo.name_chi}` + `丨城市建築物名冊丨Buddy-INFO Buddy市指南)`;
             },
             rej => {
-
+                console.log(rej);
             }
         );
 

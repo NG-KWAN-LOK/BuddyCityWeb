@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #fbfbfb;
 }
 
 a {
@@ -57,20 +58,19 @@ a {
 body {
   overflow-x: hidden;
 }
-
+.main__banner {
+  background-image: url("image/001.jpg");
+  width: 100%;
+  height: 550px;
+  background-position: center;
+}
 .main {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   @media only screen and (max-width: 550px) {
-    max-width: 320px;
-    width: 90%;
   }
   @media only screen and (min-width: 550px) {
-    max-width: 480px;
-    width: 90%;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
   }
   @media only screen and (min-width: 768px) {
     max-width: 720px;
@@ -135,17 +135,7 @@ body {
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
-    @media only screen and (min-width: 768px) {
-      .district__image__box__text {
-        opacity: 1;
-      }
-    }
-    @media only screen and (min-width: 1024px) {
-      .district__image__box__text {
-        opacity: 0;
-      }
-    }
-    & a {
+    .district__image__box__content {
       margin: 0 auto;
     }
     .district__image__box {
@@ -157,36 +147,71 @@ body {
       &__image {
         position: relative;
         height: auto;
+        border-radius: 5px;
+        height: 100%;
       }
-      &__text {
+      .district__image__box__toptext {
         opacity: 0;
         position: absolute;
         z-index: 1;
-        bottom: 0px;
+        text-align: center;
+        padding: 6px;
         background-color: rgba(255, 255, 255, 0.8);
-        color: #177cc4;
+        font-size: 15px;
+        color: #5d5d5d;
+        border-radius: 5px;
+        left: 25px;
+        top: -10px;
+        margin: 10px 0;
+        transition: 0.5s;
+      }
+      .district__image__box__shadow {
+        opacity: 0;
+        position: absolute;
+        width: calc(100% - 25px);
+        height: 100%;
+        top: 0;
+        left: 12.5px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 35%, rgba(0, 0, 0, 0.8) 100%);
+        border-radius: 5px;
+        transition: 0.5s;
+      }
+      &__text {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        left: 20px;
+        bottom: 30px;
+        color: #fff;
+        text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
         text-align: center;
         font-family: 微軟正黑體, sans-serif;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 700;
         line-height: 15px;
         padding: 5px;
-        transition: 0.5s;
       }
       &:hover {
         .district__image__box__text {
-          opacity: 1;
           position: absolute;
           z-index: 1;
           bottom: 0px;
-          background-color: rgba(255, 255, 255, 0.8);
-          color: #177cc4;
+          left: 20px;
+          bottom: 30px;
           text-align: center;
           font-family: 微軟正黑體, sans-serif;
-          font-size: 15px;
           font-weight: 700;
           line-height: 15px;
           padding: 5px;
+          transition: 0.5s;
+        }
+        .district__image__box__toptext {
+          opacity: 1;
+          top: 10px;
+          transition: 0.5s;
+        }
+        .district__image__box__shadow {
+          opacity: 1;
           transition: 0.5s;
         }
       }
@@ -196,7 +221,7 @@ body {
     .district__image__box {
       width: 100%;
     }
-    .district__image a {
+    .district__image__box__content {
       width: 100%;
       padding: 0 30px;
     }
@@ -204,12 +229,19 @@ body {
       width: 100%;
       height: auto;
     }
+    .district__image__box__shadow {
+      width: calc(100% - 60px);
+      left: 60px;
+    }
+    .district__image__box__text {
+      left: 50px;
+    }
   }
   @media only screen and (min-width: 550px) {
     .district__image__box {
       width: calc(100% / 2);
     }
-    .district__image a {
+    .district__image__box__content {
       width: 100%;
       padding: 0 12.5px;
     }
@@ -222,7 +254,7 @@ body {
     .district__image__box {
       width: calc(100% / 2);
     }
-    .district__image a {
+    .district__image__box__content {
       width: 100%;
       padding: 0 12.5px;
     }
@@ -235,7 +267,7 @@ body {
     .district__image__box {
       width: calc(100% / 3);
     }
-    .district__image a {
+    .district__image__box__content {
       width: 100%;
       padding: 0 12.5px;
     }
@@ -327,9 +359,33 @@ body {
   font-size: 30px;
   vertical-align: 0;
 }
-.data {
+.districtData {
   display: flex;
-  padding: 60px;
+  flex-flow: wrap;
+  justify-content: space-between;
+  .district__building {
+    flex: 0 50%;
+    .district__building__name {
+      display: block;
+      z-index: 1;
+      color: #5d5d5d;
+      font-family: 微軟正黑體, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 22px;
+      padding: 17px;
+      cursor: pointer;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    .district__building {
+      flex: 0 100%;
+    }
+  }
+}
+
+#buildingData {
+  display: block;
   .data__table {
     line-height: 15px;
     font-family: 微軟正黑體, sans-serif;

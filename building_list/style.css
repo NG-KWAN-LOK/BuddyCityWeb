@@ -17,6 +17,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  background-color: #fbfbfb;
 }
 
 a {
@@ -62,26 +63,17 @@ body {
   overflow-x: hidden;
 }
 
+.main__banner {
+  background-image: url("image/001.jpg");
+  width: 100%;
+  height: 550px;
+  background-position: center;
+}
+
 .main {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-}
-
-@media only screen and (max-width: 550px) {
-  .main {
-    max-width: 320px;
-    width: 90%;
-  }
-}
-
-@media only screen and (min-width: 550px) {
-  .main {
-    max-width: 480px;
-    width: 90%;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -172,19 +164,7 @@ body {
           justify-content: space-between;
 }
 
-@media only screen and (min-width: 768px) {
-  .main__content #district__image .district__image__box__text {
-    opacity: 1;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .main__content #district__image .district__image__box__text {
-    opacity: 0;
-  }
-}
-
-.main__content #district__image a {
+.main__content #district__image .district__image__box__content {
   margin: 0 auto;
 }
 
@@ -202,18 +182,67 @@ body {
 .main__content #district__image .district__image__box__image {
   position: relative;
   height: auto;
+  border-radius: 5px;
+  height: 100%;
 }
 
-.main__content #district__image .district__image__box__text {
+.main__content #district__image .district__image__box .district__image__box__toptext {
   opacity: 0;
   position: absolute;
   z-index: 1;
-  bottom: 0px;
+  text-align: center;
+  padding: 6px;
   background-color: rgba(255, 255, 255, 0.8);
-  color: #177cc4;
+  font-size: 15px;
+  color: #5d5d5d;
+  border-radius: 5px;
+  left: 25px;
+  top: -10px;
+  margin: 10px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main__content #district__image .district__image__box .district__image__box__shadow {
+  opacity: 0;
+  position: absolute;
+  width: calc(100% - 25px);
+  height: 100%;
+  top: 0;
+  left: 12.5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(35%, rgba(0, 0, 0, 0.37)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 35%, rgba(0, 0, 0, 0.8) 100%);
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main__content #district__image .district__image__box__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  bottom: 30px;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
   text-align: center;
   font-family: 微軟正黑體, sans-serif;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 15px;
+  padding: 5px;
+}
+
+.main__content #district__image .district__image__box:hover .district__image__box__text {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  left: 20px;
+  bottom: 30px;
+  text-align: center;
+  font-family: 微軟正黑體, sans-serif;
   font-weight: 700;
   line-height: 15px;
   padding: 5px;
@@ -221,19 +250,15 @@ body {
   transition: 0.5s;
 }
 
-.main__content #district__image .district__image__box:hover .district__image__box__text {
+.main__content #district__image .district__image__box:hover .district__image__box__toptext {
   opacity: 1;
-  position: absolute;
-  z-index: 1;
-  bottom: 0px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #177cc4;
-  text-align: center;
-  font-family: 微軟正黑體, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 15px;
-  padding: 5px;
+  top: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main__content #district__image .district__image__box:hover .district__image__box__shadow {
+  opacity: 1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -242,7 +267,7 @@ body {
   .main__content .district__image__box {
     width: 100%;
   }
-  .main__content .district__image a {
+  .main__content .district__image__box__content {
     width: 100%;
     padding: 0 30px;
   }
@@ -250,13 +275,20 @@ body {
     width: 100%;
     height: auto;
   }
+  .main__content .district__image__box__shadow {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .main__content .district__image__box__text {
+    left: 50px;
+  }
 }
 
 @media only screen and (min-width: 550px) {
   .main__content .district__image__box {
     width: calc(100% / 2);
   }
-  .main__content .district__image a {
+  .main__content .district__image__box__content {
     width: 100%;
     padding: 0 12.5px;
   }
@@ -270,7 +302,7 @@ body {
   .main__content .district__image__box {
     width: calc(100% / 2);
   }
-  .main__content .district__image a {
+  .main__content .district__image__box__content {
     width: 100%;
     padding: 0 12.5px;
   }
@@ -284,7 +316,7 @@ body {
   .main__content .district__image__box {
     width: calc(100% / 3);
   }
-  .main__content .district__image a {
+  .main__content .district__image__box__content {
     width: 100%;
     padding: 0 12.5px;
   }
@@ -392,14 +424,48 @@ body {
   vertical-align: 0;
 }
 
-.data {
+.districtData {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 60px;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.data .data__table {
+.districtData .district__building {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 50%;
+          flex: 0 50%;
+}
+
+.districtData .district__building .district__building__name {
+  display: block;
+  z-index: 1;
+  color: #5d5d5d;
+  font-family: 微軟正黑體, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  padding: 17px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+  .districtData .district__building {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 100%;
+            flex: 0 100%;
+  }
+}
+
+#buildingData {
+  display: block;
+}
+
+#buildingData .data__table {
   line-height: 15px;
   font-family: 微軟正黑體, sans-serif;
   font-style: normal;
@@ -412,7 +478,7 @@ body {
   text-align: center;
 }
 
-.data .data__table .data__table__datainfo {
+#buildingData .data__table .data__table__datainfo {
   width: 60%;
   height: 38.38px;
 }

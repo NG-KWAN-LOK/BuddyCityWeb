@@ -294,7 +294,7 @@
                 $('#district').append(districtTitleString);
                 districtSh.forEach((citySH, buildingIndex) => {
                     let cityInfo = citySH.val();
-                    console.log(cityInfo.name_chi);
+                    console.log(citySH, cityInfo.name_chi);
                     var districtString =
                         `<div target="_blank" class="district__building" id="districtId=${districtSh.key}&buildingId=${citySH.key}" onClick="chooseBuilding('${districtSh.key}', ${citySH.key})">` +
                         `<div class="district__building__name">${cityInfo.name_chi}</div>

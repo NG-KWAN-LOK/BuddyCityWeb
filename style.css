@@ -619,6 +619,7 @@ body {
 .reality-project .reality-project__image .reality-project__image__box__image {
   position: relative;
   height: auto;
+  height: 100%;
 }
 
 .reality-project .reality-project__image .reality-project__image__box__text {
