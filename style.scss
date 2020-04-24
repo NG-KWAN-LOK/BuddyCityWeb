@@ -460,8 +460,9 @@ body {
   }
   .reality-project__image {
     display: flex;
-    flex-flow: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
     @media only screen and (min-width: 768px) {
       .reality-project__image__box__text {
         opacity: 1;
@@ -479,7 +480,8 @@ body {
       display: flex;
       position: relative;
       object-fit: fill;
-      margin: 30px auto;
+      width: calc(100% / 3);
+      margin: 12.5px 0px;
       &__image {
         position: relative;
         height: auto;

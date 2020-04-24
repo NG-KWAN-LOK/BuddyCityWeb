@@ -583,11 +583,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 @media only screen and (min-width: 768px) {
@@ -613,7 +617,8 @@ body {
   position: relative;
   -o-object-fit: fill;
      object-fit: fill;
-  margin: 30px auto;
+  width: calc(100% / 3);
+  margin: 12.5px 0px;
 }
 
 .reality-project .reality-project__image .reality-project__image__box__image {
