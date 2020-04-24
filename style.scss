@@ -202,32 +202,28 @@ body {
   overflow-x: hidden;
 }
 .main {
-  width: 90%;
   margin: 0 auto;
   padding-bottom: 30px;
   background-color: #fff;
   @media only screen and (max-width: 550px) {
-    max-width: 320px;
-    width: 90%;
   }
   @media only screen and (min-width: 550px) {
-    max-width: 480px;
-    width: 90%;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
   }
   @media only screen and (min-width: 768px) {
     max-width: 720px;
+    width: 90%;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
   }
   @media only screen and (min-width: 1024px) {
     max-width: 980px;
+    width: 90%;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
   }
   @media only screen and (min-width: 1280px) {
     max-width: 1280px;
+    width: 90%;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
   }
@@ -284,46 +280,67 @@ body {
     padding: 36px 30px;
   }
 }
-.discover__title {
-  display: block;
-  padding: 10px 0 10px 0;
-  text-align: center;
-  line-height: 35px;
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  color: #444;
-  text-decoration: none;
-  font-variant: normal;
-  font-size: 30px;
-}
-.discover__subtitle {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin-bottom: 11px;
-  margin-left: 12.5px;
-  line-height: 28px;
-  font-family: 微軟正黑體, sans-serif;
-  font-style: normal;
-  font-weight: 1000;
-  color: #5d5d5d;
-  background-color: transparent;
-  text-decoration: none;
-  font-variant: normal;
-  font-size: 28px;
+.discover__title__content {
+  margin: 0 12.5px;
+  .discover__title {
+    display: block;
+    padding: 36px 0;
+    text-align: center;
+    line-height: 35px;
+    font-family: 微軟正黑體, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: #444;
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 2em;
+  }
+  .discover__text {
+    display: block;
+    font-family: 微軟正黑體, sans-serif;
+    text-align: center;
+    line-height: 35px;
+    font-style: normal;
+    font-weight: 550;
+    color: #444;
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 16px;
+  }
   @media only screen and (max-width: 550px) {
-    font-size: 23px;
-    margin-left: 0px;
+    .discover__title,
+    .discover__text {
+      text-align: left;
+    }
+    padding: 0 30px;
   }
 }
-
-.discover__divider{
-  background-color: #5d5d5d;
-  width: auto;
-  height: 1px;
-  margin: 30px 12.5px 30px 12.5px;
-
+.discover__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .discover__subtitle {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 40px;
+    line-height: 28px;
+    padding: 15px;
+    font-family: 微軟正黑體, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #5d5d5d;
+    border-bottom: 1px solid #e1e1e1;
+    background-color: transparent;
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 28px;
+    @media only screen and (max-width: 550px) {
+      font-size: 23px;
+      margin-left: 0px;
+    }
+  }
 }
 
 .discover__content {
