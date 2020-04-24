@@ -90,7 +90,7 @@ body {
   }
 }
 .main__content {
-  padding: 20px;
+  padding: 20px 20px 30px 20px;
   .NowIn {
     display: block;
     padding: 40px 0px 0px 0px;
@@ -112,8 +112,8 @@ body {
   }
   .BuildingList {
     display: block;
-    .discover__title__content {
-      .discover__title {
+    .BuildingList__title__content {
+      .BuildingList__title {
         display: block;
         padding: 16px 0 36px 0;
         text-align: center;
@@ -126,7 +126,7 @@ body {
         font-variant: normal;
         font-size: 2em;
       }
-      .discover__text {
+      .BuildingList__text {
         display: block;
         font-family: 微軟正黑體, sans-serif;
         text-align: center;
@@ -140,8 +140,8 @@ body {
         padding-bottom: 36px;
       }
       @media only screen and (max-width: 550px) {
-        .discover__title,
-        .discover__text {
+        .BuildingList__title,
+        .BuildingList__text {
           text-align: left;
         }
         padding: 0 30px;
@@ -394,10 +394,16 @@ body {
       color: #5d5d5d;
       font-family: 微軟正黑體, sans-serif;
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 550;
       line-height: 22px;
       padding: 17px;
       cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        color: #177cc4;
+        background-color: #f7f7f7d0;
+        transition: 0.5s;
+      }
     }
   }
   @media only screen and (max-width: 550px) {
@@ -413,7 +419,7 @@ body {
     line-height: 15px;
     font-family: 微軟正黑體, sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 550;
     color: #5d5d5d;
     font-variant: normal;
     font-size: 17px;

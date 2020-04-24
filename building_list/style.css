@@ -102,7 +102,7 @@ body {
 }
 
 .main__content {
-  padding: 20px;
+  padding: 20px 20px 30px 20px;
 }
 
 .main__content .NowIn {
@@ -133,7 +133,7 @@ body {
   display: block;
 }
 
-.main__content .BuildingList .discover__title__content .discover__title {
+.main__content .BuildingList .BuildingList__title__content .BuildingList__title {
   display: block;
   padding: 16px 0 36px 0;
   text-align: center;
@@ -147,7 +147,7 @@ body {
   font-size: 2em;
 }
 
-.main__content .BuildingList .discover__title__content .discover__text {
+.main__content .BuildingList .BuildingList__title__content .BuildingList__text {
   display: block;
   font-family: 微軟正黑體, sans-serif;
   text-align: center;
@@ -162,11 +162,11 @@ body {
 }
 
 @media only screen and (max-width: 550px) {
-  .main__content .BuildingList .discover__title__content {
+  .main__content .BuildingList .BuildingList__title__content {
     padding: 0 30px;
   }
-  .main__content .BuildingList .discover__title__content .discover__title,
-  .main__content .BuildingList .discover__title__content .discover__text {
+  .main__content .BuildingList .BuildingList__title__content .BuildingList__title,
+  .main__content .BuildingList .BuildingList__title__content .BuildingList__text {
     text-align: left;
   }
 }
@@ -469,10 +469,19 @@ body {
   color: #5d5d5d;
   font-family: 微軟正黑體, sans-serif;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 550;
   line-height: 22px;
   padding: 17px;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.districtData .district__building .district__building__name:hover {
+  color: #177cc4;
+  background-color: #f7f7f7d0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media only screen and (max-width: 550px) {
@@ -491,7 +500,7 @@ body {
   line-height: 15px;
   font-family: 微軟正黑體, sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 550;
   color: #5d5d5d;
   font-variant: normal;
   font-size: 17px;

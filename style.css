@@ -474,6 +474,10 @@ body {
   }
 }
 
+.discover__content__card__pointer {
+  cursor: pointer;
+}
+
 .discover__content__box {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -58,7 +58,13 @@ a {
 body {
   overflow-x: hidden;
 }
-
+.main__banner {
+  background-image: url("image/001.jpg");
+  background-size: 100vw;
+  width: 100%;
+  height: calc(100vw / 3.49);
+  background-position: center;
+}
 .main {
   width: 100%;
   max-width: 1000px;
@@ -103,7 +109,7 @@ body {
   */
 }
 .main__content {
-  padding: 20px;
+  padding: 20px 20px 30px;
   .NowIn {
     display: block;
     padding: 40px 0px 0px 0px;
@@ -125,23 +131,39 @@ body {
   }
   .ResidentList {
     display: block;
-    .ResidentList__title {
-      padding: 20px 0;
-      text-align: center;
-      line-height: 35px;
-      font-family: 微軟正黑體, sans-serif;
-      font-style: normal;
-      font-weight: bold;
-      color: #444;
-      background-color: transparent;
-      text-decoration: none;
-      font-variant: normal;
-      font-size: 30px;
-      vertical-align: 0;
-    }
-    @media only screen and (max-width: 320px) {
+    .ResidentList__title__content {
       .ResidentList__title {
-        font-size: 28px;
+        display: block;
+        padding: 16px 0 36px 0;
+        text-align: center;
+        line-height: 55px;
+        font-family: 微軟正黑體, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        color: #444;
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 2em;
+      }
+      .ResidentList__text {
+        display: block;
+        font-family: 微軟正黑體, sans-serif;
+        text-align: center;
+        line-height: 35px;
+        font-style: normal;
+        font-weight: 550;
+        color: #444;
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 16px;
+        padding-bottom: 36px;
+      }
+      @media only screen and (max-width: 550px) {
+        .ResidentList__title,
+        .ResidentList__text {
+          text-align: left;
+        }
+        padding: 0 30px;
       }
     }
   }
@@ -284,7 +306,7 @@ body {
             line-height: 40px;
             font-family: 微軟正黑體, sans-serif;
             font-style: normal;
-            font-weight: bold;
+            font-weight: 550;
             color: #2c2a2a;
             font-variant: normal;
             font-size: 20px;
