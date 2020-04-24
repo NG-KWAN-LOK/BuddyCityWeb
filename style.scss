@@ -393,9 +393,9 @@ body {
   position: relative;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   margin: 0 auto;
   font-family: 微軟正黑體, sans-serif;
+  border-radius: 5px;
   font-size: 16px;
   font-weight: 700;
   line-height: 15px;
@@ -405,40 +405,83 @@ body {
     position: relative;
     width: 100%;
     height: auto;
+    border-radius: 5px;
+  }
+  .district__image__box__shadow {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 35%, rgba(0, 0, 0, 0.8) 100%);
+    border-radius: 5px;
+    top: 0px;
+    transition: 0.5s;
   }
   .atoppadding {
-    z-index: 1;
     position: absolute;
-    text-align: center;
-    padding: 6px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #5d5d5d;
-    margin: 10px 0;
+    display: flex;
+    bottom: 30px;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
+    font-family: 微軟正黑體, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    margin: 0 12.5px;
+    padding: 5px;
     transition: 0.5s;
   }
   .apadding {
-    opacity: 1;
     position: absolute;
     opacity: 0;
     z-index: 1;
-    width: 100%;
-    padding: 6px;
-    bottom: 0px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #177cc4;
-    transition: opacity 0.5s ease;
+    bottom: -5px;
+    margin: 0 12.5px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
+    font-family: 微軟正黑體, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    padding-left: 3px;
+    color: #fff;
+    transition: 0.5s;
   }
   &:hover {
     .atoppadding {
       position: absolute;
+      display: flex;
       z-index: 1;
-      color: #177cc4;
+      transform: translateY(-300%);
+      transition: 0.5s;
     }
     .apadding {
       opacity: 1;
       position: absolute;
-      color: #177cc4;
-      transition: opacity 0.5s ease;
+      bottom: 20px;
+      transition: 0.5s;
+    }
+    .district__image__box__shadow {
+      opacity: 1;
+      transition: 0.5s;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .atoppadding {
+      position: absolute;
+      display: flex;
+      z-index: 1;
+      transform: translateY(-300%);
+      transition: 0.5s;
+    }
+    .apadding {
+      opacity: 1;
+      position: absolute;
+      bottom: 20px;
+      transition: 0.5s;
+    }
+    .district__image__box__shadow {
+      opacity: 1;
+      transition: 0.5s;
     }
   }
 }

@@ -232,7 +232,7 @@ body {
   transition: 0.5s;
 }
 
-.main__content #district__image .district__image__box__text {
+.main__content #district__image .district__image__box .district__image__box__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
