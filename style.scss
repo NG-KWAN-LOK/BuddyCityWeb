@@ -472,11 +472,13 @@ body {
     justify-content: start;
     @media only screen and (min-width: 768px) {
       .reality-project__image__box__text {
+        width: calc(100% / 2);
         opacity: 1;
       }
     }
     @media only screen and (min-width: 1024px) {
       .reality-project__image__box__text {
+        width: calc(100% / 3);
         opacity: 0;
       }
     }
@@ -487,7 +489,6 @@ body {
       display: flex;
       position: relative;
       object-fit: fill;
-      width: calc(100% / 3);
       margin: 12.5px 0px;
       &__image {
         position: relative;
