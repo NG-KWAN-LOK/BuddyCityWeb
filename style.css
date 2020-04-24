@@ -363,9 +363,9 @@ body {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 11px;
   margin-left: 12.5px;
   line-height: 28px;
@@ -376,7 +376,7 @@ body {
   background-color: transparent;
   text-decoration: none;
   font-variant: normal;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 @media only screen and (max-width: 550px) {
@@ -384,6 +384,13 @@ body {
     font-size: 23px;
     margin-left: 0px;
   }
+}
+
+.discover__divider {
+  background-color: #5d5d5d;
+  width: auto;
+  height: 1px;
+  margin: 30px 12.5px 30px 12.5px;
 }
 
 .discover__content {
@@ -575,7 +582,7 @@ body {
   background-color: transparent;
   text-decoration: none;
   font-variant: normal;
-  font-size: 25px;
+  font-size: 28px;
   padding: 20px 0;
 }
 
