@@ -630,7 +630,6 @@ body {
 
 @media only screen and (min-width: 1024px) {
   .reality-project .reality-project__image .reality-project__image__box__text {
-    width: calc(100% / 3);
     opacity: 0;
   }
 }
