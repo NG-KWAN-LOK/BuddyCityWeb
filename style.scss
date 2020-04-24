@@ -300,7 +300,7 @@ body {
 .discover__subtitle {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 11px;
   margin-left: 12.5px;
   line-height: 28px;
@@ -311,7 +311,7 @@ body {
   background-color: transparent;
   text-decoration: none;
   font-variant: normal;
-  font-size: 24px;
+  font-size: 28px;
   @media only screen and (max-width: 550px) {
     font-size: 23px;
     margin-left: 0px;
@@ -455,7 +455,7 @@ body {
     background-color: transparent;
     text-decoration: none;
     font-variant: normal;
-    font-size: 25px;
+    font-size: 28px;
     padding: 20px 0;
   }
   .reality-project__image {
