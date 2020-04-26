@@ -589,7 +589,8 @@ body {
           opacity: 1;
           position: absolute;
           z-index: 1;
-          bottom: 0px;
+          left: 20px;
+          bottom: 30px;
           // background-color: rgba(255, 255, 255, 0.8);
           // color: #177cc4;
           color: #fff;
@@ -601,8 +602,6 @@ body {
           line-height: 15px;
           padding: 5px;
           transition: 0.5s;
-          left: 20px;
-          bottom: 30px;
         }
         .reality-project__image__box__shadow {
           opacity: 1;
