@@ -283,6 +283,7 @@ body {
           padding: 90px;
           left: 10%;
           width: 50%;
+
           .data__table {
             line-height: 40px;
             font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
@@ -292,7 +293,8 @@ body {
             font-variant: normal;
             font-size: 20px;
             width: 100%;
-            text-align: center;
+            text-align: left;
+            vertical-align: top;
             .data__table__datatitle {
               border-right: 1px solid #b4b4b4;
             }
@@ -350,6 +352,7 @@ body {
             flex: 3 1 20%;
             order: 2;
             line-height: 20px;
+            width: 80%;
           }
         }
       }

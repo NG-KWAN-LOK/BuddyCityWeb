@@ -351,7 +351,8 @@ body {
   font-variant: normal;
   font-size: 20px;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  vertical-align: top;
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table .data__table__datatitle {
@@ -426,6 +427,7 @@ body {
         -ms-flex-order: 2;
             order: 2;
     line-height: 20px;
+    width: 80%;
   }
 }
 
