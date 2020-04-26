@@ -545,6 +545,9 @@ body {
       margin: 0 auto;
     }
     .reality-project__image__box__shadow {
+      @media only screen and (max-width: 550px) {
+        margin: 0 30px;
+      }
       opacity: 0;
       width: fill;
       height: 100%;

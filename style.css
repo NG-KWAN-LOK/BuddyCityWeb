@@ -703,6 +703,12 @@ body {
   transition: 0.5s;
 }
 
+@media only screen and (max-width: 550px) {
+  .reality-project .reality-project__image .reality-project__image__box__shadow {
+    margin: 0 30px;
+  }
+}
+
 .reality-project .reality-project__image .reality-project__image__box {
   display: -webkit-box;
   display: -ms-flexbox;
