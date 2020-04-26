@@ -36,8 +36,14 @@
 
 ## 目錄之結構 ##
 * ./
-  * image [放圖]
-  * js [javascript]
+  * image [放main page圖]
+  * js [放javascript]
+  * top&footer_css [放top和footer的css]
+    * fonts[為文件夾,裡面是ionicons的圖的檔案]
+    * top&fotter_style.css[top&fotter_style之css，是由scss自動生成的檔案，不可修改]
+    * top&fotter_style.scss [top&fotter_style之scss，此為有巢狀架構之css，增加可讀性]
+    * top&fotter_style.css [top&fotter_style之css，是由scss自動生成的檔案，不可修改]
+    * top&fotter_style.css.map [top&fotter_style之scss自動生成的檔案，不可修改]
   * **index.html [mainpage]**
   * style.scss [mainpage之scss，此為有巢狀架構之css，增加可讀性]
   * style.css [mainpage之css，是由scss自動生成的檔案，不可修改]
@@ -45,17 +51,17 @@
 
   * building_list [building_list page]
     * **index.html [building_list mainpage]**
-    * **building.html [subpage]**
     * style.scss [building_list之scss，此為有巢狀架構之css，增加可讀性]
     * style.css [building_list之css，是由scss自動生成的檔案，不可修改]
     * style.css.map [building_list之scss自動生成的檔案，不可修改]
+    * image[放building list page圖]
 
   * resident [resident page]
     * **index.html [resident mainpage]**
-    * **building.html [subpage]**
     * style.scss [resident之scss，此為有巢狀架構之css，增加可讀性]
     * style.css [resident之css，是由scss自動生成的檔案，不可修改]
     * style.css.map [resident之scss自動生成的檔案，不可修改]
+    * image[放resident page圖]
     
   * ***map.html [線上地圖，聯到互聯網]***
   
