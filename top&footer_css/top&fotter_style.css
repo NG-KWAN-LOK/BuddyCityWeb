@@ -430,9 +430,9 @@
   display: -ms-flexbox;
   display: flex;
   padding: 40px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -452,6 +452,7 @@
 .footer__content__weblogo {
   max-width: 100%;
   height: auto;
+  margin-bottom: 40px;
 }
 
 .footer__content__weblogo__image {
