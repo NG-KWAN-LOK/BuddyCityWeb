@@ -27,12 +27,12 @@
 ## 網頁之結構 ##
 * mainpage 主頁
   * building_list [城市建築物名冊一覽表]
-    * building [城市建築物的資料]
+    * 以popup 形式顯示每個城市建築物名的資料
   * resident
     * 以popup 形式顯示每個玩家的資料
    * *online_map [網上地圖，連到互聯網]*
-   * *bcctb-about-us [Buddy市觀光局 About Us，連到互聯網]*
-   * *tnc [服務條款及使用細則，連到互聯網]*
+   * *bcctb-about-us [Buddy市觀光局 About Us未完成]*
+   * *tnc [服務條款及使用細則，未完成]*
 
 ## 目錄之結構 ##
 * ./
