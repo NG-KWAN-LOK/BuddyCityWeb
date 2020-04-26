@@ -111,7 +111,7 @@
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
   width: 100%;
-  font-family: "微軟正黑體";
+  font-family: "Noto Sans TC", "微軟正黑體";
   color: #444;
   font-size: 13px;
   border-left: 1px solid #ccc;
@@ -263,7 +263,7 @@
   display: none;
   position: relative;
   z-index: 1;
-  font-family: 微軟正黑體;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: #5d5d5d;
@@ -372,9 +372,9 @@
   height: 100%;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  font-family: 微軟正黑體;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 40px;
   color: #fff;
   text-align: center;
@@ -383,9 +383,9 @@
 
 .Top__nav_subtitle {
   width: 250px;
-  font-family: 微軟正黑體;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 16px;
-  font-weight: 540;
+  font-weight: 300;
   line-height: 45px;
   padding-left: 20px;
   color: #fff;
@@ -463,9 +463,10 @@
 .footer__content__box {
   -ms-flex-flow: wrap;
       flex-flow: wrap;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   line-height: 25px;
   font-style: normal;
+  font-weight: 300;
   color: #444;
   font-size: 15px;
   margin-left: 20px;

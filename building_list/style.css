@@ -112,7 +112,7 @@ body {
 
 .main__content .NowIn .NowIn__content {
   line-height: 15px;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 700;
   color: #5d5d5d;
@@ -138,9 +138,9 @@ body {
   padding: 16px 0 36px 0;
   text-align: center;
   line-height: 55px;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   color: #444;
   text-decoration: none;
   font-variant: normal;
@@ -149,11 +149,11 @@ body {
 
 .main__content .BuildingList .BuildingList__title__content .BuildingList__text {
   display: block;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   text-align: center;
   line-height: 35px;
   font-style: normal;
-  font-weight: 550;
+  font-weight: 400;
   color: #444;
   text-decoration: none;
   font-variant: normal;
@@ -242,7 +242,7 @@ body {
   color: #fff;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
   text-align: center;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 15px;
@@ -255,7 +255,7 @@ body {
   left: 20px;
   bottom: 30px;
   text-align: center;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-weight: 700;
   line-height: 15px;
   padding: 5px;
@@ -376,7 +376,7 @@ body {
 .main__content #buildingPopUpLayer .buildingPopUpLayer__container #data_username_title {
   padding-top: 30px;
   text-align: center;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: bold;
   color: #444;
@@ -435,9 +435,9 @@ body {
   padding: 20px 0;
   text-align: center;
   line-height: 35px;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   color: #444;
   background-color: transparent;
   text-decoration: none;
@@ -467,9 +467,9 @@ body {
   display: block;
   z-index: 1;
   color: #5d5d5d;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 20px;
-  font-weight: 550;
+  font-weight: 400;
   line-height: 22px;
   padding: 17px;
   cursor: pointer;
@@ -498,9 +498,9 @@ body {
 
 #buildingData .data__table {
   line-height: 15px;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
-  font-weight: 550;
+  font-weight: 400;
   color: #5d5d5d;
   font-variant: normal;
   font-size: 17px;
@@ -531,7 +531,7 @@ body {
   padding: 20px 0;
   text-align: center;
   line-height: 35px;
-  font-family: sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: bold;
   color: #444;
@@ -545,7 +545,7 @@ body {
 .address__map .address__map__link {
   text-align: center;
   line-height: 15px;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 700;
   color: #5d5d5d;
@@ -605,7 +605,7 @@ body {
 .footer__content__box {
   -ms-flex-flow: wrap;
       flex-flow: wrap;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   line-height: 25px;
   font-style: normal;
   color: #444;

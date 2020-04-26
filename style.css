@@ -285,7 +285,7 @@ body {
           text-decoration-line: none;
   width: 100%;
   line-height: 30px;
-  font-family: "微軟正黑體";
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-weight: 700;
   color: #444;
   font-size: 13px;
@@ -338,9 +338,9 @@ body {
   padding: 36px 0;
   text-align: center;
   line-height: 35px;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   color: #444;
   text-decoration: none;
   font-variant: normal;
@@ -349,11 +349,11 @@ body {
 
 .discover__title__content .discover__text {
   display: block;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   text-align: center;
   line-height: 35px;
   font-style: normal;
-  font-weight: 550;
+  font-weight: 400;
   color: #444;
   text-decoration: none;
   font-variant: normal;
@@ -395,7 +395,7 @@ body {
   margin-bottom: 40px;
   line-height: 28px;
   padding: 15px;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
   color: #5d5d5d;
@@ -491,7 +491,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 700;
@@ -528,7 +528,7 @@ body {
   bottom: 30px;
   color: #fff;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 25px;
@@ -545,9 +545,9 @@ body {
   bottom: -5px;
   margin: 0 12.5px;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 20px;
   padding-left: 3px;
   color: #fff;
@@ -742,7 +742,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   color: #177cc4;
   text-align: center;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 15px;
   font-weight: 700;
   line-height: 15px;
@@ -759,7 +759,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   color: #177cc4;
   text-align: center;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 15px;
   font-weight: 700;
   line-height: 15px;

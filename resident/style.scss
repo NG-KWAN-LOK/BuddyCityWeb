@@ -110,25 +110,6 @@ body {
 }
 .main__content {
   padding: 20px 20px 30px;
-  .NowIn {
-    display: block;
-    padding: 40px 0px 0px 0px;
-    .NowIn__content {
-      line-height: 15px;
-      font-family: 微軟正黑體, sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      color: #5d5d5d;
-      font-variant: normal;
-      font-size: 15px;
-      text-decoration: underline;
-      transition: 0.5s;
-      &:hover {
-        color: #177cc4;
-        transition: 0.5s;
-      }
-    }
-  }
   .ResidentList {
     display: block;
     .ResidentList__title__content {
@@ -137,9 +118,9 @@ body {
         padding: 16px 0 36px 0;
         text-align: center;
         line-height: 55px;
-        font-family: 微軟正黑體, sans-serif;
+        font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: 500;
         color: #444;
         text-decoration: none;
         font-variant: normal;
@@ -147,11 +128,11 @@ body {
       }
       .ResidentList__text {
         display: block;
-        font-family: 微軟正黑體, sans-serif;
+        font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
         text-align: center;
         line-height: 35px;
         font-style: normal;
-        font-weight: 550;
+        font-weight: 400;
         color: #444;
         text-decoration: none;
         font-variant: normal;
@@ -177,7 +158,7 @@ body {
       padding: 25px 0;
       width: 20%;
       line-height: 30px;
-      font-family: 微軟正黑體, sans-serif;
+      font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
       font-style: normal;
       font-weight: bold;
       color: #5d5d5d;
@@ -198,9 +179,9 @@ body {
         .resident__box__character__title {
           margin: 10px 0;
           line-height: 20px;
-          font-family: 微軟正黑體;
+          font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
           font-style: normal;
-          font-weight: 700;
+          font-weight: 600;
           font-variant: normal;
           font-size: 17px;
           vertical-align: 0;
@@ -258,9 +239,9 @@ body {
       #data_username_title {
         padding-top: 30px;
         text-align: center;
-        font-family: 微軟正黑體, sans-serif;
+        font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: 500;
         color: #444;
         background-color: transparent;
         text-decoration: none;
@@ -304,15 +285,16 @@ body {
           width: 50%;
           .data__table {
             line-height: 40px;
-            font-family: 微軟正黑體, sans-serif;
+            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
             font-style: normal;
-            font-weight: 550;
+            font-weight: 400;
             color: #2c2a2a;
             font-variant: normal;
             font-size: 20px;
             width: 100%;
             text-align: center;
             .data__table__datatitle {
+              border-right: 1px solid #b4b4b4;
             }
 
             .data__table__datainfo {
@@ -406,9 +388,9 @@ body {
   padding: 20px 0;
   text-align: center;
   line-height: 35px;
-  font-family: 微軟正黑體, sans-serif;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   color: #444;
   background-color: transparent;
   text-decoration: none;
@@ -450,7 +432,7 @@ body {
     }
     &__box {
       flex-flow: wrap;
-      font-family: 微軟正黑體, sans-serif;
+      font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
       line-height: 25px;
       font-style: normal;
       color: #444;
