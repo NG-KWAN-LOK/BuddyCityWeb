@@ -26,13 +26,30 @@
 
 ## 網頁之結構 ##
 * mainpage 主頁
-  * building_list [城市建築物名冊一覽表]
-    * 以popup 形式顯示每個城市建築物名的資料
-  * resident
-    * 以popup 形式顯示每個玩家的資料
-   * *online_map [網上地圖，連到互聯網]*
-   * *bcctb-about-us [Buddy市觀光局 About Us未完成]*
-   * *tnc [服務條款及使用細則，未完成]*
+  * Top nav
+    * Menu
+      * *online_map [網上地圖，連到互聯網]*
+      * 城市建築物名冊一覽表
+        * 以popup 形式顯示每個城市建築物名的資料
+      * 居民名冊
+        * 以popup 形式顯示每個玩家的資料
+      * Buddy市觀光局 [未完成]
+        * Buddy市觀光局的介紹
+    * Language
+      * 正體中文
+      * 英文 [未完成]
+      * 日本文 [未完成]
+  * main
+    * Discovery Buddy市的基本資料
+    * Reality Project 風景畫廊
+  * footer
+    * BUDDY CITY旅遊局紹介[未完成]
+      * Buddy市觀光局的介紹
+  * 服務條款 [未完成]
+    * 服務條款及使用細則
+  * Dynmap
+    * 網頁地圖核心引擎
+     
 
 ## 目錄之結構 ##
 * ./
