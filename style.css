@@ -719,11 +719,12 @@ body {
   z-index: 1;
   bottom: 0px;
   color: #fff;
-  text-align: center;
+  margin-left: 12.5px;
+  text-align: left;
   font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 15px;
   font-weight: 700;
-  line-height: 15px;
+  line-height: 20px;
   padding: 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -736,12 +737,6 @@ body {
   bottom: 30px;
   color: #fff;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
-  text-align: center;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 15px;
-  padding: 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
