@@ -14,7 +14,6 @@
         城市建築物名冊丨Buddy-INFO Buddy市指南
     </title>
     <link rel="icon" href="../image/spawn.png">
-    <!--メインビジュアルのスライド-->
 </head>
 
 <body>
@@ -253,20 +252,8 @@
 <script type="text/javascript" src="../js/totop.min.js"></script>
 <!--ゆっくり上げる-->
 <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
-<script>
-    function menu_burger(x) {
-        x.classList.toggle("change");
-        if (PhoneTop__mainnav__container.style.display === "flex") {
-            PhoneTop__mainnav__container.style.display = "none";
-        } else {
-            PhoneTop__mainnav__container.style.display = "flex";
-        }
-    }
-    function closeLayer(x) {
-        x.classList.toggle("change");
-        buildingPopUpLayer.style.display = "none";
-    }
-</script>
+<!--ビジュアルのバーガーメニュー-->
+<script type="text/javascript" src="../js/menu_burger.js"></script>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
@@ -274,104 +261,8 @@
 
 <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
-<script>
-
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyD8rlfI1ia02uVCyn4HigEgKnqSVppm96c",
-        authDomain: "buddy-city-6644d.firebaseapp.com",
-        databaseURL: "https://buddy-city-6644d.firebaseio.com",
-        projectId: "buddy-city-6644d",
-        storageBucket: "buddy-city-6644d.appspot.com",
-        messagingSenderId: "602566457456",
-        appId: "1:602566457456:web:b7339ee8dc4121e7771cb5",
-        measurementId: "G-21NGJNE2VH"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    //Get Data
-    //Get Data
-    var userDataRef = firebase.database().ref("building");
-    userDataRef.once("value").then(
-        res => {
-            res.forEach((districtSh, buildingIndex) => {
-                let districtInfo = districtSh.child("0").val();
-                console.log(districtInfo.district_chi, districtSh.key);
-                var districtTitleString =
-                    `<div class="district__image__box" background-image: url("paper.gif"); onClick="chooseDistrict('${districtSh.key}')">
-                    <div class="district__image__box__content">
-                        <img class="district__image__box__image" src="image/${districtSh.key}.jpg">
-                        <div class="district__image__box__toptext">查看更多</div>
-                        <div class="district__image__box__shadow"></div>
-                        <div class="district__image__box__text">${districtInfo.district_chi}</div>
-                    </div>
-                    </div>`;
-                $('#district__image').append(districtTitleString);
-            })
-        },
-        rej => {
-            console.log(rej);
-        }
-    );
-
-    function chooseDistrict(districtId) {
-        buildingPopUpLayer.style.display = "flex";
-        buildingData.style.display = "none";
-        districtData.style.display = "block";
-        console.log(districtId);
-        $("#building").empty();
-        var userDataRef = firebase.database().ref("/building/" + districtId);
-        userDataRef.once("value").then(
-            res => {
-                res.forEach((buildingIndex, index) => {
-                    let cityInfo = buildingIndex.val();
-                    console.log(cityInfo.name_chi);
-                    var buildingString =
-                        `<div target="_blank" class="district__building" id="districtId=${districtId}&buildingId=${buildingIndex}" onClick="chooseBuilding('${districtId}', ${buildingIndex.key})">` +
-                        `<div class="district__building__name">${cityInfo.name_chi}</div>
-                        </a>`;
-                    $('#building').append(buildingString);
-                });
-                let districtInfo = res.child("0").val();
-                $('#data_district_title').html(districtInfo.district_chi);
-                console.log(districtInfo.district_chi);
-            },
-            rej => {
-                console.log(rej);
-            }
-        );
-    }
-
-    function chooseBuilding(districtId, buildingId) {
-        buildingPopUpLayer.style.display = "flex";
-        buildingData.style.display = "block";
-        districtData.style.display = "none";
-        console.log(districtId + " " + buildingId);
-        var userDataRef = firebase.database().ref("/building/" + districtId + "/" + buildingId);
-        userDataRef.once("value").then(
-            res => {
-                let buildingInfo = res.val();
-                $('.data_link_eng').attr("href", `../eng/building_list/building.html?districtId=${districtId}&buildingId=${buildingId}`);
-                $('.data_link_jp').attr("href", `../jp/building_list/building.html?districtId=${districtId}&buildingId=${buildingId}`);
-                $('#data_building_ahref').html(buildingInfo.name_chi);
-                $('#data_building_title').html(buildingInfo.name_chi);
-                $('#data_buildingName').html(buildingInfo.name_chi);
-                $('#data_district').html(buildingInfo.district_chi);
-                $('#data_adress').html(buildingInfo.adress_chi);
-                $('#data_Utilization').html(buildingInfo.用途);
-                $('#data_inside').html(buildingInfo.內裝);
-                $('#data_address_map').attr("src", `https://buddycityinfo.sgngs.com/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingInfo.x}&y=${buildingInfo.y}&z=${buildingInfo.z}`);
-                $('#data_address_link').attr("href", `https://buddycityinfo.sgngs.com/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingInfo.x}&y=${buildingInfo.y}&z=${buildingInfo.z}`);
-                document.title = `${buildingInfo.name_chi}` + `丨城市建築物名冊丨Buddy-INFO Buddy市指南)`;
-            },
-            rej => {
-                console.log(rej);
-            }
-        );
-
-    }
-
-</script>
+<script type="text/javascript" src="js/firebase.js"></script>
+<!--ポップアップのレイヤ-->
+<script type="text/javascript" src="js/building_list.PopupLayer.js"></script>
 
 </html>

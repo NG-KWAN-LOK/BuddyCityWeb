@@ -246,20 +246,8 @@
 <script type="text/javascript" src="../js/totop.min.js"></script>
 <!--ゆっくり上げる-->
 <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
-<script>
-    function menu_burger(x) {
-        x.classList.toggle("change");
-        if (PhoneTop__mainnav__container.style.display === "flex") {
-            PhoneTop__mainnav__container.style.display = "none";
-        } else {
-            PhoneTop__mainnav__container.style.display = "flex";
-        }
-    }
-    function closeLayer(x) {
-        x.classList.toggle("change");
-        residentPopUpLayer.style.display = "none";
-    }
-</script>
+<!--ビジュアルのバーガーメニュー-->
+<script type="text/javascript" src="../js/menu_burger.js"></script>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
@@ -267,64 +255,8 @@
 
 <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyD8rlfI1ia02uVCyn4HigEgKnqSVppm96c",
-        authDomain: "buddy-city-6644d.firebaseapp.com",
-        databaseURL: "https://buddy-city-6644d.firebaseio.com",
-        projectId: "buddy-city-6644d",
-        storageBucket: "buddy-city-6644d.appspot.com",
-        messagingSenderId: "602566457456",
-        appId: "1:602566457456:web:b7339ee8dc4121e7771cb5",
-        measurementId: "G-21NGJNE2VH"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    //Get Data
-    var userDataRef = firebase.database().ref("resident");
-    userDataRef.once("value").then(
-        res => {
-            res.forEach((characterSh, index) => {
-                var character = characterSh.val();
-                var characterString =
-                    `<div target="_blank" class="resident__box" id="characterId=${characterSh.key}" onclick="chooseCharacter(${characterSh.key})">` +
-                    `<div class="resident__box__character" id="${character.user_name}">` +
-                    `<img class="resident__box__character__image" src="image/${character.face}.png">` +
-                    `<div class="resident__box__character__title">${character.user_name}</div>` +
-                    `</div>` +
-                    `</div>` +
-                    `</a>`;
-                $('#resident').append(characterString);
-            })
-        },
-        rej => {
-            console.log(rej);
-        }
-    );
-    function chooseCharacter(characterId) {
-        residentPopUpLayer.style.display = "flex";
-        var userDataRef = firebase.database().ref("/resident/" + characterId);
-        console.log(characterId);
-        userDataRef.once("value").then(
-            res => {
-                let characteInfo = res.val();
-                $('#data_username_title').html(characteInfo.user_name);
-                $('#data_face_img').attr("src", `image/${characteInfo.face}1.png`);
-                $('#data_username').html(characteInfo.user_name);
-                $('#data_nickname').html(characteInfo.nickname_chi);
-                $('#data_participate_year').html(characteInfo.participate_year);
-                $('#data_address').html(characteInfo.address_CHI);
-                $('#data_project').html(characteInfo.project_CHI);
-                $('#data_address_map').attr("src", `../map.html?worldname=world&mapname=flat&zoom=6&x=${characteInfo.x}&y=${characteInfo.y}&z=${characteInfo.z}`);
-                $('#data_address_link').attr("href", `../map.html?worldname=world&mapname=flat&zoom=6&x=${characteInfo.x}&y=${characteInfo.y}&z=${characteInfo.z}`);
-            },
-            rej => {
-
-            }
-        );
-    }
-</script>
+<script type="text/javascript" src="js/firebase.js"></script>
+<!--ポップアップのレイヤ-->
+<script type="text/javascript" src="js/resident.PopupLayer.js"></script>
 
 </html>
