@@ -308,7 +308,7 @@
   &__content {
     display: flex;
     padding: 40px;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     &__links {
@@ -319,6 +319,7 @@
     &__weblogo {
       max-width: 100%;
       height: auto;
+      margin-bottom: 40px;
       &__image {
         max-width: 100%;
         width: 387px;
