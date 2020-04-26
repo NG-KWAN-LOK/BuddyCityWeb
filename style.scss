@@ -575,8 +575,7 @@ body {
         position: absolute;
         z-index: 1;
         bottom: 0px;
-        background-color: rgba(255, 255, 255, 0.8);
-        color: #177cc4;
+        color: #fff;
         text-align: center;
         font-family: 微軟正黑體, sans-serif;
         font-size: 15px;
@@ -591,8 +590,10 @@ body {
           position: absolute;
           z-index: 1;
           bottom: 0px;
-          background-color: rgba(255, 255, 255, 0.8);
-          color: #177cc4;
+          // background-color: rgba(255, 255, 255, 0.8);
+          // color: #177cc4;
+          color: #fff;
+          text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
           text-align: center;
           font-family: 微軟正黑體, sans-serif;
           font-size: 15px;
@@ -600,10 +601,13 @@ body {
           line-height: 15px;
           padding: 5px;
           transition: 0.5s;
+          left: 20px;
+          bottom: 30px;
         }
         .reality-project__image__box__shadow {
           opacity: 1;
           transition: 0.5;
+          pointer-events: none
         }
       }
     }
