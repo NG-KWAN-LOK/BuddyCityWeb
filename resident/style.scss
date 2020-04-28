@@ -302,6 +302,7 @@ body {
             .data__table__datainfo {
               width: 60%;
               height: 38.38px;
+              padding-left: 30px;
             }
             #data_project {
               overflow: auto;
@@ -316,11 +317,17 @@ body {
           @media only screen and (max-width: 500px) {
             .data__table {
               font-size: 12px;
+              .data__table__datainfo {
+                padding-left: 10px;
+              }
             }
           }
           @media only screen and (max-width: 400px) {
             .data__table {
               font-size: 10px;
+              .data__table__datainfo {
+                padding-left: 8px;
+              }
             }
           }
         }

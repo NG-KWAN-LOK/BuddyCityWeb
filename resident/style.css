@@ -210,7 +210,7 @@ body {
   line-height: 20px;
   font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-variant: normal;
   font-size: 17px;
   vertical-align: 0;
@@ -362,6 +362,7 @@ body {
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table .data__table__datainfo {
   width: 60%;
   height: 38.38px;
+  padding-left: 30px;
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table #data_project {
@@ -379,11 +380,17 @@ body {
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
     font-size: 12px;
   }
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table .data__table__datainfo {
+    padding-left: 10px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
     font-size: 10px;
+  }
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table .data__table__datainfo {
+    padding-left: 8px;
   }
 }
 
