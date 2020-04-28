@@ -337,9 +337,9 @@ body {
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
   display: block;
   position: relative;
-  padding: 90px;
-  left: 10%;
-  width: 50%;
+  padding: 0px;
+  left: 18%;
+  width: 65%;
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
@@ -372,13 +372,13 @@ body {
 
 @media only screen and (max-width: 1280px) {
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
-    font-size: 12px;
+    font-size: 15px;
   }
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table .data__table__datainfo {
     padding-left: 10px;
@@ -387,20 +387,20 @@ body {
 
 @media only screen and (max-width: 400px) {
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
-    font-size: 10px;
+    font-size: 13px;
   }
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table .data__table__datainfo {
     padding-left: 8px;
   }
 }
 
-@media only screen and (max-width: 1919px) {
+@media only screen and (max-width: 1280px) {
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
     padding: 0px;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data {
     padding: 0;
     -webkit-box-orient: vertical;

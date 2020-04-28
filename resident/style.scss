@@ -280,9 +280,9 @@ body {
         .residentPopUpLayer__container__data__table {
           display: block;
           position: relative;
-          padding: 90px;
-          left: 10%;
-          width: 50%;
+          padding: 0px;
+          left: 18%;
+          width: 65%;
 
           .data__table {
             line-height: 40px;
@@ -311,12 +311,12 @@ body {
           }
           @media only screen and (max-width: 1280px) {
             .data__table {
-              font-size: 15px;
+              font-size: 17px;
             }
           }
           @media only screen and (max-width: 500px) {
             .data__table {
-              font-size: 12px;
+              font-size: 15px;
               .data__table__datainfo {
                 padding-left: 10px;
               }
@@ -324,7 +324,7 @@ body {
           }
           @media only screen and (max-width: 400px) {
             .data__table {
-              font-size: 10px;
+              font-size: 13px;
               .data__table__datainfo {
                 padding-left: 8px;
               }
@@ -332,14 +332,14 @@ body {
           }
         }
       }
-      @media only screen and (max-width: 1919px) {
+      @media only screen and (max-width: 1280px) {
         .residentPopUpLayer__container__data {
           .residentPopUpLayer__container__data__table {
             padding: 0px;
           }
         }
       }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         .residentPopUpLayer__container__data {
           padding: 0;
           flex-direction: column;
