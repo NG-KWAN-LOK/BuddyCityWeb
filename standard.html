@@ -5,7 +5,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <script type="text/javascript"
+        src="https://buddycityinfo.sgngs.com/js/jquery-1.11.0.js?_=2.5-Dev201706100401"></script>
+    <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/leaflet.js?_=2.5-Dev201706100401"></script>
+    <script type="text/javascript"
+        src="https://buddycityinfo.sgngs.com/js/custommarker.js?_=2.5-Dev201706100401"></script>
+    <script type="text/javascript"
+        src="https://buddycityinfo.sgngs.com/js/dynmaputils.js?_=2.5-Dev201706100401"></script>
+    <script type="text/javascript" src="https://buddycityinfo.sgngs.com/version.js?_=2.5-Dev201706100401"></script>
+    <script type="text/javascript"
+        src="https://buddycityinfo.sgngs.com/js/jquery.json.js?_=2.5-Dev201706100401"></script>
+    <script type="text/javascript"
+        src="https://buddycityinfo.sgngs.com/js/jquery.mousewheel.js?_=2.5-Dev201706100401"></script>
+    <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/minecraft.js?_=2.5-Dev201706100401"></script>
+    <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/map.js?_=2.5-Dev201706100401"></script>
+    <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/hdmap.js?_=2.5-Dev201706100401"></script>
+    <script type="text/javascript"
+        src="https://buddycityinfo.sgngs.com/standalone/config.js?_=2.5-Dev201706100401"></script>
 </head>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        window.dynmap = new DynMap($.extend({ container: $('#mcmap') }, config));
+    });
+</script>
 
 <body>
 
@@ -88,6 +111,7 @@
             <img src="image/photo/006.jpg" />
         </div>
     </div>
+    <div id="mcmap"></div>
 </body>
 
 </html>
