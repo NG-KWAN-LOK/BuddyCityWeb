@@ -20,11 +20,20 @@
     <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/minecraft.js?_=2.5-Dev201706100401"></script>
     <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/map.js?_=2.5-Dev201706100401"></script>
     <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/hdmap.js?_=2.5-Dev201706100401"></script>
-    <script type="text/javascript"
-        src="https://buddycityinfo.sgngs.com/standalone/config.js?_=2.5-Dev201706100401"></script>
 </head>
 
 <script type="text/javascript">
+    var config = {
+        url: {
+            configuration: 'https://buddycityinfo.sgngs.com/up/configuration',
+            update: 'https://buddycityinfo.sgngs.com/up/world/{world}/{timestamp}',
+            sendmessage: 'https://buddycityinfo.sgngs.com/up/sendmessage',
+            login: 'https://buddycityinfo.sgngs.com/up/login',
+            register: 'https://buddycityinfo.sgngs.com/up/register',
+            tiles: 'https://buddycityinfo.sgngs.com/tiles/',
+            markers: 'https://buddycityinfo.sgngs.com/tiles/'
+        }
+    };
     $(document).ready(function () {
         window.dynmap = new DynMap($.extend({ container: $('#mcmap') }, config));
     });
@@ -91,7 +100,7 @@
             position: 'relative';
         }
     </style>
-    <div class="bxslider">
+    <div class="bxslider" style="display: none;">
         <div class="slide">
             <img src="image/photo/001.jpg" />
         </div>
@@ -111,7 +120,7 @@
             <img src="image/photo/006.jpg" />
         </div>
     </div>
-    <div id="mcmap"></div>
+    <div id="mcmap" style="width: 100%; height: 1080px;"></div>
 </body>
 
 </html>
