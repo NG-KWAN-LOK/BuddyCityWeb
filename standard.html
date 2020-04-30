@@ -20,10 +20,19 @@
     <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/minecraft.js?_=2.5-Dev201706100401"></script>
     <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/map.js?_=2.5-Dev201706100401"></script>
     <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/hdmap.js?_=2.5-Dev201706100401"></script>
+    <!-- <script type="text/javascript" src="https://buddycityinfo.sgngs.com/test.js"></script>-->
 </head>
-
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
+</link>
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.min.css">
+</link>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="style.css">
 <script type="text/javascript">
-    var config = {
+    /*var config = {
         url: {
             configuration: 'https://buddycityinfo.sgngs.com/up/configuration',
             update: 'https://buddycityinfo.sgngs.com/up/world/{world}/{timestamp}',
@@ -36,91 +45,118 @@
     };
     $(document).ready(function () {
         window.dynmap = new DynMap($.extend({ container: $('#mcmap') }, config));
+    });*/
+    $(window).resize(function () {
+        if ($(window).width() < 1024) {
+            screenSmall();
+        }
+        else {
+            screenBig();
+        }
+        resizeDiv();
     });
+    $(window).ready(function () {
+        if ($(window).width() < 1024) {
+            screenSmall();
+        }
+        else {
+            screenBig();
+        }
+        resizeDiv();
+    });
+    function resizeDiv() {
+        $(".discover__content__card").width($(".discover").width() / 4);
+        console.log($(".discover").width());
+    }
+    function screenBig() {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            autoWidth: true,   /* 可自行設定輪播寬度 */
+            items: 1,  /* 一頁出現的張數 */
+            autoplayHoverPause: false,
+            center: false,
+            autoHeight: true,
+            dots: false,
+            navigation: false,
+            autoWidth: true,
+        });
+        console.log("big");
+    }
+    function screenSmall() {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            autoWidth: true,   /* 可自行設定輪播寬度 */
+            items: 2,  /* 一頁出現的張數 */
+            autoplayHoverPause: true,
+            center: false,
+            autoHeight: true,
+            dots: false,
+            navigation: true,
+            autoWidth: true,
+        });
+        console.log("small");
+    }
 </script>
+<style type="text/css">
+    .owl-carousel {
+        margin: 0 auto;
+    }
+
+    .discover__content__card {
+        flex-wrap: nowrap;
+        width: 300px;
+    }
+</style>
 
 <body>
-
-    <!-- #region Jssor Slider Begin -->
-    <!-- Generator: Jssor Slider Composer -->
-    <!-- Source: https://www.jssor.com/demos/nearby-image-partial-visible-slider.slider/=edit -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.bxslider').bxSlider({
-                slideWidth: 1000,
-                adaptiveHeight: true,
-                minSlides: 2,
-                maxSlides: 3,
-                moveSlides: 1,
-                speed: 800,
-                pagerCustom: '#bx-pager',
-                infiniteLoop: true,
-                auto: true,
-                autoStart: true,
-                autoDirection: 'next',
-                autoHover: true,
-                autoControls: false,
-                pager: true,
-                pagerType: 'full',
-                controls: true,
-                captions: true,
-            });
-        });
-    </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .bx-wrapper {
-            position: absolute;
-            margin: 0 auto;
-            border: none;
-        }
-
-        .bxslider {
-            margin-left: 10%;
-            margin-right: 10%;
-            overflow: hidden;
-            object-fit: cover;
-        }
-
-        .bx-wrapper img {
-            margin: 0 auto;
-            width: 1000px;
-        }
-
-        .viewport {
-            width: '100%';
-            overflow: 'hidden';
-            position: 'relative';
-        }
-    </style>
-    <div class="bxslider" style="display: none;">
-        <div class="slide">
-            <img src="image/photo/001.jpg" />
-        </div>
-        <div class="slide">
-            <img src="image/photo/002.jpg" />
-        </div>
-        <div class="slide">
-            <img src="image/photo/003.jpg" />
-        </div>
-        <div class="slide">
-            <img src="image/photo/004.jpg" />
-        </div>
-        <div class="slide">
-            <img src="image/photo/005.jpg" />
-        </div>
-        <div class="slide">
-            <img src="image/photo/006.jpg" />
+    <div class="main">
+        <div class="discover">
+            <div class="owl-carousel">
+                <div class="discover__content__card">
+                    <a href="https://buddycityinfo.sgngs.com/map.html" target="_blank">
+                        <div class="discover__content__box">
+                            <img class="discover__content__text__image" src="image/pword1_1.jpg">
+                            <div class="district__image__box__shadow"></div>
+                            <div class="atoppadding">網頁地圖</div>
+                            <div class="apadding">點擊開啟網上地圖</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="discover__content__card">
+                    <a href="building_list/">
+                        <div class="discover__content__box">
+                            <img class="discover__content__text__image" src="image/pword1_2.jpg">
+                            <div class="district__image__box__shadow"></div>
+                            <div class="atoppadding">城市建築物名冊</div>
+                            <div class="apadding">點擊開啟線上版城市建築物名冊或在圖書館借閱</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="discover__content__card">
+                    <div class="discover__content__card__pointer">
+                        <div class="discover__content__box">
+                            <img class="discover__content__text__image" src="image/pword1_3.jpg">
+                            <div class="district__image__box__shadow"></div>
+                            <div class="atoppadding">區域地圖</div>
+                            <div class="apadding">在前九廣鐵路鐘樓門前告示牌領取</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="discover__content__card">
+                    <div class="discover__content__card__pointer">
+                        <div class="discover__content__box">
+                            <img class="discover__content__text__image" src="image/pword1_4.jpg">
+                            <div class="district__image__box__shadow"></div>
+                            <div class="atoppadding">GPS全球定位</div>
+                            <div class="apadding">在前九廣鐵路鐘樓門前告示牌領取</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="mcmap" style="width: 100%; height: 1080px;"></div>
 </body>
 
 </html>

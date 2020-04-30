@@ -206,8 +206,10 @@ body {
   padding-bottom: 30px;
   background-color: #fff;
   @media only screen and (max-width: 550px) {
+    width: 100%;
   }
   @media only screen and (min-width: 550px) {
+    width: 100%;
   }
   @media only screen and (min-width: 768px) {
     max-width: 720px;
