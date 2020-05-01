@@ -20,7 +20,7 @@
     <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/minecraft.js?_=2.5-Dev201706100401"></script>
     <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/map.js?_=2.5-Dev201706100401"></script>
     <script type="text/javascript" src="https://buddycityinfo.sgngs.com/js/hdmap.js?_=2.5-Dev201706100401"></script>
-    <!-- <script type="text/javascript" src="https://buddycityinfo.sgngs.com/test.js"></script>-->
+    <script type="text/javascript" src="https://buddycityinfo.sgngs.com/test.js"></script>
 </head>
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
@@ -32,7 +32,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
 <link rel="stylesheet" href="style.css">
 <script type="text/javascript">
-    /*var config = {
+    var config = {
         url: {
             configuration: 'https://buddycityinfo.sgngs.com/up/configuration',
             update: 'https://buddycityinfo.sgngs.com/up/world/{world}/{timestamp}',
@@ -45,7 +45,8 @@
     };
     $(document).ready(function () {
         window.dynmap = new DynMap($.extend({ container: $('#mcmap') }, config));
-    });*/
+        console.log(dynmap.servertime);
+    });
     $(window).resize(function () {
         if ($(window).width() < 1024) {
             screenSmall();
@@ -66,7 +67,7 @@
     });
     function resizeDiv() {
         $(".discover__content__card").width($(".discover").width() / 4);
-        console.log($(".discover").width());
+        //console.log($(".discover").width());
     }
     function screenBig() {
         $('.owl-carousel').owlCarousel({

@@ -165,6 +165,62 @@ body {
   }
 }
 
+.main__content #sortNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 0 36px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main__content #sortNav .sortNav__btn, .main__content #sortNav .actSortNav__btn {
+  background-color: #f7f7f7;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main__content #sortNav .sortNav__btn .sortNav__text, .main__content #sortNav .actSortNav__btn .sortNav__text, .main__content #sortNav .actSortNav__btn .actSortNav__text {
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  color: #444;
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 17px;
+  padding: 6px 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main__content #sortNav .sortNav__btn:hover, .main__content #sortNav .actSortNav__btn:hover {
+  background-color: #444;
+}
+
+.main__content #sortNav .sortNav__btn:hover .sortNav__text, .main__content #sortNav .actSortNav__btn:hover .sortNav__text, .main__content #sortNav .sortNav__btn:hover .actSortNav__btn .actSortNav__text, .main__content #sortNav .actSortNav__btn .sortNav__btn:hover .actSortNav__text, .main__content #sortNav .actSortNav__btn:hover .actSortNav__text {
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main__content #sortNav .actSortNav__btn {
+  background-color: #444;
+}
+
+.main__content #sortNav .actSortNav__btn .actSortNav__text {
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .main__content #resident {
   margin: 0 auto;
 }
