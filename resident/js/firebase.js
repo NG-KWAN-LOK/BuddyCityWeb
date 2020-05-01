@@ -55,7 +55,7 @@ userDataRef.once("value").then(
         res.forEach((characterSh, index) => {
             var character = characterSh.val();
             var characterString =
-                `<div target="_blank" class="resident__box" id="characterId=${characterSh.key}" onclick="chooseCharacter(${characterSh.key})">` +
+                `<div target="_blank" class="resident__box" id="${character.district_CHI}" onclick="chooseCharacter(${characterSh.key})">` +
                 `<div class="resident__box__character" id="${character.user_name}">` +
                 `<img class="resident__box__character__image" src="image/${character.face}.png">` +
                 `<div class="resident__box__character__title">${character.user_name}</div>` +
@@ -69,8 +69,43 @@ userDataRef.once("value").then(
         console.log(rej);
     }
 );
+
 var tempClassName = "all";
-function sortByDistrict(district, className) {
+function sortByDistrict(district_CHI, className) {
+    console.log(district_CHI, className, tempClassName);
+    document.getElementById(tempClassName + "-btn").className = 'sortNav__btn';
+    document.getElementById(tempClassName + "-text").className = 'sortNav__text';
+    document.getElementById(className + "-btn").className = 'actSortNav__btn';
+    document.getElementById(className + "-text").className = 'actSortNav__text';
+    $(".resident__box").fadeOut();
+    // for (var i = 0; i < document.getElementsByClassName("resident__box").length; i++) {
+    //     //document.getElementsByClassName('resident__box')[i].style.opacity = 0.3;
+    //     //document.getElementsByClassName('resident__box')[i].style.pointerEvents = "none";
+    //     //$(".resident__box").fadeOut();
+    //     //document.getElementsByClassName('resident__box')[i].style.display = "none";
+    // }
+    if (district_CHI === '全部') {
+        var residentBox = document.getElementsByClassName("resident__box");
+        $(".resident__box").delay(300).fadeIn("slow");
+        // for (var i = 0; i < residentBox.length; i++) {
+        //     //residentBox[i].style.display = "inline-flex";
+        //     //residentBox[i].style.pointerEvents = "auto";
+        //     //residentBox[i].style.opacity = 1;
+        // }
+    }
+    else {
+        var residentBox = document.querySelectorAll("#" + district_CHI)
+        $('#' + district_CHI).delay(300).fadeIn("slow");
+        // for (var i = 0; i < residentBox.length; i++) {
+        //     //residentBox[i].style.display = "inline-flex";
+        //     // residentBox[i].style.pointerEvents = "auto";
+        //     // residentBox[i].style.opacity = 1;
+        // }
+    }
+    tempClassName = className;
+}
+
+/*function sortByDistrict(district, className) {
     console.log(district, className, tempClassName);
     $("#resident").empty();
     document.getElementById(tempClassName + "-btn").className = 'sortNav__btn';
@@ -111,4 +146,4 @@ function sortByDistrict(district, className) {
         }
     );
     tempClassName = className;
-}
+}*/

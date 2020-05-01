@@ -223,6 +223,8 @@ body {
 
 .main__content #resident {
   margin: 0 auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .main__content #resident .resident__box {

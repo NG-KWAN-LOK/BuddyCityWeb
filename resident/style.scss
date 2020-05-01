@@ -193,6 +193,7 @@ body {
   }
   #resident {
     margin: 0 auto;
+    transition: 0.5s;
     .resident__box {
       display: inline-flex;
       justify-content: space-between;
