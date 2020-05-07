@@ -16,12 +16,13 @@
     <link rel="icon" href="../image/spawn.png">
 </head>
 
-<body>
+<body data-theme=''>
     <a href="#" id="toTop" style="display: none;">
         <span id="toTopHover"></span>To Top</a>
-    <!--Page Body Start-->
-    <!-- Phone Top -->
-    <div class="PaddingTop">　</div>
+    <!--スマホのトップ phone top-->
+    <div class="PaddingTop">　
+
+    </div>
     <div class="PhoneTop">
         <div class="PhoneTop__mainnav">
             <div class="PhoneTop__mainnav__icon" onclick="menu_burger(this)">
@@ -31,11 +32,11 @@
             </div>
         </div>
         <div class="PhoneTop__logo">
-            <img class="PhoneTop__logo__image" src="../image/logo.png">
+            <img class="PhoneTop__logo__image" id="logoImg__phoneTop" src="../image/logo.png">
         </div>
         <div class="PhoneTop__mainnav__container" id="PhoneTop__mainnav__container">
             <div class="PhoneTop__mainnav__container__col">
-                <a class="PhoneTop__mainnav__container__col__a" href="../#">
+                <a class="PhoneTop__mainnav__container__col__a" href="#">
                     <div class="PhoneTop__mainnav__container__col__a__eng">HOME</div>
                     <div class="PhoneTop__mainnav__container__col__a__chi">回到首頁</div>
                 </a>
@@ -44,15 +45,16 @@
                     <div class="PhoneTop__mainnav__container__col__a__eng">ONLINE MAP</div>
                     <div class="PhoneTop__mainnav__container__col__a__chi">打開網上地圖</div>
                 </a>
-                <a class="PhoneTop__mainnav__container__col__a" href="#">
+                <a class="PhoneTop__mainnav__container__col__a" href="building_list/">
                     <div class="PhoneTop__mainnav__container__col__a__eng">CITY BUILDING LIST</div>
                     <div class="PhoneTop__mainnav__container__col__a__chi">查看城市建築物名冊</div>
                 </a>
-                <a class="PhoneTop__mainnav__container__col__a" href="../resident/">
+                <a class="PhoneTop__mainnav__container__col__a" href="resident/">
                     <div class="PhoneTop__mainnav__container__col__a__eng">CITY RESIDENT LIST</div>
                     <div class="PhoneTop__mainnav__container__col__a__chi">查看居民名冊</div>
                 </a>
-                <a class="PhoneTop__mainnav__container__col__a" href="resident/resident.html">
+                <a class="PhoneTop__mainnav__container__col__a"
+                    href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html">
                     <div class="PhoneTop__mainnav__container__col__a__eng">BCCTB</div>
                     <div class="PhoneTop__mainnav__container__col__a__chi">Buddy市觀光局</div>
                 </a>
@@ -68,15 +70,15 @@
             </div>
         </div>
     </div>
-    </div>
-    <!--Top-->
+    <!--ウェブのトップ web top-->
     <div class="Top">
         <div class="Top__container">
+            <!--ウェブのトップ左メニューボタン web top left menu button-->
             <div class="Top__nav_container__menu">
                 <div class="Top__nav" id="nav">
                     <ul class="Top__nav__list">
-                        <li class="Top__nav_col">
-                            <div class="Top__nav_title">
+                        <li class="Top__nav_col__left">
+                            <div class="Top__nav__left_title">
                                 <div class="Top__nav_col__burger__icon">
                                     <div class="bar1"></div>
                                     <div class="bar2"></div>
@@ -84,53 +86,77 @@
                                 </div>
                                 MENU
                             </div>
-                            <div class="Top__nav_title_under">
-                                <div class="Top__nav_subtitle">
+                            <div class="Top__nav__left_title_under">
+                                <div class="Top__nav__left_subtitle">
                                     <a href="../">
                                         <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
                                         回到主頁
                                     </a>
                                 </div>
-                                <div class="Top__nav_subtitle">
+                                <div class="Top__nav__left_subtitle">
                                     <a href="https://buddycityinfo.sgngs.com/map.html" target=_blank>
                                         <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
                                         網上地圖
                                     </a>
                                 </div>
-                                <div class="Top__nav_subtitle">
+                                <div class="Top__nav__left_subtitle">
                                     <a href="#">
                                         <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>城市建築物名冊</a></div>
-                                <div class="Top__nav_subtitle">
+                                <div class="Top__nav__left_subtitle">
                                     <a href="../resident/">
                                         <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
                                         居民名冊
                                     </a>
                                 </div>
-                                <div class="Top__nav_subtitle">
-                                    <a href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html">
-                                        <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
-                                        Buddy市觀光局
-                                    </a>
-                                </div>
                             </div>
+                        </li>
+                    </ul>
+                    <ul class="Top__nav__list">
+                        <li class="Top__nav_col__right">
+                            <a class="Top__nav__right_title"
+                                href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html">
+                                BCCTB
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="Top__logo">
-                <a href="index.html"><img src="../image/logo.png" /></a>
+                <a href="index.html"><img id="logoImg__Top" src="../image/logo.png" /></a>
             </div>
-            <!--Top right option-->
+            <!--ウェブのトップ右言語ボタン web top right language botton-->
             <div class="Top__nav_container__language">
                 <div class="Top__nav" id="nav">
-                    <ul class="Top__nav__list"></ul>
-                    <li class="Top__nav_col">
-                        <div class="Top__nav_title">Language</div>
-                        <div class="Top__nav_title_under">
-                            <div class="Top__nav_subtitle"><a href=".eng/">English</a></div>
-                            <div class="Top__nav_subtitle"><a href=".jp/">日本語</a></div>
-                        </div>
-                    </li>
+                    <ul class="Top__nav__list">
+                        <li class="Top__nav_col__left">
+                            <div class="Top__nav__left_title">Language</div>
+                            <div class="Top__nav__left_title_under">
+                                <div class="Top__nav__left_subtitle"><a href=".eng/">English</a></div>
+                                <div class="Top__nav__left_subtitle"><a href=".jp/">日本語</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="Top__nav__list">
+                        <li class="Top__nav_col__right">
+                            <div class="Top__nav__right_title">
+                                <div class="Top__nav_col__right__burger__icon">
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </div>
+                            </div>
+                            <div class="Top__nav__right_title_under">
+                                <div class="Top__nav__right_subtitle">
+                                    <div class="Top__nav__right_subtitle__text">
+                                        夜間模式
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" onclick="DarkMode(this)">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -222,7 +248,7 @@
     <div class="footer">
         <div class="footer__content">
             <div class="footer__content__weblogo">
-                <img class="footer__content__weblogo__image" src="../image/logo.png">
+                <img class="footer__content__weblogo__image" id="logoImg__footer" src="../image/logo.png">
             </div>
             <div class="footer__content__box">
                 <div class="footer__content__text__adress">
@@ -264,5 +290,6 @@
 <script type="text/javascript" src="js/firebase.js"></script>
 <!--ポップアップのレイヤ-->
 <script type="text/javascript" src="js/building_list.PopupLayer.js"></script>
+<script type="text/javascript" src="../js/darkmode.js"></script>
 
 </html>

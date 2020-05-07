@@ -20,6 +20,8 @@
   width: 100%;
   border-bottom: 3px solid var(--phone-top-bottom-color);
   background-color: var(--primary-bg-color);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media only screen and (min-width: 768px) {
@@ -99,6 +101,8 @@
   text-align: center;
   width: 100%;
   background-color: var(--phone-top-nav-bg-color);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__col,
@@ -154,6 +158,8 @@
   height: 80%;
   margin: 0 20px;
   background-color: var(--phone-top-nav-col-line-color);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .PhoneTop .PhoneTop__logo {
@@ -198,6 +204,8 @@
   width: 100%;
   height: 90px;
   background-color: var(--top-bg-color);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Top .Top__container {
@@ -295,6 +303,8 @@
   border-bottom-left-radius: 7px;
   border-top-left-radius: 7px;
   height: 38px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Top__nav .Top__nav_col__left a {
@@ -339,6 +349,8 @@
   display: inline-block;
   margin-top: -2.6px;
   padding-right: 0.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Top__nav .Top__nav_col__burger__icon .bar1,
@@ -381,6 +393,8 @@
   color: var(--primary-button-title-color);
   text-align: center;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Top__nav .Top__nav__left_subtitle {
@@ -396,6 +410,8 @@
   text-align: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Top__nav .Top__nav__left_subtitle .ion-android-arrow-dropdown {
@@ -425,6 +441,8 @@
   border-bottom: 2px solid var(--button-bg-color);
   border-bottom-right-radius: 7px;
   border-top-right-radius: 7px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Top__nav .Top__nav_col__right .Top__nav__right_subtitle {
@@ -469,6 +487,8 @@
   display: inline-block;
   margin-top: -2.6px;
   padding-right: 0.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Top__nav .Top__nav_col__right__burger__icon .bar1,
@@ -499,6 +519,8 @@
   color: var(--second-button-title-color);
   text-align: center;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Top__nav_container__language {
@@ -594,6 +616,8 @@ input:checked + .slider:before {
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .footer__content {

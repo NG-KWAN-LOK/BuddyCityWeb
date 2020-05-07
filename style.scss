@@ -199,11 +199,13 @@ a {
 body {
   overflow-x: hidden;
   background-color: var(--second-bg-color);
+  transition: 0.5s;
 }
 .main {
   margin: 0 auto;
   padding-bottom: 30px;
   background-color: var(--primary-bg-color);
+  transition: 0.5s;
   @media only screen and (max-width: 550px) {
     width: 100%;
   }
