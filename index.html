@@ -77,8 +77,8 @@
             <div class="Top__nav_container__menu">
                 <div class="Top__nav" id="nav">
                     <ul class="Top__nav__list">
-                        <li class="Top__nav_col">
-                            <div class="Top__nav_title">
+                        <li class="Top__nav_col__left">
+                            <div class="Top__nav__left_title">
                                 <div class="Top__nav_col__burger__icon">
                                     <div class="bar1"></div>
                                     <div class="bar2"></div>
@@ -86,35 +86,37 @@
                                 </div>
                                 MENU
                             </div>
-                            <div class="Top__nav_title_under">
-                                <div class="Top__nav_subtitle">
+                            <div class="Top__nav__left_title_under">
+                                <div class="Top__nav__left_subtitle">
                                     <a href="#">
                                         <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
                                         回到主頁
                                     </a>
                                 </div>
-                                <div class="Top__nav_subtitle">
+                                <div class="Top__nav__left_subtitle">
                                     <a href="https://buddycityinfo.sgngs.com/map.html" target=_blank>
                                         <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
                                         網上地圖
                                     </a>
                                 </div>
-                                <div class="Top__nav_subtitle">
+                                <div class="Top__nav__left_subtitle">
                                     <a href="building_list/">
                                         <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>城市建築物名冊</a></div>
-                                <div class="Top__nav_subtitle">
+                                <div class="Top__nav__left_subtitle">
                                     <a href="resident/">
                                         <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
                                         居民名冊
                                     </a>
                                 </div>
-                                <div class="Top__nav_subtitle">
-                                    <a href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html">
-                                        <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
-                                        Buddy市觀光局
-                                    </a>
-                                </div>
                             </div>
+                        </li>
+                    </ul>
+                    <ul class="Top__nav__list">
+                        <li class="Top__nav_col__right">
+                            <a class="Top__nav__right_title"
+                                href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html">
+                                BCCTB
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -125,14 +127,36 @@
             <!--ウェブのトップ右言語ボタン web top right language botton-->
             <div class="Top__nav_container__language">
                 <div class="Top__nav" id="nav">
-                    <ul class="Top__nav__list"></ul>
-                    <li class="Top__nav_col">
-                        <div class="Top__nav_title">Language</div>
-                        <div class="Top__nav_title_under">
-                            <div class="Top__nav_subtitle"><a href=".eng/">English</a></div>
-                            <div class="Top__nav_subtitle"><a href=".jp/">日本語</a></div>
-                        </div>
-                    </li>
+                    <ul class="Top__nav__list">
+                        <li class="Top__nav_col__left">
+                            <div class="Top__nav__left_title">Language</div>
+                            <div class="Top__nav__left_title_under">
+                                <div class="Top__nav__left_subtitle"><a href=".eng/">English</a></div>
+                                <div class="Top__nav__left_subtitle"><a href=".jp/">日本語</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="Top__nav__list">
+                        <li class="Top__nav_col__right">
+                            <div class="Top__nav__right_title">
+                                <div class="Top__nav_col__right__burger__icon">
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </div>
+                            </div>
+                            <div class="Top__nav__right_title_under">
+                                <div class="Top__nav__right_subtitle">
+                                    <div class="Top__nav__right_subtitle__text">
+                                        夜間模式
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" onclick="DarkMode(this)">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -761,5 +785,16 @@
 <!--バンナー-->
 <script type="text/javascript" src="js/jssor.slider-28.0.0.min.js"></script>
 <script type="text/javascript" src="js/banner.js"></script>
+<script type="text/javascript">
+    function DarkMode(x) {
+        x.classList.toggle("change");
+        console.log("on");
+        // if (PhoneTop__mainnav__container.style.display === "flex") {
+        //     PhoneTop__mainnav__container.style.display = "none";
+        // } else {
+        //     PhoneTop__mainnav__container.style.display = "flex";
+        // }
+    }
+</script>
 
 </html>
