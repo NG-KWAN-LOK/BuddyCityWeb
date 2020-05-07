@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="PhoneTop__logo">
-            <img class="PhoneTop__logo__image" src="image/logo.png">
+            <img class="PhoneTop__logo__image" id="logoImg__Top" src="image/logo.png">
         </div>
         <div class="PhoneTop__mainnav__container" id="PhoneTop__mainnav__container">
             <div class="PhoneTop__mainnav__container__col">
@@ -122,7 +122,7 @@
                 </div>
             </div>
             <div class="Top__logo">
-                <a href="index.html"><img src="image/logo.png" /></a>
+                <a href="index.html"><img id="logoImg__phoneTop" src="image/logo.png" /></a>
             </div>
             <!--ウェブのトップ右言語ボタン web top right language botton-->
             <div class="Top__nav_container__language">
@@ -750,7 +750,7 @@
     <div class="footer">
         <div class="footer__content">
             <div class="footer__content__weblogo">
-                <img class="footer__content__weblogo__image" src="image/logo.png">
+                <img class="footer__content__weblogo__image" id="logoImg__footer" src="image/logo.png">
             </div>
             <div class="footer__content__box">
                 <div class="footer__content__text__adress">
@@ -790,9 +790,15 @@
         x.classList.toggle("change");
         if (document.getElementsByTagName("body")[0].getAttribute("data-theme") === '') {
             document.getElementsByTagName("body")[0].setAttribute("data-theme", "dark");
+            document.getElementById("logoImg__Top").src = "image/logo_light.png";
+            document.getElementById("logoImg__phoneTop").src = "image/logo_light.png";
+            document.getElementById("logoImg__footer").src = "image/logo_light.png";
             console.log("on");
         } else {
             document.getElementsByTagName("body")[0].setAttribute("data-theme", "");
+            document.getElementById("logoImg__Top").src = "image/logo.png";
+            document.getElementById("logoImg__phoneTop").src = "image/logo.png";
+            document.getElementById("logoImg__footer").src = "image/logo.png";
             console.log("off");
         }
     }
