@@ -7,11 +7,23 @@ html {
   min-height: 100vh;
 }
 
+:root {
+  --primary-color: #fbfbfb;
+}
+
+[data-theme="dark"] {
+  --primary-color: #fbfbfb;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #fbfbfb;
+  background-color: var(--primary-color);
 }
 
 a {
