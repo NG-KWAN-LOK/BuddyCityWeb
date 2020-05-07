@@ -788,12 +788,13 @@
 <script type="text/javascript">
     function DarkMode(x) {
         x.classList.toggle("change");
-        console.log("on");
-        // if (PhoneTop__mainnav__container.style.display === "flex") {
-        //     PhoneTop__mainnav__container.style.display = "none";
-        // } else {
-        //     PhoneTop__mainnav__container.style.display = "flex";
-        // }
+        if (document.getElementsByTagName("body")[0].getAttribute("data-theme") === '') {
+            document.getElementsByTagName("body")[0].setAttribute("data-theme", "dark");
+            console.log("on");
+        } else {
+            document.getElementsByTagName("body")[0].setAttribute("data-theme", "");
+            console.log("off");
+        }
     }
 </script>
 
