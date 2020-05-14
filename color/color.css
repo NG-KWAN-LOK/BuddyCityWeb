@@ -11,8 +11,10 @@
   --top-bg-color: rgba(255, 255, 255, 0.918);
   --top-nav-bg-color: #fff;
   --phone-top-bottom-color: #ccc;
-  --phone-top-nav-bg-color: #ccc;
+  --phone-top-nav-bg-color: #fff;
   --phone-top-nav-col-line-color: #444;
+  --phone-top-nav-col-title-color: #444;
+  --phone-top-nav-col-text-color: #444;
   --primary-burger-icon-bg-color: #444;
   --second-burger-icon-bg-color: #fff;
   --main-between-line-color: #ccc;
@@ -41,9 +43,11 @@
   --second-button-hover-color: #fff;
   --top-bg-color: #181818ea;
   --top-nav-bg-color: #212121;
-  --phone-top-bottom-color: #ccc;
-  --phone-top-nav-bg-color: #ccc;
+  --phone-top-bottom-color: #2b2b2b;
+  --phone-top-nav-bg-color: #212121;
   --phone-top-nav-col-line-color: #444;
+  --phone-top-nav-col-title-color: #fff;
+  --phone-top-nav-col-text-color: #fff;
   --primary-burger-icon-bg-color: #fff;
   --second-burger-icon-bg-color: #fff;
   --main-between-line-color: #2b2b2b;
