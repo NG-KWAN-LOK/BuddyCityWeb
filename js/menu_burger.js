@@ -6,6 +6,4 @@ function menu_burger(x) {
     } else {
         PhoneTop__mainnav__container.style.display = "flex";
     }
-    console.log(x);
-    console.log(document.getElementsByClassName("PhoneTop__mainnav__icon")[0]);
 }
