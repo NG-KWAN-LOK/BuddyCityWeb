@@ -62,50 +62,81 @@
   }
   .PhoneTop__mainnav__container,
   #PhoneTop__mainnav__container {
+    z-index: 2;
     display: none;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
+    position: fixed;
+    justify-content: space-between;
     width: 100%;
-    background-color: var(--phone-top-nav-bg-color);
-    transition: 0.5s;
-    .PhoneTop__mainnav__container__col {
-      width: 50%;
-      .PhoneTop__mainnav__container__col__a {
-        text-decoration-line: none;
+    height: 100%;
+    .PhoneTop__mainnav__container__left {
+      display: block;
+      width: 80%;
+      height: 100%;
+      max-width: 100%;
+      background-color: var(--phone-top-nav-bg-color);
+      transition: 0.5s;
+      padding: 14px;
+      .PhoneTop__mainnav__container__col {
         width: 100%;
-        font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
-        color: #444;
-        font-size: 13px;
-        border-left: 1px solid var(--main-between-line-color);
-        border-right: 1px solid var(--main-between-line-color);
-        transition: background-color 0.5s ease, color 0.5s ease;
-        box-sizing: border-box;
-        .PhoneTop__mainnav__container__col__a__eng {
-          font-size: 12px;
-          font-weight: 500;
+        margin-bottom: 20px;
+        .PhoneTop__mainnav__container__col__title {
+          font-size: 17px;
+          font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+          color: var(--phone-top-nav-col-title-color);
+          text-align: left;
+          padding: 25px 0;
         }
-        .PhoneTop__mainnav__container__col__a__chi {
-          font-size: 12px;
-          font-weight: 400;
-        }
-        @media only screen and (min-width: 767px) {
-          .PhoneTop__mainnav__container__col__a__eng {
-            font-size: 15px;
+        .PhoneTop__mainnav__container__col__a__darkmode {
+          display: flex;
+          .PhoneTop__mainnav__container__col__a__darkmode__text {
+            font-size: 14px;
+            padding: 12px;
+            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            color: var(--phone-top-nav-col-text-color);
+            text-align: left;
           }
         }
-        &:hover {
-          transition: 0.5s;
-          color: var(--subject-blue);
+        .PhoneTop__mainnav__container__col__a {
+          display: block;
+          text-decoration-line: none;
+          width: 100%;
+          transition: background-color 0.5s ease, color 0.5s ease;
+          box-sizing: border-box;
+          .PhoneTop__mainnav__container__col__a__menu {
+            font-size: 14px;
+            padding: 12px;
+            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            color: var(--phone-top-nav-col-text-color);
+            text-align: left;
+          }
+          .PhoneTop__mainnav__container__col__a__language {
+            font-size: 14px;
+            padding: 12px;
+            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            color: var(--phone-top-nav-col-text-color);
+            text-align: left;
+          }
+          &:hover {
+            transition: 0.5s;
+            color: var(--subject-blue);
+          }
         }
       }
+      .PhoneTop__mainnav__container__col__line {
+        width: 1px;
+        height: 80%;
+        margin: 0 20px;
+        background-color: var(--phone-top-nav-col-line-color);
+        transition: 0.5s;
+      }
     }
-    .PhoneTop__mainnav__container__col__line {
-      width: 1px;
-      height: 80%;
-      margin: 0 20px;
-      background-color: var(--phone-top-nav-col-line-color);
-      transition: 0.5s;
+    .PhoneTop__mainnav__container__shadow {
+      display: flex;
+      height: 100%;
+      width: 15%;
+      //background-color: rgba(68, 68, 68, 0.281);
+      background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 35%, rgba(0, 0, 0, 0.24) 100%);
+      z-index: 0;
     }
   }
   .PhoneTop__logo {
@@ -410,7 +441,16 @@
   }
 }
 
-.switch input {
+.PhoneTop__switch {
+  position: relative;
+  display: inline-block;
+  left: 80px;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input,
+.PhoneTop__switch input {
   opacity: 0;
   width: 0;
   height: 0;

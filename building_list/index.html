@@ -35,39 +35,68 @@
             <img class="PhoneTop__logo__image" id="logoImg__phoneTop" src="../image/logo.png">
         </div>
         <div class="PhoneTop__mainnav__container" id="PhoneTop__mainnav__container">
-            <div class="PhoneTop__mainnav__container__col">
-                <a class="PhoneTop__mainnav__container__col__a" href="#">
-                    <div class="PhoneTop__mainnav__container__col__a__eng">HOME</div>
-                    <div class="PhoneTop__mainnav__container__col__a__chi">回到首頁</div>
-                </a>
-                <a class="PhoneTop__mainnav__container__col__a" href="https://buddycityinfo.sgngs.com/map.html"
-                    target="_blank">
-                    <div class="PhoneTop__mainnav__container__col__a__eng">ONLINE MAP</div>
-                    <div class="PhoneTop__mainnav__container__col__a__chi">打開網上地圖</div>
-                </a>
-                <a class="PhoneTop__mainnav__container__col__a" href="building_list/">
-                    <div class="PhoneTop__mainnav__container__col__a__eng">CITY BUILDING LIST</div>
-                    <div class="PhoneTop__mainnav__container__col__a__chi">查看城市建築物名冊</div>
-                </a>
-                <a class="PhoneTop__mainnav__container__col__a" href="resident/">
-                    <div class="PhoneTop__mainnav__container__col__a__eng">CITY RESIDENT LIST</div>
-                    <div class="PhoneTop__mainnav__container__col__a__chi">查看居民名冊</div>
-                </a>
-                <a class="PhoneTop__mainnav__container__col__a"
-                    href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html">
-                    <div class="PhoneTop__mainnav__container__col__a__eng">BCCTB</div>
-                    <div class="PhoneTop__mainnav__container__col__a__chi">Buddy市觀光局</div>
-                </a>
+            <div class="PhoneTop__mainnav__container__left">
+                <div class="PhoneTop__mainnav__container__col">
+                    <div class="PhoneTop__mainnav__container__col__title">
+                        MENU
+                    </div>
+                    <a class="PhoneTop__mainnav__container__col__a" href="../">
+                        <div class="PhoneTop__mainnav__container__col__a__menu">
+                            <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
+                            回到主頁
+                        </div>
+                    </a>
+                    <a class="PhoneTop__mainnav__container__col__a" href="https://buddycityinfo.sgngs.com/map.html"
+                        target="_blank">
+                        <div class="PhoneTop__mainnav__container__col__a__menu">
+                            <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
+                            網上地圖
+                        </div>
+                    </a>
+                    <a class="PhoneTop__mainnav__container__col__a" href="#">
+                        <div class="PhoneTop__mainnav__container__col__a__menu">
+                            <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
+                            城市建築物名冊
+                        </div>
+                    </a>
+                    <a class="PhoneTop__mainnav__container__col__a" href="../resident/">
+                        <div class="PhoneTop__mainnav__container__col__a__menu">
+                            <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
+                            居民名冊
+                        </div>
+                    </a>
+                    <a class="PhoneTop__mainnav__container__col__a"
+                        href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html">
+                        <div class="PhoneTop__mainnav__container__col__a__menu">
+                            BCCTB
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="PhoneTop__mainnav__container__col__line"></div> -->
+                <div class="PhoneTop__mainnav__container__col">
+                    <div class="PhoneTop__mainnav__container__col__title">
+                        LANGUAGE
+                    </div>
+                    <a class="PhoneTop__mainnav__container__col__a" href="#">
+                        <div class="PhoneTop__mainnav__container__col__a__language">ENGLISH</div>
+                    </a>
+                    <a class="PhoneTop__mainnav__container__col__a" href="map.html" target="_blank">
+                        <div class="PhoneTop__mainnav__container__col__a__language">日本語</div>
+                    </a>
+                </div>
+                <div class="PhoneTop__mainnav__container__col">
+                    <div class="PhoneTop__mainnav__container__col__a__darkmode">
+                        <div class="PhoneTop__mainnav__container__col__a__darkmode__text">
+                            夜間模式
+                        </div>
+                        <label class="PhoneTop__switch">
+                            <input type="checkbox" onclick="DarkMode(this)">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="PhoneTop__mainnav__container__col__line"></div>
-            <div class="PhoneTop__mainnav__container__col">
-                <a class="PhoneTop__mainnav__container__col__a" href="#">
-                    <div class="PhoneTop__mainnav__container__col__a__eng">ENGLISH</div>
-                </a>
-                <a class="PhoneTop__mainnav__container__col__a" href="map.html" target="_blank">
-                    <div class="PhoneTop__mainnav__container__col__a__eng">日本語</div>
-                </a>
-            </div>
+            <div class="PhoneTop__mainnav__container__shadow" onclick="menu_burger(this)"></div>
         </div>
     </div>
     <!--ウェブのトップ web top-->
