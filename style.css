@@ -61,8 +61,8 @@
   --border-bottom-color: #303030;
   --footer-bg-color: #232323;
   --subject-blue: #177cc4;
-  --select-color: #fff;
-  --select-bg-color: #666;
+  --select-color: #000000;
+  --select-bg-color: #ffffff;
 }
 
 * {

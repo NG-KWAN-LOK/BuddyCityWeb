@@ -28,6 +28,11 @@
   --border-bottom-color: #e1e1e1;
   --footer-bg-color: #f2f2f2;
   --subject-blue: #177cc4;
+  --second-bottom-bg-color: #f7f7f7;
+  --second-bottom-color: #444;
+  --second-bottom-hover-bg-color: #444;
+  --second-bottom-hover-color: #f7f7f7;
+  --popup-bg-color: rgba(255, 255, 255, 0.85);
   --select-color: #fff;
   --select-bg-color: #666;
 }
@@ -60,9 +65,14 @@
   --cover-background-color: #818cab;
   --border-bottom-color: #303030;
   --footer-bg-color: #232323;
+  --second-bottom-bg-color: #444;
+  --second-bottom-color: #f7f7f7;
+  --second-bottom-hover-bg-color: #f7f7f7;
+  --second-bottom-hover-color: #444;
+  --popup-bg-color: rgba(0, 0, 0, 0.85);
   --subject-blue: #177cc4;
-  --select-color: #fff;
-  --select-bg-color: #666;
+  --select-color: #000000;
+  --select-bg-color: #ffffff;
 }
 
 * {
@@ -83,7 +93,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background-color: #fbfbfb;
+  background-color: var(-second-bg-color);
 }
 
 a {
@@ -127,6 +137,7 @@ a {
 
 body {
   overflow-x: hidden;
+  background-color: var(--second-bg-color);
 }
 
 .main__banner {
@@ -141,58 +152,35 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  background-color: var(--primary-bg-color);
 }
 
 @media only screen and (min-width: 768px) {
   .main {
     max-width: 720px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .main {
     max-width: 980px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .main {
     max-width: 1280px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
   }
 }
 
 .main__content {
   padding: 20px 20px 30px 20px;
-}
-
-.main__content .NowIn {
-  display: block;
-  padding: 40px 0px 0px 0px;
-}
-
-.main__content .NowIn .NowIn__content {
-  line-height: 15px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  color: #5d5d5d;
-  font-variant: normal;
-  font-size: 15px;
-  text-decoration: underline;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.main__content .NowIn .NowIn__content:hover {
-  color: #177cc4;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .main__content .BuildingList {
@@ -207,7 +195,7 @@ body {
   font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
-  color: #444;
+  color: var(--title-color);
   text-decoration: none;
   font-variant: normal;
   font-size: 2em;
@@ -220,7 +208,7 @@ body {
   line-height: 35px;
   font-style: normal;
   font-weight: 400;
-  color: #444;
+  color: var(--title-color);
   text-decoration: none;
   font-variant: normal;
   font-size: 16px;
@@ -305,7 +293,7 @@ body {
   position: absolute;
   z-index: 1;
   bottom: 30px;
-  color: #fff;
+  color: var(--white-title-font-color);
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
   text-align: center;
   font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
@@ -436,7 +424,7 @@ body {
   width: 75%;
   height: 75%;
   overflow-y: scroll;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: var(--popup-bg-color);
 }
 
 .main__content #buildingPopUpLayer .buildingPopUpLayer__container #data_username_title {
@@ -445,7 +433,7 @@ body {
   font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: bold;
-  color: #444;
+  color: var(--title-color);
   background-color: transparent;
   text-decoration: none;
   font-variant: normal;
@@ -504,7 +492,7 @@ body {
   font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
-  color: #444;
+  color: var(--title-color);
   background-color: transparent;
   text-decoration: none;
   font-variant: normal;
@@ -532,7 +520,7 @@ body {
 .districtData .district__building .district__building__name {
   display: block;
   z-index: 1;
-  color: #5d5d5d;
+  color: var(--subtitle-bg);
   font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -545,7 +533,7 @@ body {
 
 .districtData .district__building .district__building__name:hover {
   color: #177cc4;
-  background-color: #f7f7f7d0;
+  background-color: var(--second-bottom-hover-color);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -567,7 +555,7 @@ body {
   font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: #5d5d5d;
+  color: var(--subtitle-bg);
   font-variant: normal;
   font-size: 17px;
   vertical-align: inherit;
@@ -600,7 +588,7 @@ body {
   font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: bold;
-  color: #444;
+  color: var(--title-color);
   background-color: transparent;
   text-decoration: none;
   font-variant: normal;
@@ -626,100 +614,5 @@ body {
   color: #177cc4;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-.footer {
-  background-color: #f2f2f2;
-  width: 100%;
-}
-
-.footer__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 40px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.footer__content__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
-.footer__content__weblogo {
-  max-width: 100%;
-  height: auto;
-}
-
-.footer__content__weblogo__image {
-  max-width: 100%;
-  width: 387px;
-  right: 0px;
-}
-
-.footer__content__box {
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
-  line-height: 25px;
-  font-style: normal;
-  color: #444;
-  font-size: 15px;
-  margin-left: 20px;
-}
-
-.footer__content__box__btn__text {
-  display: inline;
-  margin-right: 30px;
-  color: #444;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.footer__content__box__btn__text:hover {
-  background-color: #000000;
-  color: #ffffff;
-  border-radius: 5px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-@media only screen and (max-width: 411px) {
-  .footer .footer__content {
-    padding: 20px;
-  }
-  .footer .footer__content__text__adress,
-  .footer .footer__content__links {
-    font-size: 14px;
-  }
-  .footer .footer__content__box__copyright {
-    font-size: 10px;
-    text-align: center;
-  }
-}
-
-.footer__content__text__adress {
-  margin-bottom: 10px;
-}
-
-::-moz-selection {
-  background-color: #666;
-  color: #fff;
-}
-
-::selection {
-  background-color: #666;
-  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
