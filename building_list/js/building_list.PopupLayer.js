@@ -1,6 +1,8 @@
 function closeLayer(x) {
     x.classList.toggle("change");
     buildingPopUpLayer.style.display = "none";
+    window.history.pushState({}, 0, 'index.html');
+    document.title = '城市建築物名冊丨Buddy-INFO Buddy市指南)';
 }
 
 function chooseDistrict(districtId) {
@@ -24,6 +26,7 @@ function chooseDistrict(districtId) {
             let districtInfo = res.child("0").val();
             $('#data_district_title').html(districtInfo.district_chi);
             console.log(districtInfo.district_chi);
+            window.history.pushState({}, 0, '?districtId=' + districtId);
         },
         rej => {
             console.log(rej);
@@ -51,11 +54,25 @@ function chooseBuilding(districtId, buildingId) {
             $('#data_inside').html(buildingInfo.內裝);
             $('#data_address_map').attr("src", `https://buddycityinfo.sgngs.com/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingInfo.x}&y=${buildingInfo.y}&z=${buildingInfo.z}`);
             $('#data_address_link').attr("href", `https://buddycityinfo.sgngs.com/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingInfo.x}&y=${buildingInfo.y}&z=${buildingInfo.z}`);
+            window.history.pushState({}, 0, '?districtId=' + districtId + '&buildingId=' + buildingId);
             document.title = `${buildingInfo.name_chi}` + `丨城市建築物名冊丨Buddy-INFO Buddy市指南)`;
         },
         rej => {
             console.log(rej);
         }
     );
-
 }
+
+function getURL() {
+    let searchParams = new URLSearchParams(window.location.search);
+    let districtId = searchParams.get('districtId');
+    let buildingId = searchParams.get('buildingId');
+    if (districtId != null && buildingId != null) {
+        chooseBuilding(districtId, buildingId);
+    }
+    console.log("URL" + districtId, buildingId);
+}
+
+$(document).ready(function () {
+    getURL();
+});
