@@ -1,335 +1,260 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../top&footer_css/top&fotter_style.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../top&footer_css/ionicons.min.css"
-    />
-    <title>
-      城市建築物名冊丨Buddy-INFO Buddy市指南
-    </title>
-    <link rel="icon" href="../image/spawn.png" />
-  </head>
 
-  <body data-theme="">
-    <a href="#" id="toTop" style="display: none;">
-      <span id="toTopHover"></span>To Top</a
-    >
-    <!--スマホのトップ phone top-->
-    <div class="PaddingTop"></div>
-    <div class="PhoneTop">
-      <div class="PhoneTop__mainnav">
-        <div class="PhoneTop__mainnav__icon" onclick="menu_burger(this)">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-      </div>
-      <div class="PhoneTop__logo">
-        <img
-          class="PhoneTop__logo__image"
-          id="logoImg__phoneTop"
-          src="../image/logo.png"
-        />
-      </div>
-      <div
-        class="PhoneTop__mainnav__container"
-        id="PhoneTop__mainnav__container"
-      >
-        <div class="PhoneTop__mainnav__container__left">
-          <div class="PhoneTop__mainnav__container__col">
-            <div class="PhoneTop__mainnav__container__col__title">
-              MENU
-            </div>
-            <a class="PhoneTop__mainnav__container__col__a" href="../">
-              <div class="PhoneTop__mainnav__container__col__a__menu">
-                <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
-                回到主頁
-              </div>
-            </a>
-            <a
-              class="PhoneTop__mainnav__container__col__a"
-              href="https://buddycityinfo.sgngs.com/map.html"
-              target="_blank"
-            >
-              <div class="PhoneTop__mainnav__container__col__a__menu">
-                <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
-                網上地圖
-              </div>
-            </a>
-            <a class="PhoneTop__mainnav__container__col__a" href="#">
-              <div class="PhoneTop__mainnav__container__col__a__menu">
-                <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
-                城市建築物名冊
-              </div>
-            </a>
-            <a class="PhoneTop__mainnav__container__col__a" href="../resident/">
-              <div class="PhoneTop__mainnav__container__col__a__menu">
-                <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
-                居民名冊
-              </div>
-            </a>
-            <a
-              class="PhoneTop__mainnav__container__col__a"
-              href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html"
-            >
-              <div class="PhoneTop__mainnav__container__col__a__menu">
-                BCCTB
-              </div>
-            </a>
-          </div>
-          <!-- <div class="PhoneTop__mainnav__container__col__line"></div> -->
-          <div class="PhoneTop__mainnav__container__col">
-            <div class="PhoneTop__mainnav__container__col__title">
-              LANGUAGE
-            </div>
-            <a class="PhoneTop__mainnav__container__col__a" href="#">
-              <div class="PhoneTop__mainnav__container__col__a__language">
-                ENGLISH
-              </div>
-            </a>
-            <a
-              class="PhoneTop__mainnav__container__col__a"
-              href="map.html"
-              target="_blank"
-            >
-              <div class="PhoneTop__mainnav__container__col__a__language">
-                日本語
-              </div>
-            </a>
-          </div>
-          <div class="PhoneTop__mainnav__container__col">
-            <div class="PhoneTop__mainnav__container__col__a__darkmode">
-              <div class="PhoneTop__mainnav__container__col__a__darkmode__text">
-                夜間模式
-              </div>
-              <label class="PhoneTop__switch">
-                <input type="checkbox" onclick="DarkMode(this)" />
-                <span class="slider round"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div
-          class="PhoneTop__mainnav__container__shadow"
-          onclick="menu_burger(this)"
-        ></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="../top&footer_css/top&fotter_style.css" />
+  <link rel="stylesheet" type="text/css" href="../top&footer_css/ionicons.min.css" />
+  <title>
+    城市建築物名冊丨Buddy-INFO Buddy市指南
+  </title>
+  <link rel="icon" href="../image/spawn.png" />
+</head>
+
+<body data-theme="">
+  <a href="#" id="toTop" style="display: none;">
+    <span id="toTopHover"></span>To Top</a>
+  <!--スマホのトップ phone top-->
+  <div class="PaddingTop"></div>
+  <div class="PhoneTop">
+    <div class="PhoneTop__mainnav">
+      <div class="PhoneTop__mainnav__icon" onclick="menu_burger(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
       </div>
     </div>
-    <!--ウェブのトップ web top-->
-    <div class="Top">
-      <div class="Top__container">
-        <!--ウェブのトップ左メニューボタン web top left menu button-->
-        <div class="Top__nav_container__menu">
-          <div class="Top__nav" id="nav">
-            <ul class="Top__nav__list">
-              <li class="Top__nav_col__left">
-                <div class="Top__nav__left_title">
-                  <div class="Top__nav_col__burger__icon">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </div>
-                  MENU
-                </div>
-                <div class="Top__nav__left_title_under">
-                  <div class="Top__nav__left_subtitle">
-                    <a href="../">
-                      <i
-                        aria-hidden="true"
-                        class="ion-android-arrow-dropdown"
-                      ></i>
-                      回到主頁
-                    </a>
-                  </div>
-                  <div class="Top__nav__left_subtitle">
-                    <a
-                      href="https://buddycityinfo.sgngs.com/map.html"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="ion-android-arrow-dropdown"
-                      ></i>
-                      網上地圖
-                    </a>
-                  </div>
-                  <div class="Top__nav__left_subtitle">
-                    <a href="#">
-                      <i
-                        aria-hidden="true"
-                        class="ion-android-arrow-dropdown"
-                      ></i
-                      >城市建築物名冊</a
-                    >
-                  </div>
-                  <div class="Top__nav__left_subtitle">
-                    <a href="../resident/">
-                      <i
-                        aria-hidden="true"
-                        class="ion-android-arrow-dropdown"
-                      ></i>
-                      居民名冊
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <ul class="Top__nav__list">
-              <li class="Top__nav_col__right">
-                <a
-                  class="Top__nav__right_title"
-                  href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html"
-                >
-                  BCCTB
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="Top__logo">
-          <a href="index.html"
-            ><img id="logoImg__Top" src="../image/logo.png"
-          /></a>
-        </div>
-        <!--ウェブのトップ右言語ボタン web top right language botton-->
-        <div class="Top__nav_container__language">
-          <div class="Top__nav" id="nav">
-            <ul class="Top__nav__list">
-              <li class="Top__nav_col__left">
-                <div class="Top__nav__left_title">Language</div>
-                <div class="Top__nav__left_title_under">
-                  <div class="Top__nav__left_subtitle">
-                    <a href=".eng/">English</a>
-                  </div>
-                  <div class="Top__nav__left_subtitle">
-                    <a href=".jp/">日本語</a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <ul class="Top__nav__list">
-              <li class="Top__nav_col__right">
-                <div class="Top__nav__right_title">
-                  <div class="Top__nav_col__right__burger__icon">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </div>
-                </div>
-                <div class="Top__nav__right_title_under">
-                  <div class="Top__nav__right_subtitle">
-                    <div class="Top__nav__right_subtitle__text">
-                      夜間模式
-                    </div>
-                    <label class="switch">
-                      <input type="checkbox" onclick="DarkMode(this)" />
-                      <span class="slider round"></span>
-                    </label>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="PhoneTop__logo">
+      <img class="PhoneTop__logo__image" id="logoImg__phoneTop" src="../image/logo.png" />
     </div>
-    <!--main-->
-    <div class="main__banner"></div>
-    <div class="main">
-      <!-- main_content -->
-      <div class="main__content">
-        <div class="BuildingList">
-          <div class="BuildingList__title__content">
-            <div class="BuildingList__title">
+    <div class="PhoneTop__mainnav__container" id="PhoneTop__mainnav__container">
+      <div class="PhoneTop__mainnav__container__left">
+        <div class="PhoneTop__mainnav__container__col">
+          <div class="PhoneTop__mainnav__container__col__title">
+            MENU
+          </div>
+          <a class="PhoneTop__mainnav__container__col__a" href="../">
+            <div class="PhoneTop__mainnav__container__col__a__menu">
+              <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
+              回到主頁
+            </div>
+          </a>
+          <a class="PhoneTop__mainnav__container__col__a" href="https://buddycityinfo.sgngs.com/map.html"
+            target="_blank">
+            <div class="PhoneTop__mainnav__container__col__a__menu">
+              <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
+              網上地圖
+            </div>
+          </a>
+          <a class="PhoneTop__mainnav__container__col__a" href="#">
+            <div class="PhoneTop__mainnav__container__col__a__menu">
+              <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
               城市建築物名冊
             </div>
-            <div class="BuildingList__text">
-              BUDDY 市內所有建築物，全部呈現在您眼前。
+          </a>
+          <a class="PhoneTop__mainnav__container__col__a" href="../resident/">
+            <div class="PhoneTop__mainnav__container__col__a__menu">
+              <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
+              居民名冊
             </div>
+          </a>
+          <a class="PhoneTop__mainnav__container__col__a"
+            href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html">
+            <div class="PhoneTop__mainnav__container__col__a__menu">
+              BCCTB
+            </div>
+          </a>
+        </div>
+        <!-- <div class="PhoneTop__mainnav__container__col__line"></div> -->
+        <div class="PhoneTop__mainnav__container__col">
+          <div class="PhoneTop__mainnav__container__col__title">
+            LANGUAGE
           </div>
-          <div id="district__image"></div>
-          <div id="buildingPopUpLayer">
-            <div class="buildingPopUpLayer__container">
-              <div
-                class="buildingPopUpLayer_closeLayer"
-                onclick="closeLayer(this)"
-              ></div>
-              <div class="buildingPopUpLayer__container__main">
-                <div id="districtData">
-                  <div id="data_district_title" class="data__title"></div>
-                  <div id="building" class="districtData"></div>
+          <a class="PhoneTop__mainnav__container__col__a" href="#">
+            <div class="PhoneTop__mainnav__container__col__a__language">
+              ENGLISH
+            </div>
+          </a>
+          <a class="PhoneTop__mainnav__container__col__a" href="map.html" target="_blank">
+            <div class="PhoneTop__mainnav__container__col__a__language">
+              日本語
+            </div>
+          </a>
+        </div>
+        <div class="PhoneTop__mainnav__container__col">
+          <div class="PhoneTop__mainnav__container__col__a__darkmode">
+            <div class="PhoneTop__mainnav__container__col__a__darkmode__text">
+              夜間模式
+            </div>
+            <label class="PhoneTop__switch">
+              <input type="checkbox" onclick="DarkMode(this)" id='PhoneTopDarkModeSwitch'>
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="PhoneTop__mainnav__container__shadow" onclick="menu_burger(this)"></div>
+    </div>
+  </div>
+  <!--ウェブのトップ web top-->
+  <div class="Top">
+    <div class="Top__container">
+      <!--ウェブのトップ左メニューボタン web top left menu button-->
+      <div class="Top__nav_container__menu">
+        <div class="Top__nav" id="nav">
+          <ul class="Top__nav__list">
+            <li class="Top__nav_col__left">
+              <div class="Top__nav__left_title">
+                <div class="Top__nav_col__burger__icon">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
                 </div>
-                <div id="buildingData">
-                  <div id="data_building_title" class="data__title"></div>
-                  <table class="data__table">
-                    <tr>
-                      <td class="data__table__datatitle">
-                        建築物名稱
-                      </td>
-                      <td
-                        id="data_buildingName"
-                        class="data__table__datainfo"
-                      ></td>
-                    </tr>
-                    <tr>
-                      <td class="data__table__datatitle">
-                        區域
-                      </td>
-                      <td id="data_district" class="data__table__datainfo"></td>
-                    </tr>
-                    <tr>
-                      <td class="data__table__datatitle">
-                        地址
-                      </td>
-                      <td class="data__table__datainfo" id="data_adress"></td>
-                    </tr>
-                    <tr>
-                      <td class="data__table__datatitle">
-                        用途
-                      </td>
-                      <td
-                        class="data__table__datainfo"
-                        id="data_Utilization"
-                      ></td>
-                    </tr>
-                    <tr>
-                      <td class="data__table__datatitle">
-                        是否有內裝？
-                      </td>
-                      <td class="data__table__datainfo" id="data_inside"></td>
-                    </tr>
-                  </table>
-                  <!--map-->
-                  <div id="address_map" class="address__map">
-                    <div class="address__map__title">MAP</div>
-                    <iframe
-                      id="data_address_map"
-                      class="address__map__iframe"
-                      width="100%"
-                      height="440px"
-                    ></iframe>
-                    ><a
-                      class="address__map__link"
-                      id="data_address_link"
-                      target="blank"
-                      >網上地圖</a
-                    >
+                MENU
+              </div>
+              <div class="Top__nav__left_title_under">
+                <div class="Top__nav__left_subtitle">
+                  <a href="../">
+                    <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
+                    回到主頁
+                  </a>
+                </div>
+                <div class="Top__nav__left_subtitle">
+                  <a href="https://buddycityinfo.sgngs.com/map.html" target="_blank">
+                    <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
+                    網上地圖
+                  </a>
+                </div>
+                <div class="Top__nav__left_subtitle">
+                  <a href="#">
+                    <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>城市建築物名冊</a>
+                </div>
+                <div class="Top__nav__left_subtitle">
+                  <a href="../resident/">
+                    <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
+                    居民名冊
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="Top__nav__list">
+            <li class="Top__nav_col__right">
+              <a class="Top__nav__right_title" href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html">
+                BCCTB
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="Top__logo">
+        <a href="index.html"><img id="logoImg__Top" src="../image/logo.png" /></a>
+      </div>
+      <!--ウェブのトップ右言語ボタン web top right language botton-->
+      <div class="Top__nav_container__language">
+        <div class="Top__nav" id="nav">
+          <ul class="Top__nav__list">
+            <li class="Top__nav_col__left">
+              <div class="Top__nav__left_title">Language</div>
+              <div class="Top__nav__left_title_under">
+                <div class="Top__nav__left_subtitle"><a href=".eng/">English</a></div>
+                <div class="Top__nav__left_subtitle"><a href=".jp/">日本語</a></div>
+              </div>
+            </li>
+          </ul>
+          <ul class="Top__nav__list">
+            <li class="Top__nav_col__right">
+              <div class="Top__nav__right_title">
+                <div class="Top__nav_col__right__burger__icon">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                </div>
+              </div>
+              <div class="Top__nav__right_title_under">
+                <div class="Top__nav__right_subtitle">
+                  <div class="Top__nav__right_subtitle__text">
+                    夜間模式
                   </div>
+                  <label class="switch">
+                    <input type="checkbox" onclick="DarkMode(this)" id="darkModeSwitch">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--main-->
+  <div class="main__banner"></div>
+  <div class="main">
+    <!-- main_content -->
+    <div class="main__content">
+      <div class="BuildingList">
+        <div class="BuildingList__title__content">
+          <div class="BuildingList__title">
+            城市建築物名冊
+          </div>
+          <div class="BuildingList__text">
+            BUDDY 市內所有建築物，全部呈現在您眼前。
+          </div>
+        </div>
+        <div id="district__image"></div>
+        <div id="buildingPopUpLayer">
+          <div class="buildingPopUpLayer__container">
+            <div class="buildingPopUpLayer_closeLayer" onclick="closeLayer(this)"></div>
+            <div class="buildingPopUpLayer__container__main">
+              <div id="districtData">
+                <div id="data_district_title" class="data__title"></div>
+                <div id="building" class="districtData"></div>
+              </div>
+              <div id="buildingData">
+                <div id="data_building_title" class="data__title"></div>
+                <table class="data__table">
+                  <tr>
+                    <td class="data__table__datatitle">
+                      建築物名稱
+                    </td>
+                    <td id="data_buildingName" class="data__table__datainfo"></td>
+                  </tr>
+                  <tr>
+                    <td class="data__table__datatitle">
+                      區域
+                    </td>
+                    <td id="data_district" class="data__table__datainfo"></td>
+                  </tr>
+                  <tr>
+                    <td class="data__table__datatitle">
+                      地址
+                    </td>
+                    <td class="data__table__datainfo" id="data_adress"></td>
+                  </tr>
+                  <tr>
+                    <td class="data__table__datatitle">
+                      用途
+                    </td>
+                    <td class="data__table__datainfo" id="data_Utilization"></td>
+                  </tr>
+                  <tr>
+                    <td class="data__table__datatitle">
+                      是否有內裝？
+                    </td>
+                    <td class="data__table__datainfo" id="data_inside"></td>
+                  </tr>
+                </table>
+                <!--map-->
+                <div id="address_map" class="address__map">
+                  <div class="address__map__title">MAP</div>
+                  <iframe id="data_address_map" class="address__map__iframe" width="100%" height="440px"></iframe>
+                  ><a class="address__map__link" id="data_address_link" target="blank">網上地圖</a>
                 </div>
               </div>
             </div>
@@ -337,66 +262,55 @@
         </div>
       </div>
     </div>
-    <!--footer-->
-    <div class="footer">
-      <div class="footer__content">
-        <div class="footer__content__weblogo">
-          <img
-            class="footer__content__weblogo__image"
-            id="logoImg__footer"
-            src="../image/logo.png"
-          />
+  </div>
+  <!--footer-->
+  <div class="footer">
+    <div class="footer__content">
+      <div class="footer__content__weblogo">
+        <img class="footer__content__weblogo__image" id="logoImg__footer" src="../image/logo.png" />
+      </div>
+      <div class="footer__content__box">
+        <div class="footer__content__text__adress">
+          BUDDY CITY旅遊局<br />
+          Buddy City大阪區本町通2號2樓2D01室
         </div>
-        <div class="footer__content__box">
-          <div class="footer__content__text__adress">
-            BUDDY CITY旅遊局<br />
-            Buddy City大阪區本町通2號2樓2D01室
-          </div>
-          <div class="footer__content__links">
-            <a
-              class="footer__content__box__btn"
-              href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html"
-            >
-              <div class="footer__content__box__btn__text">
-                BUDDY CITY旅遊局紹介
-              </div>
-            </a>
-            <a
-              class="footer__content__box__btn"
-              href="https://buddycityinfo.sgngs.com/page/tnc.html"
-            >
-              <div class="footer__content__box__btn__text">服務條款</div>
-            </a>
-            <a
-              class="footer__content__box__btn"
-              href="https://buddycityinfo.sgngs.com/map.html"
-            >
-              <div class="footer__content__box__btn__text">Dynmap</div>
-            </a>
-          </div>
-          <div class="footer__content__box__copyright">
-            ©BUDDY CITY CONVENTION & TOURISM BUREAU
-          </div>
+        <div class="footer__content__links">
+          <a class="footer__content__box__btn" href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html">
+            <div class="footer__content__box__btn__text">
+              BUDDY CITY旅遊局紹介
+            </div>
+          </a>
+          <a class="footer__content__box__btn" href="https://buddycityinfo.sgngs.com/page/tnc.html">
+            <div class="footer__content__box__btn__text">服務條款</div>
+          </a>
+          <a class="footer__content__box__btn" href="https://buddycityinfo.sgngs.com/map.html">
+            <div class="footer__content__box__btn__text">Dynmap</div>
+          </a>
+        </div>
+        <div class="footer__content__box__copyright">
+          ©BUDDY CITY CONVENTION & TOURISM BUREAU
         </div>
       </div>
     </div>
-  </body>
-  <script type="text/javascript" src="../js/jquery.js"></script>
-  <!--トップ上げる-->
-  <script type="text/javascript" src="../js/totop.min.js"></script>
-  <!--ゆっくり上げる-->
-  <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
-  <!--ビジュアルのバーガーメニュー-->
-  <script type="text/javascript" src="../js/menu_burger.js"></script>
+  </div>
+</body>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<!--トップ上げる-->
+<script type="text/javascript" src="../js/totop.min.js"></script>
+<!--ゆっくり上げる-->
+<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+<!--ビジュアルのバーガーメニュー-->
+<script type="text/javascript" src="../js/menu_burger.js"></script>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
-  <script type="text/javascript" src="js/firebase.js"></script>
-  <!--ポップアップのレイヤ-->
-  <script type="text/javascript" src="js/building_list.PopupLayer.js"></script>
-  <script type="text/javascript" src="../js/darkmode.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+<script type="text/javascript" src="js/firebase.js"></script>
+<!--ポップアップのレイヤ-->
+<script type="text/javascript" src="js/building_list.PopupLayer.js"></script>
+<script type="text/javascript" src="../js/darkmode.js"></script>
+
 </html>
