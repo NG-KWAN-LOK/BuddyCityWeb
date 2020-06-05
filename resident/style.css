@@ -438,6 +438,32 @@ body {
   height: 86.5%;
 }
 
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-style: normal;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: top;
+  color: var(--title-color);
+  font-weight: 400;
+  font-variant: normal;
+  font-size: 50px;
+  line-height: 75px;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error .residentPopUpLayer__container__error__title {
+  display: block;
+  padding: 20px;
+}
+
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data {
   padding: 60px;
   display: -webkit-box;
@@ -530,12 +556,18 @@ body {
 }
 
 @media only screen and (max-width: 1280px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error {
+    font-size: 50px;
+  }
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
     padding: 0px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error {
+    font-size: 40px;
+  }
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data {
     padding: 0;
     -webkit-box-orient: vertical;
@@ -570,6 +602,18 @@ body {
             order: 2;
     line-height: 20px;
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error {
+    font-size: 20px;
   }
 }
 

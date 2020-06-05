@@ -303,6 +303,26 @@ body {
       .residentPopUpLayer__container__main {
         height: 86.5%;
       }
+      .residentPopUpLayer__container__error {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+        font-style: normal;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        vertical-align: top;
+        color: var(--title-color);
+        font-weight: 400;
+        font-variant: normal;
+        font-size: 50px;
+        line-height: 75px;
+        .residentPopUpLayer__container__error__title {
+          display: block;
+          padding: 20px;
+        }
+      }
       .residentPopUpLayer__container__data {
         padding: 60px;
         display: flex;
@@ -378,6 +398,9 @@ body {
         }
       }
       @media only screen and (max-width: 1280px) {
+        .residentPopUpLayer__container__error {
+          font-size: 50px;
+        }
         .residentPopUpLayer__container__data {
           .residentPopUpLayer__container__data__table {
             padding: 0px;
@@ -385,6 +408,9 @@ body {
         }
       }
       @media only screen and (max-width: 1024px) {
+        .residentPopUpLayer__container__error {
+          font-size: 40px;
+        }
         .residentPopUpLayer__container__data {
           padding: 0;
           flex-direction: column;
@@ -406,6 +432,16 @@ body {
             line-height: 20px;
             width: 80%;
           }
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .residentPopUpLayer__container__error {
+          font-size: 30px;
+        }
+      }
+      @media only screen and (max-width: 500px) {
+        .residentPopUpLayer__container__error {
+          font-size: 20px;
         }
       }
 
