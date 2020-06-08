@@ -17,17 +17,17 @@ var L_zhTW = {
   topFooterLang_fotterTNC: "服務條款",
   topFooterLang_fotterDynmap: "Dynmap",
   topFooterLang_fotterCopyright: "©BUDDY CITY CONVENTION & TOURISM BUREAU",
-  BuildingList_title: "城市建築物名冊",
-  BuildingList_text: "BUDDY 市內所有建築物，全部呈現在您眼前。",
+  ResidentList_title: "居民名冊",
+  ResidentList_text: "以他們的居住地點，點擊頭像來認識BUDDY市的居民。",
   district_image_box_toptext: "查看更多",
-  buildingPopUpLayer_container_error_title_top: "404 Page Not Found",
-  buildingPopUpLayer_container_error_title_bottom:
+  residentPopUpLayer_container_error_title_top: "404 Page Not Found",
+  residentPopUpLayer_container_error_title_bottom:
     "噢！很抱歉，我們找不到這個頁面喔～",
-  data_table_buildingName: "建築物名稱",
-  data_table_district: "區域",
-  data_table_adress: "地址",
-  data_table_Utilization: "用途",
-  data_table_inside: "是否有內裝？",
+  data_table_username: "名稱",
+  data_table_nickname: "稱號",
+  data_table_participate_year: "入籍年份",
+  data_table_address: "地址",
+  data_table_project: "曾參與過建築項目",
 };
 
 var L_Eng = {
@@ -50,17 +50,17 @@ var L_Eng = {
   topFooterLang_fotterTNC: "Term and Condition",
   topFooterLang_fotterDynmap: "Dynmap",
   topFooterLang_fotterCopyright: "©BUDDY CITY CONVENTION & TOURISM BUREAU",
-  BuildingList_title: "CITY BUILDING LIST",
-  BuildingList_text: "You can check all the building on the BUDDY city.",
+  ResidentList_title: "CITY RESIDENT LIST",
+  ResidentList_text: "Filter by living place, Click their icon to know more.",
   district_image_box_toptext: "Read More",
-  buildingPopUpLayer_container_error_title_top: "404 Page Not Found",
-  buildingPopUpLayer_container_error_title_bottom:
+  residentPopUpLayer_container_error_title_top: "404 Page Not Found",
+  residentPopUpLayer_container_error_title_bottom:
     "Oops！Sorry，We cannot find this page.",
-  data_table_buildingName: "Building's Name",
-  data_table_district: "District",
-  data_table_adress: "Adress",
-  data_table_Utilization: "Utilization",
-  data_table_inside: "Is there are decoration?",
+  data_table_username: "Name",
+  data_table_nickname: "Nickname",
+  data_table_participate_year: "Year of entry",
+  data_table_address: "Address",
+  data_table_project: "The project(s) have took part before",
 };
 
 var L_JP = {
@@ -82,15 +82,21 @@ var L_JP = {
   topFooterLang_fotterTNC: "サービス規約",
   topFooterLang_fotterDynmap: "Dynmap",
   topFooterLang_fotterCopyright: "©BUDDY CITY CONVENTION & TOURISM BUREAU",
-  BuildingList_title: "都市ビル一覧表",
-  BuildingList_text: "全部BUDDY 市內のビル一はここに見られます。",
+  ResidentList_title: "都市居住者一覧表",
+  ResidentList_text:
+    "みんなのアイコンをクリックして、BUDDY市のみんなに会いましょう。",
   district_image_box_toptext: "もっと読む",
-  buildingPopUpLayer_container_error_title_top: "404 Page Not Found",
-  buildingPopUpLayer_container_error_title_bottom:
+  residentPopUpLayer_container_error_title_top: "404 Page Not Found",
+  residentPopUpLayer_container_error_title_bottom:
     "申し訳ありませんが、要求のページは見つかりませんでした。",
   data_table_buildingName: "ビル一の名前",
   data_table_district: "地区",
   data_table_adress: "住所",
   data_table_Utilization: "用途",
   data_table_inside: "インテリアがあり",
+  data_table_username: "名前",
+  data_table_nickname: "ニックネーム",
+  data_table_participate_year: "入籍時間",
+  data_table_address: "住所",
+  data_table_project: "この前にしていたの企画",
 };

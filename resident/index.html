@@ -60,7 +60,9 @@
             <a class="PhoneTop__mainnav__container__col__a" href="../">
               <div class="PhoneTop__mainnav__container__col__a__menu">
                 <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
-                回到主頁
+                <span id="topFooterLang_phoneHome">
+                  回到主頁
+                </span>
               </div>
             </a>
             <a
@@ -70,7 +72,9 @@
             >
               <div class="PhoneTop__mainnav__container__col__a__menu">
                 <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
-                網上地圖
+                <span id="topFooterLang_phoneOnlineMap">
+                  網上地圖
+                </span>
               </div>
             </a>
             <a
@@ -79,13 +83,17 @@
             >
               <div class="PhoneTop__mainnav__container__col__a__menu">
                 <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
-                城市建築物名冊
+                <span id="topFooterLang_phoneBulidingList">
+                  城市建築物名冊
+                </span>
               </div>
             </a>
             <a class="PhoneTop__mainnav__container__col__a" href="#">
               <div class="PhoneTop__mainnav__container__col__a__menu">
                 <i aria-hidden="true" class="ion-android-arrow-dropdown"></i>
-                居民名冊
+                <span id="topFooterLang_phoneResidentList">
+                  居民名冊
+                </span>
               </div>
             </a>
             <a
@@ -102,24 +110,41 @@
             <div class="PhoneTop__mainnav__container__col__title">
               LANGUAGE
             </div>
-            <a class="PhoneTop__mainnav__container__col__a" href="#">
-              <div class="PhoneTop__mainnav__container__col__a__language">
+            <div class="PhoneTop__mainnav__container__col__a" href="#">
+              <div
+                class="PhoneTop__mainnav__container__col__a__language"
+                onclick="SelectLang(1)"
+              >
+                正體中文
+              </div>
+            </div>
+            <div class="PhoneTop__mainnav__container__col__a" href="#">
+              <div
+                class="PhoneTop__mainnav__container__col__a__language"
+                onclick="SelectLang(2)"
+              >
                 ENGLISH
               </div>
-            </a>
-            <a
+            </div>
+            <div
               class="PhoneTop__mainnav__container__col__a"
               href="map.html"
               target="_blank"
             >
-              <div class="PhoneTop__mainnav__container__col__a__language">
+              <div
+                class="PhoneTop__mainnav__container__col__a__language"
+                onclick="SelectLang(3)"
+              >
                 日本語
               </div>
-            </a>
+            </div>
           </div>
           <div class="PhoneTop__mainnav__container__col">
             <div class="PhoneTop__mainnav__container__col__a__darkmode">
-              <div class="PhoneTop__mainnav__container__col__a__darkmode__text">
+              <div
+                class="PhoneTop__mainnav__container__col__a__darkmode__text"
+                id="topFooterLang_phoneDarkMode"
+              >
                 夜間模式
               </div>
               <label class="PhoneTop__switch">
@@ -162,7 +187,9 @@
                         aria-hidden="true"
                         class="ion-android-arrow-dropdown"
                       ></i>
-                      回到主頁
+                      <span id="topFooterLang_topHome">
+                        回到主頁
+                      </span>
                     </a>
                   </div>
                   <div class="Top__nav__left_subtitle">
@@ -174,7 +201,9 @@
                         aria-hidden="true"
                         class="ion-android-arrow-dropdown"
                       ></i>
-                      網上地圖
+                      <span id="topFooterLang_topOnlineMap">
+                        網上地圖
+                      </span>
                     </a>
                   </div>
                   <div class="Top__nav__left_subtitle">
@@ -182,9 +211,11 @@
                       <i
                         aria-hidden="true"
                         class="ion-android-arrow-dropdown"
-                      ></i
-                      >城市建築物名冊</a
-                    >
+                      ></i>
+                      <span id="topFooterLang_topBulidingList">
+                        城市建築物名冊
+                      </span>
+                    </a>
                   </div>
                   <div class="Top__nav__left_subtitle">
                     <a href="#">
@@ -192,7 +223,9 @@
                         aria-hidden="true"
                         class="ion-android-arrow-dropdown"
                       ></i>
-                      居民名冊
+                      <span id="topFooterLang_topResidentList">
+                        居民名冊
+                      </span>
                     </a>
                   </div>
                 </div>
@@ -223,10 +256,28 @@
                 <div class="Top__nav__left_title">Language</div>
                 <div class="Top__nav__left_title_under">
                   <div class="Top__nav__left_subtitle">
-                    <a href=".eng/">English</a>
+                    <div
+                      class="Top__nav__left_subtitle__text"
+                      onclick="SelectLang(1)"
+                    >
+                      正體中文
+                    </div>
                   </div>
                   <div class="Top__nav__left_subtitle">
-                    <a href=".jp/">日本語</a>
+                    <div
+                      class="Top__nav__left_subtitle__text"
+                      onclick="SelectLang(2)"
+                    >
+                      English
+                    </div>
+                  </div>
+                  <div class="Top__nav__left_subtitle">
+                    <div
+                      class="Top__nav__left_subtitle__text"
+                      onclick="SelectLang(3)"
+                    >
+                      日本語
+                    </div>
                   </div>
                 </div>
               </li>
@@ -242,7 +293,10 @@
                 </div>
                 <div class="Top__nav__right_title_under">
                   <div class="Top__nav__right_subtitle">
-                    <div class="Top__nav__right_subtitle__text">
+                    <div
+                      class="Top__nav__right_subtitle__text"
+                      id="topFooterLang_topDarkMode"
+                    >
                       夜間模式
                     </div>
                     <label class="switch">
@@ -268,10 +322,10 @@
       <div class="main__content">
         <div class="ResidentList">
           <div class="ResidentList__title__content">
-            <div class="ResidentList__title">
+            <div class="ResidentList__title" id="ResidentList_title">
               居民名冊
             </div>
-            <div class="ResidentList__text">
+            <div class="ResidentList__text" id="ResidentList_text">
               以他們的居住地點，點擊頭像來認識BUDDY市的居民。
             </div>
           </div>
@@ -290,8 +344,12 @@
               >
                 <div class="residentPopUpLayer__container__error">
                   <div class="residentPopUpLayer__container__error__title">
-                    404 Page Not Found <br />
-                    噢！很抱歉，我們找不到這個頁面喔～
+                    <p id="residentPopUpLayer_container_error_title_top">
+                      404 Page Not Found
+                    </p>
+                    <p id="residentPopUpLayer_container_error_title_bottom">
+                      噢！很抱歉，我們找不到這個頁面喔～
+                    </p>
                   </div>
                 </div>
                 <div class="residentPopUpLayer__container__data">
@@ -301,7 +359,10 @@
                   <div class="residentPopUpLayer__container__data__table">
                     <table class="data__table">
                       <tr>
-                        <td class="data__table__datatitle">
+                        <td
+                          class="data__table__datatitle"
+                          id="data_table_username"
+                        >
                           名稱
                         </td>
                         <td
@@ -310,7 +371,10 @@
                         ></td>
                       </tr>
                       <tr>
-                        <td class="data__table__datatitle">
+                        <td
+                          class="data__table__datatitle"
+                          id="data_table_nickname"
+                        >
                           稱號
                         </td>
                         <td
@@ -319,7 +383,10 @@
                         ></td>
                       </tr>
                       <tr>
-                        <td class="data__table__datatitle">
+                        <td
+                          class="data__table__datatitle"
+                          id="data_table_participate_year"
+                        >
                           入籍年份
                         </td>
                         <td
@@ -328,7 +395,10 @@
                         ></td>
                       </tr>
                       <tr>
-                        <td class="data__table__datatitle">
+                        <td
+                          class="data__table__datatitle"
+                          id="data_table_address"
+                        >
                           地址
                         </td>
                         <td
@@ -337,7 +407,10 @@
                         ></td>
                       </tr>
                       <tr class="data_project_row">
-                        <td class="data__table__datatitle">
+                        <td
+                          class="data__table__datatitle"
+                          id="data_table_project"
+                        >
                           曾參與過建築項目
                         </td>
                         <td
@@ -361,20 +434,25 @@
           <img
             class="footer__content__weblogo__image"
             id="logoImg__footer"
-            src="../image/logo.png"
+            src="image/logo.png"
           />
         </div>
         <div class="footer__content__box">
           <div class="footer__content__text__adress">
-            BUDDY CITY旅遊局<br />
-            Buddy City大阪區本町通2號2樓2D01室
+            <p id="topFooterLang_fotterTitle">BUDDY CITY旅遊局</p>
+            <p id="topFooterLang_fotterAddress">
+              Buddy City大阪區本町通2號2樓2D01室
+            </p>
           </div>
           <div class="footer__content__links">
             <a
               class="footer__content__box__btn"
               href="https://buddycityinfo.sgngs.com/page/bcctb-about-us.html"
             >
-              <div class="footer__content__box__btn__text">
+              <div
+                class="footer__content__box__btn__text"
+                id="topFooterLang_fotterAbout"
+              >
                 BUDDY CITY旅遊局紹介
               </div>
             </a>
@@ -382,16 +460,29 @@
               class="footer__content__box__btn"
               href="https://buddycityinfo.sgngs.com/page/tnc.html"
             >
-              <div class="footer__content__box__btn__text">服務條款</div>
+              <div
+                class="footer__content__box__btn__text"
+                id="topFooterLang_fotterTNC"
+              >
+                服務條款
+              </div>
             </a>
             <a
               class="footer__content__box__btn"
               href="https://buddycityinfo.sgngs.com/map.html"
             >
-              <div class="footer__content__box__btn__text">Dynmap</div>
+              <div
+                class="footer__content__box__btn__text"
+                id="topFooterLang_fotterDynmap"
+              >
+                Dynmap
+              </div>
             </a>
           </div>
-          <div class="footer__content__box__copyright">
+          <div
+            class="footer__content__box__copyright"
+            id="topFooterLang_fotterCopyright"
+          >
             ©BUDDY CITY CONVENTION & TOURISM BUREAU
           </div>
         </div>
@@ -415,5 +506,8 @@
   <script type="text/javascript" src="js/firebase.js"></script>
   <!--ポップアップのレイヤ-->
   <script type="text/javascript" src="js/resident.PopupLayer.js"></script>
+  <script type="text/javascript" src="js/Language.js"></script>
+  <script type="text/javascript" src="../js/selectLang.js"></script>
+  <script type="text/javascript" src="js/chooseLang.js"></script>
   <script type="text/javascript" src="../js/darkmode.js"></script>
 </html>

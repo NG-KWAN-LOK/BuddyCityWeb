@@ -32,6 +32,10 @@ function setLanguage(languageIndex) {
     languageContainer.topFooterLang_phoneResidentList;
   document.getElementById("topFooterLang_phoneDarkMode").innerHTML =
     languageContainer.topFooterLang_phoneDarkMode;
+  document.getElementById("ResidentList_title").innerHTML =
+    languageContainer.ResidentList_title;
+  document.getElementById("ResidentList_text").innerHTML =
+    languageContainer.ResidentList_text;
   document.getElementById("topFooterLang_fotterTitle").innerHTML =
     languageContainer.topFooterLang_fotterTitle;
   document.getElementById("topFooterLang_fotterAddress").innerHTML =
@@ -44,17 +48,25 @@ function setLanguage(languageIndex) {
     languageContainer.topFooterLang_fotterDynmap;
   document.getElementById("topFooterLang_fotterCopyright").innerHTML =
     languageContainer.topFooterLang_fotterCopyright;
-  document.getElementById("BuildingList_title").innerHTML =
-    languageContainer.BuildingList_title;
-  document.getElementById("BuildingList_text").innerHTML =
-    languageContainer.BuildingList_text;
+  document.getElementById("data_table_username").innerHTML =
+    languageContainer.data_table_username;
+  document.getElementById("data_table_nickname").innerHTML =
+    languageContainer.data_table_nickname;
+  document.getElementById("data_table_address").innerHTML =
+    languageContainer.data_table_adress;
+  document.getElementById("data_table_participate_year").innerHTML =
+    languageContainer.data_table_participate_year;
+  document.getElementById("data_table_address").innerHTML =
+    languageContainer.data_table_address;
+  document.getElementById("data_table_project").innerHTML =
+    languageContainer.data_table_project;
   document.getElementById(
-    "buildingPopUpLayer_container_error_title_top"
-  ).innerHTML = languageContainer.buildingPopUpLayer_container_error_title_top;
+    "residentPopUpLayer_container_error_title_top"
+  ).innerHTML = languageContainer.residentPopUpLayer_container_error_title_top;
   document.getElementById(
-    "buildingPopUpLayer_container_error_title_bottom"
+    "residentPopUpLayer_container_error_title_bottom"
   ).innerHTML =
-    languageContainer.buildingPopUpLayer_container_error_title_bottom;
+    languageContainer.residentPopUpLayer_container_error_title_bottom;
   //document.getElementById("").innerHTML = L_zhTW[16];
-  showDistrict(languageIndex);
+  renderResident();
 }
