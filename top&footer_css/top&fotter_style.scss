@@ -112,6 +112,7 @@
             text-align: left;
           }
           .PhoneTop__mainnav__container__col__a__language {
+            cursor: pointer;
             font-size: 14px;
             padding: 12px;
             font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
@@ -239,7 +240,9 @@
     border-top-left-radius: 7px;
     height: 38px;
     transition: 0.5s;
+    .Top__nav__left_subtitle__text,
     a {
+      cursor: pointer;
       color: var(--third-button-title-color);
     }
     &:hover {
