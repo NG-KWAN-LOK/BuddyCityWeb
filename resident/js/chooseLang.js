@@ -48,18 +48,20 @@ function setLanguage(languageIndex) {
     languageContainer.topFooterLang_fotterDynmap;
   document.getElementById("topFooterLang_fotterCopyright").innerHTML =
     languageContainer.topFooterLang_fotterCopyright;
-  document.getElementById("data_table_username").innerHTML =
-    languageContainer.data_table_username;
-  document.getElementById("data_table_nickname").innerHTML =
-    languageContainer.data_table_nickname;
-  document.getElementById("data_table_address").innerHTML =
-    languageContainer.data_table_adress;
-  document.getElementById("data_table_participate_year").innerHTML =
-    languageContainer.data_table_participate_year;
-  document.getElementById("data_table_address").innerHTML =
-    languageContainer.data_table_address;
-  document.getElementById("data_table_project").innerHTML =
-    languageContainer.data_table_project;
+  document.getElementById("residentPopUpLayer_data_table_username").innerHTML =
+    languageContainer.residentPopUpLayer_data_table_username;
+  document.getElementById("residentPopUpLayer_data_table_nickname").innerHTML =
+    languageContainer.residentPopUpLayer_data_table_nickname;
+  document.getElementById("residentPopUpLayer_data_table_address").innerHTML =
+    languageContainer.residentPopUpLayer_data_table_adress;
+  document.getElementById(
+    "residentPopUpLayer_data_table_participate_year"
+  ).innerHTML =
+    languageContainer.residentPopUpLayer_data_table_participate_year;
+  document.getElementById("residentPopUpLayer_data_table_address").innerHTML =
+    languageContainer.residentPopUpLayer_data_table_address;
+  document.getElementById("residentPopUpLayer_data_table_project").innerHTML =
+    languageContainer.residentPopUpLayer_data_table_project;
   document.getElementById(
     "residentPopUpLayer_container_error_title_top"
   ).innerHTML = languageContainer.residentPopUpLayer_container_error_title_top;

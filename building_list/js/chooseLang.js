@@ -49,6 +49,18 @@ function setLanguage(languageIndex) {
   document.getElementById("BuildingList_text").innerHTML =
     languageContainer.BuildingList_text;
   document.getElementById(
+    "buildingPopUpLayer_data_table_buildingName"
+  ).innerHTML = languageContainer.buildingPopUpLayer_data_table_buildingName;
+  document.getElementById("buildingPopUpLayer_data_table_district").innerHTML =
+    languageContainer.buildingPopUpLayer_data_table_district;
+  document.getElementById("buildingPopUpLayer_data_table_adress").innerHTML =
+    languageContainer.buildingPopUpLayer_data_table_adress;
+  document.getElementById(
+    "buildingPopUpLayer_data_table_Utilization"
+  ).innerHTML = languageContainer.buildingPopUpLayer_data_table_Utilization;
+  document.getElementById("buildingPopUpLayer_data_table_inside").innerHTML =
+    languageContainer.buildingPopUpLayer_data_table_inside;
+  document.getElementById(
     "buildingPopUpLayer_container_error_title_top"
   ).innerHTML = languageContainer.buildingPopUpLayer_container_error_title_top;
   document.getElementById(

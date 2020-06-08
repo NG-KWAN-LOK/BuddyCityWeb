@@ -209,7 +209,7 @@ body {
   padding: 16px 0 36px 0;
   text-align: center;
   line-height: 55px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
   color: var(--title-color);
@@ -220,7 +220,7 @@ body {
 
 .main__content .ResidentList .ResidentList__title__content .ResidentList__text {
   display: block;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   text-align: center;
   line-height: 35px;
   font-style: normal;
@@ -265,7 +265,7 @@ body {
 }
 
 .main__content #sortNav .sortNav__btn .sortNav__text, .main__content #sortNav .actSortNav__btn .sortNav__text, .main__content #sortNav .actSortNav__btn .actSortNav__text {
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   text-align: center;
   font-style: normal;
   font-weight: 400;
@@ -316,7 +316,7 @@ body {
   padding: 25px 0;
   width: 20%;
   line-height: 30px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: bold;
   color: var(--subtitle-bg);
@@ -343,7 +343,7 @@ body {
 .main__content #resident .resident__box .resident__box__character .resident__box__character__title {
   margin: 10px 0;
   line-height: 20px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-variant: normal;
@@ -416,7 +416,7 @@ body {
 .main__content #residentPopUpLayer .residentPopUpLayer__container #data_username_title {
   padding-top: 30px;
   text-align: center;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
   color: var(--title-color);
@@ -446,7 +446,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   width: 100%;
   height: 100%;
@@ -505,7 +505,7 @@ body {
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
   line-height: 40px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: var(--subtitle-bg);
@@ -654,7 +654,7 @@ body {
   padding: 20px 0;
   text-align: center;
   line-height: 35px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
   color: var(--title-color);

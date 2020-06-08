@@ -83,7 +83,7 @@
         margin-bottom: 20px;
         .PhoneTop__mainnav__container__col__title {
           font-size: 17px;
-          font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+          font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
           color: var(--phone-top-nav-col-title-color);
           text-align: left;
           padding: 25px 0;
@@ -93,7 +93,8 @@
           .PhoneTop__mainnav__container__col__a__darkmode__text {
             font-size: 14px;
             padding: 12px;
-            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體",
+              sans-serif;
             color: var(--phone-top-nav-col-text-color);
             text-align: left;
           }
@@ -107,7 +108,8 @@
           .PhoneTop__mainnav__container__col__a__menu {
             font-size: 14px;
             padding: 12px;
-            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體",
+              sans-serif;
             color: var(--phone-top-nav-col-text-color);
             text-align: left;
           }
@@ -115,7 +117,8 @@
             cursor: pointer;
             font-size: 14px;
             padding: 12px;
-            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體",
+              sans-serif;
             color: var(--phone-top-nav-col-text-color);
             text-align: left;
           }
@@ -138,7 +141,12 @@
       height: 100%;
       width: 20%;
       //background-color: rgba(68, 68, 68, 0.281);
-      background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 35%, rgba(0, 0, 0, 0.24) 100%);
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.05) 35%,
+        rgba(0, 0, 0, 0.24) 100%
+      );
       z-index: 0;
     }
   }
@@ -214,7 +222,7 @@
   display: none;
   position: relative;
   z-index: 1;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: #5d5d5d;
@@ -303,7 +311,7 @@
   .Top__nav__left_title {
     height: 100%;
     box-sizing: content-box;
-    font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 40px;
@@ -314,7 +322,7 @@
   }
   .Top__nav__left_subtitle {
     width: 270px;
-    font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 45px;
@@ -353,7 +361,7 @@
       display: flex;
       align-items: center;
       width: 250px;
-      font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
       font-size: 16px;
       font-weight: 300;
       line-height: 45px;
@@ -404,7 +412,7 @@
   .Top__nav__right_title {
     height: 100%;
     box-sizing: content-box;
-    font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 37px;
@@ -532,10 +540,20 @@ input:checked + .slider:before {
         width: 387px;
         right: 0px;
       }
+      .footer__content__weblogo__underText {
+        display: flex;
+        justify-content: center;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        line-height: 25px;
+        font-style: normal;
+        font-weight: 300;
+        color: var(--third-button-title-color);
+        font-size: 15px;
+      }
     }
     &__box {
       flex-flow: wrap;
-      font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
       line-height: 25px;
       font-style: normal;
       font-weight: 300;

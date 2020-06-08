@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -30,8 +34,7 @@
       <span id="toTopHover"></span>To Top</a
     >
     <!--スマホのトップ phone top-->
-    <!-- prettier-ignore -->
-    <div class="PaddingTop">　</div>
+    <div class="PaddingTop"></div>
     <div class="PhoneTop">
       <div class="PhoneTop__mainnav">
         <div class="PhoneTop__mainnav__icon" onclick="menu_burger(this)">
@@ -359,7 +362,7 @@
                     <tr>
                       <td
                         class="data__table__datatitle"
-                        id="data_table_buildingName"
+                        id="buildingPopUpLayer_data_table_buildingName"
                       >
                         建築物名稱
                       </td>
@@ -371,14 +374,17 @@
                     <tr>
                       <td
                         class="data__table__datatitle"
-                        id="data_table_district"
+                        id="buildingPopUpLayer_data_table_district"
                       >
                         區域
                       </td>
                       <td id="data_district" class="data__table__datainfo"></td>
                     </tr>
                     <tr>
-                      <td class="data__table__datatitle" id="data_table_adress">
+                      <td
+                        class="data__table__datatitle"
+                        id="buildingPopUpLayer_data_table_adress"
+                      >
                         地址
                       </td>
                       <td class="data__table__datainfo" id="data_adress"></td>
@@ -386,7 +392,7 @@
                     <tr>
                       <td
                         class="data__table__datatitle"
-                        id="data_table_Utilization"
+                        id="buildingPopUpLayer_data_table_Utilization"
                       >
                         用途
                       </td>
@@ -396,7 +402,10 @@
                       ></td>
                     </tr>
                     <tr>
-                      <td class="data__table__datatitle" id="data_table_inside">
+                      <td
+                        class="data__table__datatitle"
+                        id="buildingPopUpLayer_data_table_inside"
+                      >
                         是否有內裝？
                       </td>
                       <td class="data__table__datainfo" id="data_inside"></td>
@@ -411,7 +420,8 @@
                       width="100%"
                       height="440px"
                     ></iframe>
-                    ><a
+                    >
+                    <a
                       class="address__map__link"
                       id="data_address_link"
                       target="blank"
@@ -434,6 +444,12 @@
             id="logoImg__footer"
             src="image/logo.png"
           />
+          <div
+            class="footer__content__weblogo__underText"
+            id="footer__content__weblogo__underText"
+          >
+            BUDDY CITY觀光服務官方網站
+          </div>
         </div>
         <div class="footer__content__box">
           <div class="footer__content__text__adress">
@@ -504,7 +520,7 @@
   <!--ポップアップのレイヤ-->
   <script type="text/javascript" src="js/firebase.js"></script>
   <script type="text/javascript" src="js/building_list.PopupLayer.js"></script>
-  <script type="text/javascript" src="js/language.js"></script>
+  <script type="text/javascript" src="../js/language.js"></script>
   <script type="text/javascript" src="../js/selectLang.js"></script>
   <script type="text/javascript" src="js/chooseLang.js"></script>
   <script type="text/javascript" src="../js/darkmode.js"></script>

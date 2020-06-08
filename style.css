@@ -391,7 +391,7 @@ body {
   padding: 36px 0;
   text-align: center;
   line-height: 35px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
   color: var(--title-color);
@@ -402,7 +402,7 @@ body {
 
 .discover__title__content .discover__text {
   display: block;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   text-align: center;
   line-height: 35px;
   font-style: normal;
@@ -448,7 +448,7 @@ body {
   margin-bottom: 40px;
   line-height: 28px;
   padding: 15px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
   color: var(--subtitle-bg);
@@ -544,7 +544,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 700;
@@ -581,7 +581,7 @@ body {
   bottom: 30px;
   color: var(--white-font-color);
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 25px;
@@ -598,7 +598,7 @@ body {
   bottom: -5px;
   margin: 0 12.5px;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -697,7 +697,7 @@ body {
   display: block;
   text-align: center;
   line-height: 35px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
   color: var(--white-title-font-color);
@@ -774,7 +774,7 @@ body {
   color: var(--white-font-color);
   margin: 0 30px 0 12.5px;
   text-align: left;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   line-height: 25px;
   font-size: 20px;
   font-weight: 500;
