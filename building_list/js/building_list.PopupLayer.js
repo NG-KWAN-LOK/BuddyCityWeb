@@ -100,7 +100,6 @@ function chooseBuilding(districtId, buildingId) {
             adress: buildingInfo.adress_chi,
             utilization: buildingInfo.用途,
             inside: buildingInfo.內裝,
-            notFound: "找不到資料",
           };
         } else if (languageContainer.lang === "eng") {
           tempInfo = {
@@ -109,7 +108,6 @@ function chooseBuilding(districtId, buildingId) {
             adress: buildingInfo.adress_eng,
             utilization: buildingInfo.Utilization,
             inside: buildingInfo.inside,
-            notFound: "404 Not Found",
           };
         } else if (languageContainer.lang === "jp") {
           tempInfo = {
@@ -118,7 +116,6 @@ function chooseBuilding(districtId, buildingId) {
             adress: buildingInfo.adress_jp,
             utilization: buildingInfo.用途_jp,
             inside: buildingInfo.インテリア,
-            notFound: "ページが見つかりません",
           };
         }
         $(".data_link_eng").attr(

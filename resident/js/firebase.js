@@ -28,7 +28,7 @@ async function renderResident() {
         if (languageContainer.lang === "chi") {
           districtArray.push(character.district_CHI);
         } else if (languageContainer.lang === "eng") {
-          districtArray.push(character.district_ENG);
+          districtArray.push(character.district_CHI);
         } else if (languageContainer.lang === "jp") {
           districtArray.push(character.district_CHI);
         }
@@ -58,6 +58,9 @@ async function renderResident() {
         </div>
         </div>`;
   $("#sortNav").append(districtBtn);
+  var tempInfo = {
+    district: null,
+  };
   districtList.forEach((district_CHI, districtIndex) => {
     if (district_CHI != undefined) {
       console.log(district_CHI);
