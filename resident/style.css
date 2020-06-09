@@ -1,4 +1,80 @@
 @charset "UTF-8";
+:root {
+  --primary-bg-color: #fff;
+  --second-bg-color: #fbfbfb;
+  --button-bg-color: #444;
+  --primary-button-title-color: #fff;
+  --second-button-title-color: #444;
+  --third-button-title-color: #5d5d5d;
+  --primary-button-hover-bg-color: #e0dede;
+  --second-button-hover-bg-color: #444;
+  --second-button-hover-color: #fff;
+  --top-bg-color: rgba(255, 255, 255, 0.918);
+  --top-nav-bg-color: #fff;
+  --phone-top-bottom-color: #ccc;
+  --phone-top-nav-bg-color: #fff;
+  --phone-top-nav-col-line-color: #444;
+  --phone-top-nav-col-title-color: #444;
+  --phone-top-nav-col-text-color: #444;
+  --primary-burger-icon-bg-color: #444;
+  --second-burger-icon-bg-color: #fff;
+  --main-between-line-color: #ccc;
+  --title-color: #444;
+  --subtitle-bg: #5d5d5d;
+  --white-title-font-color: #fff;
+  --grey-cotainer-bg-color: #333;
+  --white-font-color: #fff;
+  --cover-background-color: #818cab;
+  --border-bottom-color: #e1e1e1;
+  --footer-bg-color: #f2f2f2;
+  --subject-blue: #177cc4;
+  --second-bottom-bg-color: #f7f7f7;
+  --second-bottom-color: #444;
+  --second-bottom-hover-bg-color: #444;
+  --second-bottom-hover-color: #f7f7f7;
+  --popup-bg-color: rgba(255, 255, 255, 0.85);
+  --select-color: #fff;
+  --select-bg-color: #666;
+}
+
+[data-theme="dark"] {
+  --primary-bg-color: #212121;
+  --second-bg-color: #181818;
+  --button-bg-color: #313131;
+  --primary-button-title-color: #fff;
+  --second-button-title-color: #fff;
+  --third-button-title-color: #ececec;
+  --primary-button-hover-bg-color: rgb(70, 70, 70);
+  --second-button-hover-bg-color: rgb(70, 70, 70);
+  --second-button-hover-color: #fff;
+  --top-bg-color: #181818ea;
+  --top-nav-bg-color: #212121;
+  --phone-top-bottom-color: #2b2b2b;
+  --phone-top-nav-bg-color: #212121;
+  --phone-top-nav-col-line-color: #444;
+  --phone-top-nav-col-title-color: #fff;
+  --phone-top-nav-col-text-color: #fff;
+  --primary-burger-icon-bg-color: #fff;
+  --second-burger-icon-bg-color: #fff;
+  --main-between-line-color: #2b2b2b;
+  --title-color: #fff;
+  --subtitle-bg: #fbfbfb;
+  --white-title-font-color: #fff;
+  --grey-cotainer-bg-color: #333;
+  --white-font-color: #fff;
+  --cover-background-color: #818cab;
+  --border-bottom-color: #303030;
+  --footer-bg-color: #232323;
+  --second-bottom-bg-color: #444;
+  --second-bottom-color: #f7f7f7;
+  --second-bottom-hover-bg-color: #f7f7f7;
+  --second-bottom-hover-color: #444;
+  --popup-bg-color: rgba(0, 0, 0, 0.85);
+  --subject-blue: #177cc4;
+  --select-color: #000000;
+  --select-bg-color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +93,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background-color: #fbfbfb;
+  background-color: var(-second-bg-color);
 }
 
 a {
@@ -61,6 +137,7 @@ a {
 
 body {
   overflow-x: hidden;
+  background-color: var(--second-bg-color);
 }
 
 .main__banner {
@@ -75,7 +152,7 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--primary-bg-color);
   /*
   @media only screen and (min-width: 550px) {
     max-width: calc((225px * 2) + 50px);
@@ -98,24 +175,24 @@ body {
 @media only screen and (min-width: 768px) {
   .main {
     max-width: 720px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .main {
     max-width: 980px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .main {
     max-width: 1280px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
   }
 }
 
@@ -132,10 +209,10 @@ body {
   padding: 16px 0 36px 0;
   text-align: center;
   line-height: 55px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
-  color: #444;
+  color: var(--title-color);
   text-decoration: none;
   font-variant: normal;
   font-size: 2em;
@@ -143,12 +220,12 @@ body {
 
 .main__content .ResidentList .ResidentList__title__content .ResidentList__text {
   display: block;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   text-align: center;
   line-height: 35px;
   font-style: normal;
   font-weight: 400;
-  color: #444;
+  color: var(--title-color);
   text-decoration: none;
   font-variant: normal;
   font-size: 16px;
@@ -179,7 +256,7 @@ body {
 }
 
 .main__content #sortNav .sortNav__btn, .main__content #sortNav .actSortNav__btn {
-  background-color: #f7f7f7;
+  background-color: var(--second-bottom-bg-color);
   margin: 5px;
   border-radius: 5px;
   cursor: pointer;
@@ -188,11 +265,11 @@ body {
 }
 
 .main__content #sortNav .sortNav__btn .sortNav__text, .main__content #sortNav .actSortNav__btn .sortNav__text, .main__content #sortNav .actSortNav__btn .actSortNav__text {
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   text-align: center;
   font-style: normal;
   font-weight: 400;
-  color: #444;
+  color: var(--second-bottom-color);
   text-decoration: none;
   font-variant: normal;
   font-size: 17px;
@@ -202,21 +279,21 @@ body {
 }
 
 .main__content #sortNav .sortNav__btn:hover, .main__content #sortNav .actSortNav__btn:hover {
-  background-color: #444;
+  background-color: var(--second-bottom-hover-bg-color);
 }
 
 .main__content #sortNav .sortNav__btn:hover .sortNav__text, .main__content #sortNav .actSortNav__btn:hover .sortNav__text, .main__content #sortNav .sortNav__btn:hover .actSortNav__btn .actSortNav__text, .main__content #sortNav .actSortNav__btn .sortNav__btn:hover .actSortNav__text, .main__content #sortNav .actSortNav__btn:hover .actSortNav__text {
-  color: #fff;
+  color: var(--second-bottom-hover-color);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .main__content #sortNav .actSortNav__btn {
-  background-color: #444;
+  background-color: var(--second-bottom-hover-bg-color);
 }
 
 .main__content #sortNav .actSortNav__btn .actSortNav__text {
-  color: #fff;
+  color: var(--second-bottom-hover-color);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -239,10 +316,10 @@ body {
   padding: 25px 0;
   width: 20%;
   line-height: 30px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: bold;
-  color: #5d5d5d;
+  color: var(--subtitle-bg);
   background-color: transparent;
   font-variant: normal;
   font-size: 25px;
@@ -266,7 +343,7 @@ body {
 .main__content #resident .resident__box .resident__box__character .resident__box__character__title {
   margin: 10px 0;
   line-height: 20px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-variant: normal;
@@ -276,7 +353,7 @@ body {
 
 .main__content #resident .resident__box:hover {
   color: #177cc4;
-  background-color: #f7f7f7;
+  background-color: var(--second-bottom-hover-color);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -333,16 +410,16 @@ body {
   width: 75%;
   height: 75%;
   overflow-y: scroll;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: var(--popup-bg-color);
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container #data_username_title {
   padding-top: 30px;
   text-align: center;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
-  color: #444;
+  color: var(--title-color);
   background-color: transparent;
   text-decoration: none;
   font-variant: normal;
@@ -359,6 +436,32 @@ body {
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__main {
   height: 86.5%;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-style: normal;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: top;
+  color: var(--title-color);
+  font-weight: 400;
+  font-variant: normal;
+  font-size: 50px;
+  line-height: 75px;
+}
+
+.main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error .residentPopUpLayer__container__error__title {
+  display: block;
+  padding: 20px;
 }
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data {
@@ -402,10 +505,10 @@ body {
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
   line-height: 40px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: #2c2a2a;
+  color: var(--subtitle-bg);
   font-variant: normal;
   font-size: 20px;
   width: 100%;
@@ -453,12 +556,18 @@ body {
 }
 
 @media only screen and (max-width: 1280px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error {
+    font-size: 50px;
+  }
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table {
     padding: 0px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error {
+    font-size: 40px;
+  }
   .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data {
     padding: 0;
     -webkit-box-orient: vertical;
@@ -493,6 +602,18 @@ body {
             order: 2;
     line-height: 20px;
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__error {
+    font-size: 20px;
   }
 }
 
@@ -533,10 +654,10 @@ body {
   padding: 20px 0;
   text-align: center;
   line-height: 35px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
-  color: #444;
+  color: var(--title-color);
   background-color: transparent;
   text-decoration: none;
   font-variant: normal;
@@ -551,100 +672,5 @@ body {
   .data__title {
     font-size: 20px;
   }
-}
-
-.footer {
-  background-color: #f2f2f2;
-  width: 100%;
-}
-
-.footer__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 40px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.footer__content__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
-.footer__content__weblogo {
-  max-width: 100%;
-  height: auto;
-}
-
-.footer__content__weblogo__image {
-  max-width: 100%;
-  width: 387px;
-  right: 0px;
-}
-
-.footer__content__box {
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
-  line-height: 25px;
-  font-style: normal;
-  color: #444;
-  font-size: 15px;
-  margin-left: 20px;
-}
-
-.footer__content__box__btn__text {
-  display: inline;
-  margin-right: 30px;
-  color: #444;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.footer__content__box__btn__text:hover {
-  background-color: #000000;
-  color: #ffffff;
-  border-radius: 5px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-@media only screen and (max-width: 411px) {
-  .footer .footer__content {
-    padding: 20px;
-  }
-  .footer .footer__content__text__adress,
-  .footer .footer__content__links {
-    font-size: 14px;
-  }
-  .footer .footer__content__box__copyright {
-    font-size: 10px;
-    text-align: center;
-  }
-}
-
-.footer__content__text__adress {
-  margin-bottom: 10px;
-}
-
-::-moz-selection {
-  background-color: #666;
-  color: #fff;
-}
-
-::selection {
-  background-color: #666;
-  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

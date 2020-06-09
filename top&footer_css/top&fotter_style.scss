@@ -12,6 +12,7 @@
   width: 100%;
   border-bottom: 3px solid var(--phone-top-bottom-color);
   background-color: var(--primary-bg-color);
+  transition: 0.5s;
   @media only screen and (min-width: 768px) {
     display: flex;
   }
@@ -61,48 +62,92 @@
   }
   .PhoneTop__mainnav__container,
   #PhoneTop__mainnav__container {
-    display: none;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
+    z-index: 2;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
     width: 100%;
-    background-color: var(--phone-top-nav-bg-color);
-    .PhoneTop__mainnav__container__col {
-      width: 50%;
-      .PhoneTop__mainnav__container__col__a {
-        text-decoration-line: none;
+    height: 100%;
+    transform: translateX(-1000px);
+    transition: 0.5s;
+    .PhoneTop__mainnav__container__left {
+      display: block;
+      width: 80%;
+      height: 100%;
+      max-width: 100%;
+      background-color: var(--phone-top-nav-bg-color);
+      transition: 0.5s;
+      padding: 14px;
+      .PhoneTop__mainnav__container__col {
         width: 100%;
-        font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
-        color: #444;
-        font-size: 13px;
-        border-left: 1px solid var(--main-between-line-color);
-        border-right: 1px solid var(--main-between-line-color);
-        transition: background-color 0.5s ease, color 0.5s ease;
-        box-sizing: border-box;
-        .PhoneTop__mainnav__container__col__a__eng {
-          font-size: 12px;
-          font-weight: 500;
+        margin-bottom: 20px;
+        .PhoneTop__mainnav__container__col__title {
+          font-size: 17px;
+          font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+          color: var(--phone-top-nav-col-title-color);
+          text-align: left;
+          padding: 25px 0;
         }
-        .PhoneTop__mainnav__container__col__a__chi {
-          font-size: 12px;
-          font-weight: 400;
-        }
-        @media only screen and (min-width: 767px) {
-          .PhoneTop__mainnav__container__col__a__eng {
-            font-size: 15px;
+        .PhoneTop__mainnav__container__col__a__darkmode {
+          display: flex;
+          .PhoneTop__mainnav__container__col__a__darkmode__text {
+            font-size: 14px;
+            padding: 12px;
+            font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體",
+              sans-serif;
+            color: var(--phone-top-nav-col-text-color);
+            text-align: left;
           }
         }
-        &:hover {
-          transition: 0.5s;
-          color: var(--subject-blue);
+        .PhoneTop__mainnav__container__col__a {
+          display: block;
+          text-decoration-line: none;
+          width: 100%;
+          transition: background-color 0.5s ease, color 0.5s ease;
+          box-sizing: border-box;
+          .PhoneTop__mainnav__container__col__a__menu {
+            font-size: 14px;
+            padding: 12px;
+            font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體",
+              sans-serif;
+            color: var(--phone-top-nav-col-text-color);
+            text-align: left;
+          }
+          .PhoneTop__mainnav__container__col__a__language {
+            cursor: pointer;
+            font-size: 14px;
+            padding: 12px;
+            font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體",
+              sans-serif;
+            color: var(--phone-top-nav-col-text-color);
+            text-align: left;
+          }
+          &:hover {
+            transition: 0.5s;
+            color: var(--subject-blue);
+          }
         }
       }
+      .PhoneTop__mainnav__container__col__line {
+        width: 1px;
+        height: 80%;
+        margin: 0 20px;
+        background-color: var(--phone-top-nav-col-line-color);
+        transition: 0.5s;
+      }
     }
-    .PhoneTop__mainnav__container__col__line {
-      width: 1px;
-      height: 80%;
-      margin: 0 20px;
-      background-color: var(--phone-top-nav-col-line-color);
+    .PhoneTop__mainnav__container__shadow {
+      display: flex;
+      height: 100%;
+      width: 20%;
+      //background-color: rgba(68, 68, 68, 0.281);
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.05) 35%,
+        rgba(0, 0, 0, 0.24) 100%
+      );
+      z-index: 0;
     }
   }
   .PhoneTop__logo {
@@ -132,6 +177,7 @@
   width: 100%;
   height: 90px;
   background-color: var(--top-bg-color);
+  transition: 0.5s;
   .Top__container {
     max-width: 1280px;
     width: 90%;
@@ -176,7 +222,7 @@
   display: none;
   position: relative;
   z-index: 1;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: #5d5d5d;
@@ -201,7 +247,10 @@
     border-bottom-left-radius: 7px;
     border-top-left-radius: 7px;
     height: 38px;
+    transition: 0.5s;
+    .Top__nav__left_subtitle__text,
     a {
+      cursor: pointer;
       color: var(--third-button-title-color);
     }
     &:hover {
@@ -231,6 +280,7 @@
     display: inline-block;
     margin-top: -2.6px;
     padding-right: 0.5px;
+    transition: 0.5s;
     .bar1,
     .bar2,
     .bar3 {
@@ -261,17 +311,18 @@
   .Top__nav__left_title {
     height: 100%;
     box-sizing: content-box;
-    font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 40px;
     color: var(--primary-button-title-color);
     text-align: center;
     cursor: pointer;
+    transition: 0.5s;
   }
   .Top__nav__left_subtitle {
     width: 270px;
-    font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 45px;
@@ -281,6 +332,7 @@
     background-color: var(--top-nav-bg-color);
     text-align: left;
     box-sizing: border-box;
+    transition: 0.5s;
     .ion-android-arrow-dropdown {
       line-height: inherit;
       padding-right: 5px;
@@ -304,11 +356,12 @@
     border-bottom: 2px solid var(--button-bg-color);
     border-bottom-right-radius: 7px;
     border-top-right-radius: 7px;
+    transition: 0.5s;
     .Top__nav__right_subtitle {
       display: flex;
       align-items: center;
       width: 250px;
-      font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
       font-size: 16px;
       font-weight: 300;
       line-height: 45px;
@@ -338,6 +391,7 @@
     display: inline-block;
     margin-top: -2.6px;
     padding-right: 0.5px;
+    transition: 0.5s;
     .bar1,
     .bar2,
     .bar3 {
@@ -358,13 +412,14 @@
   .Top__nav__right_title {
     height: 100%;
     box-sizing: content-box;
-    font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 37px;
     color: var(--second-button-title-color);
     text-align: center;
     cursor: pointer;
+    transition: 0.5s;
   }
 }
 
@@ -399,7 +454,16 @@
   }
 }
 
-.switch input {
+.PhoneTop__switch {
+  position: relative;
+  display: inline-block;
+  left: 80px;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input,
+.PhoneTop__switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -455,6 +519,7 @@ input:checked + .slider:before {
   background-color: var(--footer-bg-color);
   width: 100%;
   justify-content: space-around;
+  transition: 0.5s;
   &__content {
     display: flex;
     padding: 40px;
@@ -475,10 +540,20 @@ input:checked + .slider:before {
         width: 387px;
         right: 0px;
       }
+      .footer__content__weblogo__underText {
+        display: flex;
+        justify-content: center;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        line-height: 25px;
+        font-style: normal;
+        font-weight: 300;
+        color: var(--third-button-title-color);
+        font-size: 15px;
+      }
     }
     &__box {
       flex-flow: wrap;
-      font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
       line-height: 25px;
       font-style: normal;
       font-weight: 300;

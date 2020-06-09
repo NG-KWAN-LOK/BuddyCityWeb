@@ -1,3 +1,4 @@
+@import "../color/color";
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #fbfbfb;
+  background-color: var(-second-bg-color);
 }
 
 a {
@@ -57,6 +58,7 @@ a {
 
 body {
   overflow-x: hidden;
+  background-color: var(--second-bg-color);
 }
 .main__banner {
   background-image: url("image/001.jpg");
@@ -69,25 +71,25 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--primary-bg-color);
   @media only screen and (max-width: 550px) {
   }
   @media only screen and (min-width: 550px) {
   }
   @media only screen and (min-width: 768px) {
     max-width: 720px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
   }
   @media only screen and (min-width: 1024px) {
     max-width: 980px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
   }
   @media only screen and (min-width: 1280px) {
     max-width: 1280px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
   }
 
   /*
@@ -119,22 +121,22 @@ body {
         padding: 16px 0 36px 0;
         text-align: center;
         line-height: 55px;
-        font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
         font-style: normal;
         font-weight: 500;
-        color: #444;
+        color: var(--title-color);
         text-decoration: none;
         font-variant: normal;
         font-size: 2em;
       }
       .ResidentList__text {
         display: block;
-        font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
         text-align: center;
         line-height: 35px;
         font-style: normal;
         font-weight: 400;
-        color: #444;
+        color: var(--title-color);
         text-decoration: none;
         font-variant: normal;
         font-size: 16px;
@@ -156,17 +158,17 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     .sortNav__btn {
-      background-color: #f7f7f7;
+      background-color: var(--second-bottom-bg-color);
       margin: 5px;
       border-radius: 5px;
       cursor: pointer;
       transition: 0.5s;
       .sortNav__text {
-        font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
         text-align: center;
         font-style: normal;
         font-weight: 400;
-        color: #444;
+        color: var(--second-bottom-color);
         text-decoration: none;
         font-variant: normal;
         font-size: 17px;
@@ -174,19 +176,19 @@ body {
         transition: 0.5s;
       }
       &:hover {
-        background-color: #444;
+        background-color: var(--second-bottom-hover-bg-color);
         .sortNav__text {
-          color: #fff;
+          color: var(--second-bottom-hover-color);
           transition: 0.5s;
         }
       }
     }
     .actSortNav__btn {
       @extend .sortNav__btn;
-      background-color: #444;
+      background-color: var(--second-bottom-hover-bg-color);
       .actSortNav__text {
         @extend .sortNav__text;
-        color: #fff;
+        color: var(--second-bottom-hover-color);
         transition: 0.5s;
       }
     }
@@ -201,10 +203,10 @@ body {
       padding: 25px 0;
       width: 20%;
       line-height: 30px;
-      font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
       font-style: normal;
       font-weight: bold;
-      color: #5d5d5d;
+      color: var(--subtitle-bg);
       background-color: transparent;
       font-variant: normal;
       font-size: 25px;
@@ -222,7 +224,7 @@ body {
         .resident__box__character__title {
           margin: 10px 0;
           line-height: 20px;
-          font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+          font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
           font-style: normal;
           font-weight: 500;
           font-variant: normal;
@@ -232,7 +234,7 @@ body {
       }
       &:hover {
         color: #177cc4;
-        background-color: #f7f7f7;
+        background-color: var(--second-bottom-hover-color);
         transition: 0.5s;
       }
     }
@@ -278,14 +280,14 @@ body {
       width: 75%;
       height: 75%;
       overflow-y: scroll;
-      background-color: rgba(255, 255, 255, 0.85);
+      background-color: var(--popup-bg-color);
       #data_username_title {
         padding-top: 30px;
         text-align: center;
-        font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
         font-style: normal;
         font-weight: 500;
-        color: #444;
+        color: var(--title-color);
         background-color: transparent;
         text-decoration: none;
         font-variant: normal;
@@ -300,6 +302,26 @@ body {
       }
       .residentPopUpLayer__container__main {
         height: 86.5%;
+      }
+      .residentPopUpLayer__container__error {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        font-style: normal;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        vertical-align: top;
+        color: var(--title-color);
+        font-weight: 400;
+        font-variant: normal;
+        font-size: 50px;
+        line-height: 75px;
+        .residentPopUpLayer__container__error__title {
+          display: block;
+          padding: 20px;
+        }
       }
       .residentPopUpLayer__container__data {
         padding: 60px;
@@ -329,10 +351,11 @@ body {
 
           .data__table {
             line-height: 40px;
-            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體",
+              sans-serif;
             font-style: normal;
             font-weight: 400;
-            color: #2c2a2a;
+            color: var(--subtitle-bg);
             font-variant: normal;
             font-size: 20px;
             width: 100%;
@@ -376,6 +399,9 @@ body {
         }
       }
       @media only screen and (max-width: 1280px) {
+        .residentPopUpLayer__container__error {
+          font-size: 50px;
+        }
         .residentPopUpLayer__container__data {
           .residentPopUpLayer__container__data__table {
             padding: 0px;
@@ -383,6 +409,9 @@ body {
         }
       }
       @media only screen and (max-width: 1024px) {
+        .residentPopUpLayer__container__error {
+          font-size: 40px;
+        }
         .residentPopUpLayer__container__data {
           padding: 0;
           flex-direction: column;
@@ -404,6 +433,16 @@ body {
             line-height: 20px;
             width: 80%;
           }
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .residentPopUpLayer__container__error {
+          font-size: 30px;
+        }
+      }
+      @media only screen and (max-width: 500px) {
+        .residentPopUpLayer__container__error {
+          font-size: 20px;
         }
       }
 
@@ -441,10 +480,10 @@ body {
   padding: 20px 0;
   text-align: center;
   line-height: 35px;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 500;
-  color: #444;
+  color: var(--title-color);
   background-color: transparent;
   text-decoration: none;
   font-variant: normal;
@@ -458,74 +497,4 @@ body {
   .data__title {
     font-size: 20px;
   }
-}
-
-.footer {
-  background-color: #f2f2f2;
-  width: 100%;
-  &__content {
-    display: flex;
-    padding: 40px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    &__links {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-    &__weblogo {
-      max-width: 100%;
-      height: auto;
-      &__image {
-        max-width: 100%;
-        width: 387px;
-        right: 0px;
-      }
-    }
-    &__box {
-      flex-flow: wrap;
-      font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
-      line-height: 25px;
-      font-style: normal;
-      color: #444;
-      font-size: 15px;
-      margin-left: 20px;
-      &__btn {
-        &__text {
-          display: inline;
-          margin-right: 30px;
-          color: #444;
-          transition: 0.5s;
-          &:hover {
-            background-color: #000000;
-            color: #ffffff;
-            border-radius: 5px;
-            transition: 0.5s;
-          }
-        }
-      }
-    }
-  }
-  @media only screen and (max-width: 411px) {
-    .footer__content {
-      padding: 20px;
-    }
-    .footer__content__text__adress,
-    .footer__content__links {
-      font-size: 14px;
-    }
-    .footer__content__box__copyright {
-      font-size: 10px;
-      text-align: center;
-    }
-  }
-}
-.footer__content__text__adress {
-  margin-bottom: 10px;
-}
-
-::selection {
-  background-color: #666;
-  color: #fff;
 }

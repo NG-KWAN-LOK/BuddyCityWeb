@@ -11,8 +11,10 @@
   --top-bg-color: rgba(255, 255, 255, 0.918);
   --top-nav-bg-color: #fff;
   --phone-top-bottom-color: #ccc;
-  --phone-top-nav-bg-color: #ccc;
+  --phone-top-nav-bg-color: #fff;
   --phone-top-nav-col-line-color: #444;
+  --phone-top-nav-col-title-color: #444;
+  --phone-top-nav-col-text-color: #444;
   --primary-burger-icon-bg-color: #444;
   --second-burger-icon-bg-color: #fff;
   --main-between-line-color: #ccc;
@@ -25,6 +27,11 @@
   --border-bottom-color: #e1e1e1;
   --footer-bg-color: #f2f2f2;
   --subject-blue: #177cc4;
+  --second-bottom-bg-color: #f7f7f7;
+  --second-bottom-color: #444;
+  --second-bottom-hover-bg-color: #444;
+  --second-bottom-hover-color: #f7f7f7;
+  --popup-bg-color: rgba(255, 255, 255, 0.85);
   --select-color: #fff;
   --select-bg-color: #666;
 }
@@ -35,15 +42,17 @@
   --button-bg-color: #313131;
   --primary-button-title-color: #fff;
   --second-button-title-color: #fff;
-  --third-button-title-color: #909090;
+  --third-button-title-color: #ececec;
   --primary-button-hover-bg-color: rgb(70, 70, 70);
   --second-button-hover-bg-color: rgb(70, 70, 70);
   --second-button-hover-color: #fff;
   --top-bg-color: #181818ea;
   --top-nav-bg-color: #212121;
-  --phone-top-bottom-color: #ccc;
-  --phone-top-nav-bg-color: #ccc;
+  --phone-top-bottom-color: #2b2b2b;
+  --phone-top-nav-bg-color: #212121;
   --phone-top-nav-col-line-color: #444;
+  --phone-top-nav-col-title-color: #fff;
+  --phone-top-nav-col-text-color: #fff;
   --primary-burger-icon-bg-color: #fff;
   --second-burger-icon-bg-color: #fff;
   --main-between-line-color: #2b2b2b;
@@ -55,8 +64,13 @@
   --cover-background-color: #818cab;
   --border-bottom-color: #303030;
   --footer-bg-color: #232323;
+  --second-bottom-bg-color: #444;
+  --second-bottom-color: #f7f7f7;
+  --second-bottom-hover-bg-color: #f7f7f7;
+  --second-bottom-hover-color: #444;
+  --popup-bg-color: rgba(0, 0, 0, 0.85);
   --subject-blue: #177cc4;
-  --select-color: #fff;
-  --select-bg-color: #666;
+  --select-color: #000000;
+  --select-bg-color: #ffffff;
 }
 /*# sourceMappingURL=color.css.map */
