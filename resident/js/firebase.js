@@ -25,6 +25,7 @@ async function renderResident() {
       var districtBtn;
       res.forEach((characterSh, index) => {
         var character = characterSh.val();
+        console.log(character);
         if (languageContainer.lang === "chi") {
           districtArray.push(character.district_CHI);
         } else if (languageContainer.lang === "eng") {
