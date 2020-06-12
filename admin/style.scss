@@ -332,5 +332,23 @@ body {
       font-variant: normal;
       font-size: 16px;
     }
+    .admin__monitor__chooseItem {
+      cursor: pointer;
+      display: flex;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+      text-align: left;
+      line-height: 35px;
+      font-style: normal;
+      font-weight: 300;
+      color: var(--title-color);
+      text-decoration: none;
+      font-variant: normal;
+      font-size: 16px;
+      &:hover {
+        color: var(--subject-blue);
+        background-color: var(--second-bottom-hover-color);
+        transition: 0.5s;
+      }
+    }
   }
 }
