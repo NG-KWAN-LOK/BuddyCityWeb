@@ -11,13 +11,19 @@ function googleLoginRedirect() {
       user = result.user;
     });
 }
-function logout() {
+function logout(eventCode = 0) {
   firebase
     .auth()
     .signOut()
     .then(
       function () {
-        alert("登出成功");
+        if (eventCode === 0) {
+          alert("登出成功");
+        } else if (eventCode === 1) {
+          alert("您已閒置超過5秒，系統自動登出");
+        }
+        user = "";
+        token = "";
       },
       function (error) {
         alert("登出失敗");
@@ -58,6 +64,7 @@ firebase.auth().onAuthStateChanged(async function (user) {
         城市建築物名冊
     </div>
     `;
+      autoLogout();
     } else {
       alert("很抱歉，您不是管理員，請您找真·管理員尋求協助");
       logout();
@@ -73,3 +80,24 @@ firebase.auth().onAuthStateChanged(async function (user) {
   }
   $("#admin__content").append(divContent);
 });
+
+console.log(user);
+function autoLogout() {
+  console.log("autoLogout");
+  var oTimerId;
+  function Timeout() {
+    logout(1);
+  }
+  function ReCalculate() {
+    clearTimeout(oTimerId);
+    if (user != "") {
+      oTimerId = setTimeout(function () {
+        Timeout(1);
+      }, 1 * 5 * 1000);
+    }
+  }
+  document.onmousedown = ReCalculate;
+  document.onmousemove = ReCalculate;
+  ReCalculate();
+}
+autoLogout();
