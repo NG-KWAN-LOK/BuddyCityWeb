@@ -333,23 +333,7 @@
             </div>
           </div>
         </div>
-        <div class="admin__content">
-          <div class="admin__login">
-            <div class="admin__login__title">請先登入</div>
-            <div id="singUpRedirect" onclick="googleLoginRedirect()">
-              使用google註冊
-            </div>
-          </div>
-          <div class="admin__content__text">
-            請選擇您想管理之頁面：
-          </div>
-          <div class="admin__content__chooseItem" onclick="choosePage(1)">
-            居民名冊
-          </div>
-          <div class="admin__content__chooseItem" onclick="choosePage(2)">
-            城市建築物名冊
-          </div>
-        </div>
+        <div class="admin__content" id="admin__content"></div>
         <div class="admin__choosePage" id="admin__choosePage"></div>
         <div class="admin__monitor" id="admin__monitor"></div>
       </div>
@@ -435,10 +419,10 @@
   <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
   <script type="text/javascript" src="js/firebase.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
   <!--ポップアップのレイヤ-->
   <script type="text/javascript" src="../js/language.js"></script>
   <script type="text/javascript" src="../js/selectLang.js"></script>

@@ -10,21 +10,8 @@ var firebaseConfig = {
   measurementId: "G-21NGJNE2VH",
 };
 // Initialize Firebase
-var provider = new firebase.auth.GoogleAuthProvider();
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-//Login
-function googleLoginRedirect() {
-  console.log("clicked");
-  firebase
-    .auth()
-    .signInWithRedirect(provider)
-    .then(function (result) {
-      var token = result.credential.accessToken;
-      var user = result.user;
-    });
-}
-
 //Get Data
 
 async function readDatabase(pagechoose) {
@@ -161,7 +148,7 @@ async function newItemResident() {
         alert("建立成功");
       })
       .catch(function () {
-        alert("伺服器發生錯誤，請稍後再試");
+        alert("伺服器發生錯誤 或者 你是黑客 ㄇㄌㄈㄎ！！");
       });
   } else {
     alert("建立失敗！！！未有填寫全部資料");
@@ -169,8 +156,8 @@ async function newItemResident() {
   $("#admin__monitor").empty();
 }
 
-const submitBtn = document.querySelector('[data-action="submit"]');
-submitBtn.addEventListener("click", newItemResident);
+// const submitBtn = document.querySelector('[data-action="submit"]');
+// submitBtn.addEventListener("click", newItemResident);
 
 function showEditResidentForm() {
   $("#admin__monitor").empty();

@@ -246,6 +246,50 @@ body {
   }
 }
 
+.main__content .admin__content .admin__content__title {
+  display: block;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  text-align: center;
+  line-height: 35px;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--title-color);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.main__content .admin__content .admin__content__logout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__content .admin__content .admin__content__logout .admin__content__logout__btn {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 3px solid var(--main-between-line-color);
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  line-height: 35px;
+  font-style: normal;
+  font-weight: 300;
+  color: var(--title-color);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.main__content .admin__content .admin__content__logout .admin__content__logout__btn:hover {
+  background-color: var(--primary-button-hover-bg-color);
+}
+
 .main__content .admin__content .admin__login {
   display: -webkit-box;
   display: -ms-flexbox;
