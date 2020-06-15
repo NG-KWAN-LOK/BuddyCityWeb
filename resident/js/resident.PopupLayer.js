@@ -41,7 +41,7 @@ function chooseCharacter(characterId) {
         } else if (languageContainer.lang === "jp") {
           tempInfo = {
             nickname: characteInfo.nickname_jp,
-            address: characteInfo.address_JP,
+            address: characteInfo.adress_JP,
             project: characteInfo.project_JP,
           };
         }
