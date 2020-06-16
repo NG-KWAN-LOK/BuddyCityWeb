@@ -173,6 +173,8 @@ function setLanguage(languageIndex) {
     languageContainer.reality_project_bridge;
   document.getElementById("reality_project_playground").innerHTML =
     languageContainer.reality_project_playground;
+  document.getElementById("reality_project_playground_sub").innerHTML =
+    languageContainer.reality_project_playground_sub;
   document.getElementById("reality_project_school").innerHTML =
     languageContainer.reality_project_school;
   document.getElementById("reality_project_library").innerHTML =
