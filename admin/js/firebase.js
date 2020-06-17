@@ -153,7 +153,7 @@ async function newItemBuilding(districtId) {
         alert("建立成功");
       })
       .catch(function () {
-        alert("伺服器發生錯誤 或者 你是黑客 ㄇㄌㄈㄎ！！");
+        alert("伺服器發生錯誤。如果您是管理員，請尋真·管理員協助。 或者 你是黑客 ㄇㄌㄈㄎ！！");
       });
   } else {
     alert("建立失敗！！！未有填寫全部資料");
@@ -424,7 +424,7 @@ async function newItemResident() {
         alert("建立成功");
       })
       .catch(function () {
-        alert("伺服器發生錯誤 或者 你是黑客 ㄇㄌㄈㄎ！！");
+        alert("伺服器發生錯誤。如果您是管理員，請尋真·管理員協助。 或者 你是黑客 ㄇㄌㄈㄎ！！");
       });
   } else {
     alert("建立失敗！！！未有填寫全部資料");

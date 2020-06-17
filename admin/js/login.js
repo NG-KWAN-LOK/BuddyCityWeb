@@ -22,6 +22,9 @@ function logout(eventCode = 0) {
         } else if (eventCode === 1) {
           alert("您已閒置超過5秒，系統自動登出");
         }
+        else {
+          console.log("Login Inited");
+        }
         user = "";
         token = "";
       },
@@ -64,10 +67,10 @@ firebase.auth().onAuthStateChanged(async function (user) {
         城市建築物名冊
     </div>
     `;
-      autoLogout();
+      //autoLogout();
     } else {
-      alert("很抱歉，您不是管理員，請您找真·管理員尋求協助");
-      logout();
+      alert("很抱歉，您不是管理員，請您找管理員尋求協助");
+      logout(999);
     }
   } else {
     var divContent = `
@@ -82,22 +85,23 @@ firebase.auth().onAuthStateChanged(async function (user) {
 });
 
 console.log(user);
-function autoLogout() {
-  console.log("autoLogout");
-  var oTimerId;
-  function Timeout() {
-    logout(1);
-  }
-  function ReCalculate() {
-    clearTimeout(oTimerId);
-    if (user != "") {
-      oTimerId = setTimeout(function () {
-        Timeout(1);
-      }, 1 * 5 * 1000);
-    }
-  }
-  document.onmousedown = ReCalculate;
-  document.onmousemove = ReCalculate;
-  ReCalculate();
+console.log("autoLogout");
+var oTimerId;
+function Timeout() {
+  logout(1);
 }
-autoLogout();
+function ReCalculate() {
+  clearTimeout(oTimerId);
+  if (user != "") {
+    oTimerId = setTimeout(function () {
+      Timeout(1);
+    }, 1 * 5 * 1000);
+  }
+}
+document.onmousedown = ReCalculate;
+if (document.onmousemove) {
+  console.log("move");
+}
+document.onmousemove = ReCalculate;
+ReCalculate();
+logout(999);
