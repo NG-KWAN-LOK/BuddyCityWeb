@@ -11,8 +11,8 @@ function googleLoginRedirect() {
       user = result.user;
     });
 }
-function logout(eventCode = 0) {
-  firebase
+async function logout(eventCode = 0) {
+  await firebase
     .auth()
     .signOut()
     .then(
@@ -52,6 +52,7 @@ firebase.auth().onAuthStateChanged(async function (user) {
     );
     if (userIsAdmin === true) {
       alert("歡迎管理員大大");
+      console.log("Login success");
       var divContent = `
     <div class="admin__content__title">歡迎管理員大大</div>
     <div class="admin__content__logout" onclick="logout()">
@@ -77,17 +78,17 @@ firebase.auth().onAuthStateChanged(async function (user) {
     <div class="admin__login">
         <div class="admin__login__title">請先登入</div>
         <div id="singUpRedirect" onclick="googleLoginRedirect()">
-            使用google註冊
+            使用google帳號登入
         </div>
     </div>`;
   }
   $("#admin__content").append(divContent);
 });
-
+logout(999);
 console.log(user);
-console.log("autoLogout");
 var oTimerId;
 function Timeout() {
+  console.log("autoLogout");
   logout(1);
 }
 function ReCalculate() {
@@ -99,9 +100,6 @@ function ReCalculate() {
   }
 }
 document.onmousedown = ReCalculate;
-if (document.onmousemove) {
-  console.log("move");
-}
 document.onmousemove = ReCalculate;
+document.onkeydown = ReCalculate;
 ReCalculate();
-logout(999);

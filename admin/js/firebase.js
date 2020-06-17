@@ -19,7 +19,7 @@ async function readDatabase(pagechoose) {
   var DataRef = firebase.database().ref(pagechoose);
   console.log("In editDatabase" + pagechoose);
   var titleString = `
-  <div>在資料庫${pagechoose}內有的資料</div>
+  <div class="admin__monitor__title">在資料庫${pagechoose}內有的資料</div>
   `;
   $("#admin__monitor").append(titleString);
   if (pagechoose === "building") {
@@ -30,12 +30,12 @@ async function readDatabase(pagechoose) {
           var itemKey = Item.getKey();
           itemValue = Item.val();
           console.log(itemValue);
-          var divContent = `<div>${itemKey}：<div>`;
+          var divContent = `<div class="admin__monitor__item" style="padding:36px 0px 0px 0px">${itemKey}：</div>`;
           for (var title in itemValue) {
             //console.log(itemValue[title]);
-            divContent += `<div>${title}：${itemValue[title]}<div>`;
+            divContent += `<div class="admin__monitor__item" style="padding-left:64px">${title}：${itemValue[title]}</div>`;
             for (var value in itemValue[title]) {
-              divContent += `<div>${value}：${itemValue[title][value]}<div>`;
+              divContent += `<div class="admin__monitor__item" style="padding-left:128px">${value}：${itemValue[title][value]}</div>`;
             }
           }
           $("#admin__monitor").append(divContent);
@@ -55,9 +55,9 @@ async function readDatabase(pagechoose) {
           var itemKey = Item.getKey();
           //console.log(Item.val());
           itemValue = Item.val();
-          var divContent = `<div>${itemKey}：<div>`;
+          var divContent = `<div class="admin__monitor__item" style="padding:36px 0px 0px 0px">${itemKey}：</div>`;
           for (var title in itemValue) {
-            divContent += `<div>${title}：${itemValue[title]}<div>`;
+            divContent += `<div class="admin__monitor__item" style="padding-left:64px">${title}：${itemValue[title]}</div>`;
           }
           $("#admin__monitor").append(divContent);
         });
@@ -154,6 +154,19 @@ async function newItemBuilding(districtId) {
       })
       .catch(function () {
         alert("伺服器發生錯誤。如果您是管理員，請尋真·管理員協助。 或者 你是黑客 ㄇㄌㄈㄎ！！");
+        if (user === "") {
+          logout(999);
+          $("#admin__content").empty();
+          $("#admin__choosePage").empty();
+          var divContent = `
+    <div class="admin__login">
+        <div class="admin__login__title">請先登入</div>
+        <div id="singUpRedirect" onclick="googleLoginRedirect()">
+            使用google帳號登入
+        </div>
+    </div>`;
+          $("#admin__content").append(divContent);
+        }
       });
   } else {
     alert("建立失敗！！！未有填寫全部資料");
@@ -425,6 +438,19 @@ async function newItemResident() {
       })
       .catch(function () {
         alert("伺服器發生錯誤。如果您是管理員，請尋真·管理員協助。 或者 你是黑客 ㄇㄌㄈㄎ！！");
+        if (user === "") {
+          logout(999);
+          $("#admin__content").empty();
+          $("#admin__choosePage").empty();
+          var divContent = `
+    <div class="admin__login">
+        <div class="admin__login__title">請先登入</div>
+        <div id="singUpRedirect" onclick="googleLoginRedirect()">
+            使用google帳號登入
+        </div>
+    </div>`;
+          $("#admin__content").append(divContent);
+        }
       });
   } else {
     alert("建立失敗！！！未有填寫全部資料");
