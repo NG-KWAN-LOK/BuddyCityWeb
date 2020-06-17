@@ -409,7 +409,7 @@ body {
   display: block;
   width: 75%;
   height: 75%;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: var(--popup-bg-color);
 }
 
@@ -505,7 +505,7 @@ body {
 
 .main__content #residentPopUpLayer .residentPopUpLayer__container .residentPopUpLayer__container__data .residentPopUpLayer__container__data__table .data__table {
   line-height: 40px;
-  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: var(--subtitle-bg);

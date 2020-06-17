@@ -298,7 +298,7 @@ body {
       display: block;
       width: 75%;
       height: 75%;
-      overflow-y: scroll;
+      overflow-y: auto;
       background-color: var(--popup-bg-color);
       #data_username_title {
         padding-top: 30px;

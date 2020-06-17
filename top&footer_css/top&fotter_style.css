@@ -118,6 +118,7 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding: 14px;
+  overflow-y: auto;
 }
 
 .PhoneTop .PhoneTop__mainnav__container .PhoneTop__mainnav__container__left .PhoneTop__mainnav__container__col,
@@ -146,7 +147,7 @@
 .PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__left .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a__darkmode .PhoneTop__mainnav__container__col__a__darkmode__text {
   font-size: 14px;
   padding: 12px;
-  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   color: var(--phone-top-nav-col-text-color);
   text-align: left;
 }
@@ -167,7 +168,7 @@
 .PhoneTop #PhoneTop__mainnav__container .PhoneTop__mainnav__container__left .PhoneTop__mainnav__container__col .PhoneTop__mainnav__container__col__a .PhoneTop__mainnav__container__col__a__menu {
   font-size: 14px;
   padding: 12px;
-  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   color: var(--phone-top-nav-col-text-color);
   text-align: left;
 }
@@ -177,7 +178,7 @@
   cursor: pointer;
   font-size: 14px;
   padding: 12px;
-  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   color: var(--phone-top-nav-col-text-color);
   text-align: left;
 }

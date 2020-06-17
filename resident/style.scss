@@ -279,7 +279,7 @@ body {
       display: block;
       width: 75%;
       height: 75%;
-      overflow-y: scroll;
+      overflow-y: auto;
       background-color: var(--popup-bg-color);
       #data_username_title {
         padding-top: 30px;
@@ -351,8 +351,7 @@ body {
 
           .data__table {
             line-height: 40px;
-            font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體",
-              sans-serif;
+            font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
             font-style: normal;
             font-weight: 400;
             color: var(--subtitle-bg);
