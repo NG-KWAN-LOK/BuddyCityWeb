@@ -4,24 +4,18 @@ function DarkMode(x) {
     document.getElementsByTagName("body")[0].getAttribute("data-theme") === ""
   ) {
     setDarkMode("dark");
-    document.cookie =
-      "darkMode=light; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/BuddyCityWeb;";
-    document.cookie = "darkMode=dark; path=/;";
-    console.log(document.cookie.split(";"));
+    localStorage.setItem("darkMode", "dark");
     console.log("on");
   } else {
     setDarkMode("light");
-    document.cookie =
-      "darkMode=dark; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/BuddyCityWeb;";
-    document.cookie = "darkMode=light; path=/;";
-    console.log(document.cookie.split(";"));
+    localStorage.setItem("darkMode", "light");
     console.log("off");
   }
 }
 function readModeToSwitchMode() {
-  if (getCookieByName("darkMode") === "light") {
+  if (localStorage.getItem("darkMode") === "light") {
     setDarkMode("light");
-  } else if (getCookieByName("darkMode") === "dark") {
+  } else if (localStorage.getItem("darkMode") === "dark") {
     setDarkMode("dark");
   }
 }
@@ -64,36 +58,15 @@ function setDarkMode(mode) {
   }
 }
 
-function parseCookie() {
-  var cookieObj = {};
-  var cookieAry = document.cookie.split(";");
-  var cookie;
-
-  for (var i = 0, l = cookieAry.length; i < l; ++i) {
-    cookie = jQuery.trim(cookieAry[i]);
-    cookie = cookie.split("=");
-    cookieObj[cookie[0]] = cookie[1];
-  }
-
-  return cookieObj;
-}
-function getCookieByName(name) {
-  var value = parseCookie()[name];
-  if (value) {
-    value = decodeURIComponent(value);
-  }
-
-  return value;
-}
 $(document).ready(function () {
-  console.log("check cookies");
-  if (getCookieByName("darkMode") === undefined) {
+  console.log("check localstorage");
+  if (localStorage.getItem("darkMode") === null) {
     console.log("darkMode null");
-    document.cookie = "darkMode=light; path=/";
+    localStorage.setItem("darkMode", "light");
   } else {
     console.log("darkMode exist");
   }
   readModeToSwitchMode();
 });
 
-console.log(document.cookie.split(";"));
+console.log(localStorage.getItem("darkMode"));
