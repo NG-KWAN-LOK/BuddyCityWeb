@@ -151,9 +151,10 @@ async function newItemBuilding(districtId) {
       })
       .then(function () {
         alert("建立成功");
+        $("#admin__monitor").empty();
       })
       .catch(function () {
-        alert("伺服器發生錯誤。如果您是管理員，請尋真·管理員協助。 或者 你是黑客 ㄇㄌㄈㄎ！！");
+        alert("伺服器發生錯誤。如果您是管理員，請尋找真·管理員協助。 或者 你是駭客 ㄇㄌㄈㄎ！！");
         if (user === "") {
           logout(999);
           $("#admin__content").empty();
@@ -167,11 +168,11 @@ async function newItemBuilding(districtId) {
     </div>`;
           $("#admin__content").append(divContent);
         }
+        $("#admin__monitor").empty();
       });
   } else {
     alert("建立失敗！！！未有填寫全部資料");
   }
-  $("#admin__monitor").empty();
 }
 function showEditBuildingForm(
   districtId,
@@ -193,20 +194,20 @@ function showEditBuildingForm(
       type="text"
       name="adress_chi"
       id="adress_chi"
-      value="市中心Buddy路1號"
+      value="${district_chi}Buddy路1號" required
     />
   </div>
   <div class="admin__monitor__item">
     住址（英文）：
-    <input type="text" name="adress_eng" id="adress_eng" value="1-Buddy Road, Buddy Central" />
+    <input type="text" name="adress_eng" id="adress_eng" value="1-Buddy Road, ${district_eng}" required />
   </div>
   <div class="admin__monitor__item">
-    住址所在之地區（日文）：
+    住址（日文）：
     <input
       type="text"
       name="adress_jp"
       id="adress_jp"
-      value="中央区Buddy路-1"
+      value="${district_jp}Buddy路-1" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -215,7 +216,7 @@ function showEditBuildingForm(
       type="text"
       name="district_chi"
       id="district_chi"
-      value="${district_chi}"
+      value="${district_chi}" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -224,12 +225,12 @@ function showEditBuildingForm(
       type="text"
       name="district_eng"
       id="district_eng"
-      value="${district_eng}"
+      value="${district_eng}" required
     />
   </div>
   <div class="admin__monitor__item">
     住址所在之地區（日文）：
-    <input type="text" name="district_jp" id="district_jp" value="${district_jp}" />
+    <input type="text" name="district_jp" id="district_jp" value="${district_jp}" required />
   </div>
   <div class="admin__monitor__item">
     建築物名稱（中文）：
@@ -237,7 +238,7 @@ function showEditBuildingForm(
       type="text"
       name="name_chi"
       id="name_chi"
-      value="新建築"
+      value="新建築" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -246,7 +247,7 @@ function showEditBuildingForm(
       type="text"
       name="name_eng"
       id="name_eng"
-      value="New Building"
+      value="New Building" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -255,20 +256,20 @@ function showEditBuildingForm(
       type="text"
       name="name_jp"
       id="name_jp"
-      value="新しビール"
+      value="新しビール" required
     />
   </div>
   <div class="admin__monitor__item">
     所在地圖之X座標：
-    <input type="text" name="x" id="x" value="365" />
+    <input type="text" name="x" id="x" value="365" required />
   </div>
   <div class="admin__monitor__item">
     所在地圖之Y座標：
-    <input type="text" name="y" id="y" value="453" />
+    <input type="text" name="y" id="y" value="453" required />
   </div>
   <div class="admin__monitor__item">
     所在地圖之Z座標：
-    <input type="text" name="z" id="z" value="70" />
+    <input type="text" name="z" id="z" value="70" required />
   </div>
   <div class="admin__monitor__item">
     內裝（中文）：
@@ -276,7 +277,7 @@ function showEditBuildingForm(
       type="text"
       name="內裝"
       id="內裝"
-      value="有"
+      value="有" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -285,7 +286,7 @@ function showEditBuildingForm(
       type="text"
       name="inside"
       id="inside"
-      value="Yes"
+      value="Yes" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -294,7 +295,7 @@ function showEditBuildingForm(
       type="text"
       name="インテリア"
       id="インテリア"
-      value="あり"
+      value="あり" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -303,7 +304,7 @@ function showEditBuildingForm(
       type="text"
       name="用途"
       id="用途"
-      value="古蹟"
+      value="古蹟" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -312,7 +313,7 @@ function showEditBuildingForm(
       type="text"
       name="Utilization"
       id="Utilization"
-      value="Monument"
+      value="Monument" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -321,7 +322,7 @@ function showEditBuildingForm(
       type="text"
       name="用途_jp"
       id="用途_jp"
-      value="遺跡"
+      value="遺跡" required
     />
   </div>
   <input
@@ -435,9 +436,10 @@ async function newItemResident() {
       })
       .then(function () {
         alert("建立成功");
+        $("#admin__monitor").empty();
       })
       .catch(function () {
-        alert("伺服器發生錯誤。如果您是管理員，請尋真·管理員協助。 或者 你是黑客 ㄇㄌㄈㄎ！！");
+        alert("伺服器發生錯誤。如果您是管理員，請尋找真·管理員協助。 或者 你是駭客 ㄇㄌㄈㄎ！！");
         if (user === "") {
           logout(999);
           $("#admin__content").empty();
@@ -451,11 +453,11 @@ async function newItemResident() {
     </div>`;
           $("#admin__content").append(divContent);
         }
+        $("#admin__monitor").empty();
       });
   } else {
     alert("建立失敗！！！未有填寫全部資料");
   }
-  $("#admin__monitor").empty();
 }
 
 // const submitBtn = document.querySelector('[data-action="submit"]');
@@ -471,12 +473,11 @@ function showEditResidentForm() {
 </div>
 <form name="form" id="form">
   <div class="admin__monitor__item">
-    住址（日文）：
+    住址（中文）：
     <input
       type="text"
       name="address_CHI"
-      id="address_CHI"
-      value="無"
+      id="address_CHI" value="無" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -485,12 +486,12 @@ function showEditResidentForm() {
       type="text"
       name="address_ENG"
       id="address_ENG"
-      value="None"
+      value="None" required
     />
   </div>
   <div class="admin__monitor__item">
     住址（日文）：
-    <input type="text" name="adress_JP" id="adress_JP" value="なし" />
+    <input type="text" name="adress_JP" id="adress_JP" value="なし" required/>
   </div>
   <div class="admin__monitor__item">
     住址所在之地區（中文）：
@@ -498,7 +499,7 @@ function showEditResidentForm() {
       type="text"
       name="district_CHI"
       id="district_CHI"
-      value="公園"
+      value="公園" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -507,7 +508,7 @@ function showEditResidentForm() {
       type="text"
       name="district_ENG"
       id="district_ENG"
-      value="Park"
+      value="Park" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -516,12 +517,12 @@ function showEditResidentForm() {
       type="text"
       name="district_JP"
       id="district_JP"
-      value="公園"
+      value="公園" required
     />
   </div>
   <div class="admin__monitor__item">
     頭像檔名：
-    <input type="text" name="face" id="face" value="steve" />
+    <input type="text" name="face" id="face" value="steve" required />
   </div>
   <div class="admin__monitor__item">
     稱號（中文）：
@@ -529,25 +530,25 @@ function showEditResidentForm() {
       type="text"
       name="nickname_chi"
       id="nickname_chi"
-      value="史提夫"
+      value="史提夫" required
     />
   </div>
   <div class="admin__monitor__item">
-    稱號（英文）：：
+    稱號（英文）：
     <input
       type="text"
       name="nickname_eng"
       id="nickname_eng"
-      value="steve"
+      value="steve" required
     />
   </div>
   <div class="admin__monitor__item">
-    稱號（日文）：：
+    稱號（日文）：
     <input
       type="text"
       name="nickname_jp"
       id="nickname_jp"
-      value="スティーブ"
+      value="スティーブ" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -556,7 +557,7 @@ function showEditResidentForm() {
       type="text"
       name="participate_year"
       id="participate_year"
-      value="2012"
+      value="2012" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -565,7 +566,7 @@ function showEditResidentForm() {
       type="text"
       name="project_CHI"
       id="project_CHI"
-      value="無"
+      value="無" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -574,7 +575,7 @@ function showEditResidentForm() {
       type="text"
       name="project_ENG"
       id="project_ENG"
-      value="None"
+      value="None" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -583,7 +584,7 @@ function showEditResidentForm() {
       type="text"
       name="project_JP"
       id="project_JP"
-      value="なし"
+      value="なし" required
     />
   </div>
   <div class="admin__monitor__item">
@@ -592,20 +593,20 @@ function showEditResidentForm() {
       type="text"
       name="user_name"
       id="user_name"
-      value="steve"
+      value="steve" required
     />
   </div>
   <div class="admin__monitor__item">
     地址所在地圖之X座標：
-    <input type="text" name="x" id="x" value="365" />
+    <input type="text" name="x" id="x" value="365" required />
   </div>
   <div class="admin__monitor__item">
     地址所在地圖之Y座標：
-    <input type="text" name="y" id="y" value="453" />
+    <input type="text" name="y" id="y" value="453" required />
   </div>
   <div class="admin__monitor__item">
     地址所在地圖之Z座標：
-    <input type="text" name="z" id="z" value="70" />
+    <input type="text" name="z" id="z" value="70" required />
   </div>
   <input
     type="button"

@@ -31,13 +31,13 @@ a {
   border: none;
   text-indent: 100%;
   z-index: 999;
-  background: #282a2b url(image/totop.png) no-repeat left top;
+  background: url(image/totop.png) no-repeat left top;
   background-size: contain;
   border-radius: 0px;
 }
 
 #toTopHover {
-  background: #282a2b url(image/totop.png) no-repeat left top;
+  background: url(image/totop.png) no-repeat left top;
   background-size: contain;
   width: 43px;
   height: 43px;
@@ -385,12 +385,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.37) 35%,
-      rgba(0, 0, 0, 0.8) 100%
-    );
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 35%, rgba(0, 0, 0, 0.8) 100%);
     border-radius: 5px;
     top: 0px;
     transition: 0.5s;
@@ -520,12 +515,7 @@ body {
       height: 100%;
       margin: 0 12.5px;
       position: absolute;
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.37) 35%,
-        rgba(0, 0, 0, 0.8) 100%
-      );
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 35%, rgba(0, 0, 0, 0.8) 100%);
       border-radius: 5px;
       top: 0px;
       transition: 0.5s;

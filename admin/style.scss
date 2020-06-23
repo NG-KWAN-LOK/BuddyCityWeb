@@ -352,3 +352,23 @@ body {
     }
   }
 }
+input {
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  text-align: left;
+  font-style: normal;
+  font-weight: 300;
+  border: 1px solid var(--main-between-line-color);
+  border-radius: 3px;
+  color: var(--title-color);
+  font-size: 16px;
+}
+input:invalid {
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  text-align: left;
+  font-style: normal;
+  font-weight: 300;
+  border: 1px solid red;
+  border-radius: 3px;
+  color: var(--title-color);
+  font-size: 16px;
+}

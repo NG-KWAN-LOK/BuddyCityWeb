@@ -112,13 +112,13 @@ a {
   border: none;
   text-indent: 100%;
   z-index: 999;
-  background: #282a2b url(image/totop.png) no-repeat left top;
+  background: url(image/totop.png) no-repeat left top;
   background-size: contain;
   border-radius: 0px;
 }
 
 #toTopHover {
-  background: #282a2b url(image/totop.png) no-repeat left top;
+  background: url(image/totop.png) no-repeat left top;
   background-size: contain;
   width: 43px;
   height: 43px;

@@ -38,11 +38,14 @@ firebase.auth().onAuthStateChanged(async function (user) {
   $("#admin__choosePage").empty();
   $("#admin__monitor").empty();
   var userIsAdmin = "";
+  var userName = "";
   if (user) {
-    var UserRef = firebase.database().ref("/user/" + user.uid + "/admin");
+    var UserRef = firebase.database().ref("/user/" + user.uid);
     await UserRef.once("value").then(
       (res) => {
-        userIsAdmin = res.val();
+        var dataInfo = res.val();
+        userIsAdmin = dataInfo.admin;
+        userName = dataInfo.name;
         return true;
       },
       (rej) => {
@@ -51,10 +54,10 @@ firebase.auth().onAuthStateChanged(async function (user) {
       }
     );
     if (userIsAdmin === true) {
-      alert("歡迎管理員大大");
+      alert("歡迎管理員" + userName + "大大");
       console.log("Login success");
       var divContent = `
-    <div class="admin__content__title">歡迎管理員大大</div>
+    <div class="admin__content__title">歡迎管理員 ${userName}大大</div>
     <div class="admin__content__logout" onclick="logout()">
         <div class="admin__content__logout__btn">登出系統</div>
     </div>
@@ -94,9 +97,9 @@ function Timeout() {
 function ReCalculate() {
   clearTimeout(oTimerId);
   if (user != "") {
-    oTimerId = setTimeout(function () {
-      Timeout(1);
-    }, 1 * 5 * 1000);
+    // oTimerId = setTimeout(function () {
+    //   Timeout(1);
+    // }, 1 * 5 * 1000);
   }
 }
 document.onmousedown = ReCalculate;
