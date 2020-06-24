@@ -147,6 +147,19 @@ var L_zhTW = {
   residentPopUpLayer_data_table_participate_year: "入籍年份",
   residentPopUpLayer_data_table_address: "地址",
   residentPopUpLayer_data_table_project: "曾參與過建築項目",
+
+  //BCCTB
+  BCCTB_title: "Buddy市觀光局",
+  BCCTB__content__subTitle: "關於我們",
+  BCCTB__content__text__1: "財團法人Buddy市觀光局正式成立。",
+  BCCTB__content__text__2: "2017年11月25日",
+  BCCTB__content__text__3: "2018年7月4日起由中國銀行香港大廈遷至Buddy市廳。",
+  BCCTB__content__text__4: "（公益財團法人）Buddy市觀光局",
+  BCCTB__content__text__5: "Buddy市大阪區本町通1號Buddy市廳2樓2D01室",
+  BCCTB__content__text__6: "致力向國際宣傳這美麗的Buddy市是我們的使命。",
+  main__content__sideMenu__content__btn__title__backhome: "回到主頁",
+  main__content__sideMenu__content__btn__title__tnc: "服務條款（連到外網站）",
+  main__content__sideMenu__content__btn__title__admin: "管理員頁面",
 };
 
 var L_Eng = {
@@ -301,6 +314,19 @@ var L_Eng = {
   residentPopUpLayer_data_table_participate_year: "Year of entry",
   residentPopUpLayer_data_table_address: "Address",
   residentPopUpLayer_data_table_project: "The project(s) have took part before",
+
+  //BBCTB
+  BCCTB_title: "BUDDY CITY CONVENTION & TOURISM BUREAU",
+  BCCTB__content__subTitle: "ABOUT US",
+  BCCTB__content__text__1: "Foundation BUDDY CITY CONVENTION & TOURISM BUREAU was established.",
+  BCCTB__content__text__2: "25 November 2017",
+  BCCTB__content__text__3: "It took up residence at Buddy City Government Office from Bank of China (HK) Building on 4 April 2018",
+  BCCTB__content__text__4: "(Foundation) BUDDY CITY CONVENTION & TOURISM BUREAU",
+  BCCTB__content__text__5: "2D01Rm 2/F Buddy City Government Office 2-Hommachi Dori, Osaka District, Buddy City",
+  BCCTB__content__text__6: "Strive for promote this beautiful Buddy City over the world is our mission.",
+  main__content__sideMenu__content__btn__title__backhome: "BACK HOME",
+  main__content__sideMenu__content__btn__title__tnc: "Term and Condition",
+  main__content__sideMenu__content__btn__title__admin: "Admin Page",
 };
 
 var L_JP = {
@@ -451,4 +477,18 @@ var L_JP = {
   residentPopUpLayer_data_table_participate_year: "入籍時間",
   residentPopUpLayer_data_table_address: "住所",
   residentPopUpLayer_data_table_project: "この前にしていたの企画",
+
+  //BBCTB
+  BCCTB_title: "Buddy市観光局",
+  BCCTB__content__subTitle: "アバウトアス",
+  BCCTB__content__text__1: "財団法人 Buddy市観光局が発足しました。",
+  BCCTB__content__text__2: "平成29年11月25日",
+  BCCTB__content__text__3: "平成30年4月7日中国銀行タワー（香港）からBuddy市庁に移されました。",
+  BCCTB__content__text__4: "（財団法人）Buddy市観光局",
+  BCCTB__content__text__5: "Buddy市大阪区本町通-2 Buddy市庁 2階 2D01室",
+  BCCTB__content__text__6: "全力でこの綺麗なBuddy市は全世界を宣伝することが私たちの使命です。",
+  main__content__sideMenu__content__btn__title__backhome: "ホームページへ戻る",
+  main__content__sideMenu__content__btn__title__tnc: "ウェブサイト サービス規約",
+  main__content__sideMenu__content__btn__title__admin: "管理者ページへ",
+
 };

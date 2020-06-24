@@ -1,0 +1,350 @@
+@charset "UTF-8";
+:root {
+  --primary-bg-color: #fff;
+  --second-bg-color: #fbfbfb;
+  --button-bg-color: #444;
+  --primary-button-title-color: #fff;
+  --second-button-title-color: #444;
+  --third-button-title-color: #5d5d5d;
+  --primary-button-hover-bg-color: #e0dede;
+  --second-button-hover-bg-color: #444;
+  --second-button-hover-color: #fff;
+  --top-bg-color: rgba(255, 255, 255, 0.918);
+  --top-nav-bg-color: #fff;
+  --phone-top-bottom-color: #ccc;
+  --phone-top-nav-bg-color: #fff;
+  --phone-top-nav-col-line-color: #444;
+  --phone-top-nav-col-title-color: #444;
+  --phone-top-nav-col-text-color: #444;
+  --primary-burger-icon-bg-color: #444;
+  --second-burger-icon-bg-color: #fff;
+  --main-between-line-color: #ccc;
+  --title-color: #444;
+  --subtitle-bg: #5d5d5d;
+  --white-title-font-color: #fff;
+  --grey-cotainer-bg-color: #333;
+  --white-font-color: #fff;
+  --cover-background-color: #818cab;
+  --border-bottom-color: #e1e1e1;
+  --footer-bg-color: #f2f2f2;
+  --subject-blue: #177cc4;
+  --second-bottom-bg-color: #f7f7f7;
+  --second-bottom-color: #444;
+  --second-bottom-hover-bg-color: #444;
+  --second-bottom-hover-color: #f7f7f7;
+  --popup-bg-color: rgba(255, 255, 255, 0.85);
+  --select-color: #fff;
+  --select-bg-color: #666;
+}
+
+[data-theme="dark"] {
+  --primary-bg-color: #212121;
+  --second-bg-color: #181818;
+  --button-bg-color: #313131;
+  --primary-button-title-color: #fff;
+  --second-button-title-color: #fff;
+  --third-button-title-color: #ececec;
+  --primary-button-hover-bg-color: rgb(70, 70, 70);
+  --second-button-hover-bg-color: rgb(70, 70, 70);
+  --second-button-hover-color: #fff;
+  --top-bg-color: #181818ea;
+  --top-nav-bg-color: #212121;
+  --phone-top-bottom-color: #2b2b2b;
+  --phone-top-nav-bg-color: #212121;
+  --phone-top-nav-col-line-color: #444;
+  --phone-top-nav-col-title-color: #fff;
+  --phone-top-nav-col-text-color: #fff;
+  --primary-burger-icon-bg-color: #fff;
+  --second-burger-icon-bg-color: #fff;
+  --main-between-line-color: #2b2b2b;
+  --title-color: #fff;
+  --subtitle-bg: #fbfbfb;
+  --white-title-font-color: #fff;
+  --grey-cotainer-bg-color: #333;
+  --white-font-color: #fff;
+  --cover-background-color: #818cab;
+  --border-bottom-color: #303030;
+  --footer-bg-color: #232323;
+  --second-bottom-bg-color: #444;
+  --second-bottom-color: #f7f7f7;
+  --second-bottom-hover-bg-color: #f7f7f7;
+  --second-bottom-hover-color: #444;
+  --popup-bg-color: rgba(0, 0, 0, 0.85);
+  --subject-blue: #177cc4;
+  --select-color: #000000;
+  --select-bg-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: var(-second-bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+#toTop {
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  overflow: hidden;
+  width: 43px;
+  height: 43px;
+  border: none;
+  text-indent: 100%;
+  z-index: 999;
+  background: url(../image/totop.png) no-repeat left top;
+  background-size: contain;
+  border-radius: 0px;
+}
+
+#toTopHover {
+  background: url(../image/totop.png) no-repeat left top;
+  background-size: contain;
+  width: 43px;
+  height: 43px;
+  display: block;
+  overflow: hidden;
+  float: left;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#toTop:active,
+#toTop:focus {
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--second-bg-color);
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.BCCTB__title__banner {
+  background-image: url("image/001.jpg");
+  background-size: 100vw;
+  width: 100%;
+  height: calc(100vw / 3.49);
+  background-position: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--primary-bg-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    max-width: 720px;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    max-width: 980px;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .main {
+    max-width: 1280px;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+}
+
+.main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 20px 30px 20px;
+}
+
+.main__content .BCCTB {
+  display: block;
+  width: 100%;
+}
+
+.main__content .BCCTB .BCCTB__title__content .BCCTB__title {
+  display: block;
+  padding: 16px 0 15px 0;
+  text-align: left;
+  line-height: 55px;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--title-color);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 2em;
+  border-bottom: 1px solid var(--border-bottom-color);
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 550px) {
+  .main__content .BCCTB .BCCTB__title__content {
+    padding: 0 30px;
+  }
+  .main__content .BCCTB .BCCTB__title__content .BCCTB__title {
+    text-align: left;
+  }
+}
+
+.main__content .BCCTB .BCCTB__content .BCCTB__content__subTitle {
+  display: block;
+  width: 100%;
+  line-height: 28px;
+  padding: 20px 0;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--subtitle-bg);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 28px;
+}
+
+.main__content .BCCTB .BCCTB__content .BCCTB__content__text {
+  display: block;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  text-align: left;
+  line-height: 35px;
+  font-style: normal;
+  font-weight: 300;
+  color: var(--title-color);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 550px) {
+  .main__content .BCCTB .BCCTB__content {
+    padding: 0 30px;
+  }
+  .main__content .BCCTB .BCCTB__content .BCCTB__content__subTitle {
+    font-size: 23px;
+    padding: 15px 0px;
+  }
+  .main__content .BCCTB .BCCTB__content .BCCTB__content__text {
+    font-size: 16px;
+  }
+}
+
+.main__content .main__content__sideMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 220px;
+  width: 38.2%;
+}
+
+.main__content .main__content__sideMenu .main__content__sideMenu__content {
+  width: 100%;
+  margin: 70px 0 0 30px;
+}
+
+.main__content .main__content__sideMenu .main__content__sideMenu__content__title {
+  display: block;
+  width: 100%;
+  line-height: 28px;
+  padding: 10px 0 5px 5px;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--subtitle-bg);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 18px;
+}
+
+.main__content .main__content__sideMenu .main__content__sideMenu__content__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px 12px;
+  background-color: var(--border-bottom-color);
+  margin-bottom: 5px;
+  border-radius: 7px;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: var(--title-color);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 16px;
+  margin: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main__content .main__content__sideMenu .main__content__sideMenu__content__btn .ion-android-home {
+  padding-right: 5px;
+  content: "\f38f";
+}
+
+.main__content .main__content__sideMenu .main__content__sideMenu__content__btn .ion-android-document {
+  padding-right: 5px;
+}
+
+.main__content .main__content__sideMenu .main__content__sideMenu__content__btn .ion-android-document ::before {
+  content: "\f381";
+}
+
+.main__content .main__content__sideMenu .main__content__sideMenu__content__btn .ion-android-person {
+  padding-right: 5px;
+}
+
+.main__content .main__content__sideMenu .main__content__sideMenu__content__btn .ion-android-person ::before {
+  content: "\f3a0";
+}
+
+.main__content .main__content__sideMenu .main__content__sideMenu__content__btn:hover {
+  color: var(--second-button-hover-color);
+  background-color: var(--subject-blue);
+  padding: 6px 12px;
+  margin: 0 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main__content .main__content__sideMenu {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

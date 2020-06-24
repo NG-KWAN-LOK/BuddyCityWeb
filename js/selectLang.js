@@ -15,14 +15,17 @@ function SelectLang(languageIndex) {
 function readLangToSetLang() {
   if (localStorage.getItem("language") === "chi") {
     setLanguage(1);
+    document.getElementsByClassName("switch")[0].style.left = "80px";
     console.log("read chi");
     //showDistrict(1);
   } else if (localStorage.getItem("language") === "eng") {
     setLanguage(2);
+    document.getElementsByClassName("switch")[0].style.left = "70px";
     console.log("read eng");
     //showDistrict(2);
   } else if (localStorage.getItem("language") === "jp") {
     setLanguage(3);
+    document.getElementsByClassName("switch")[0].style.left = "50px";
     console.log("read jp");
     //showDistrict(3);
   }

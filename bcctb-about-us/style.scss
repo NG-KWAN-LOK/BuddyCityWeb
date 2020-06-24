@@ -1,0 +1,236 @@
+@import "../color/color";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(-second-bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+#toTop {
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  overflow: hidden;
+  width: 43px;
+  height: 43px;
+  border: none;
+  text-indent: 100%;
+  z-index: 999;
+  background: url(../image/totop.png) no-repeat left top;
+  background-size: contain;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+#toTopHover {
+  background: url(../image/totop.png) no-repeat left top;
+  background-size: contain;
+  width: 43px;
+  height: 43px;
+  display: block;
+  overflow: hidden;
+  float: left;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#toTop:active,
+#toTop:focus {
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--second-bg-color);
+}
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.BCCTB__title__banner {
+  background-image: url("image/001.jpg");
+  background-size: 100vw;
+  width: 100%;
+  height: calc(100vw / 3.49);
+  background-position: center;
+}
+.main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--primary-bg-color);
+  @media only screen and (max-width: 550px) {
+  }
+  @media only screen and (min-width: 550px) {
+  }
+  @media only screen and (min-width: 768px) {
+    max-width: 720px;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+  @media only screen and (min-width: 1024px) {
+    max-width: 980px;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+  @media only screen and (min-width: 1280px) {
+    max-width: 1280px;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+}
+.main__content {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 20px 30px 20px;
+  .BCCTB {
+    display: block;
+    width: 100%;
+    .BCCTB__title__content {
+      .BCCTB__title {
+        display: block;
+        padding: 16px 0 15px 0;
+        text-align: left;
+        line-height: 55px;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        color: var(--title-color);
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 2em;
+        border-bottom: 1px solid var(--border-bottom-color);
+        margin-bottom: 30px;
+      }
+      @media only screen and (max-width: 550px) {
+        .BCCTB__title {
+          text-align: left;
+        }
+        padding: 0 30px;
+      }
+    }
+    .BCCTB__content {
+      .BCCTB__content__subTitle {
+        display: block;
+        width: 100%;
+        line-height: 28px;
+        padding: 20px 0;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        color: var(--subtitle-bg);
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 28px;
+      }
+      .BCCTB__content__text {
+        display: block;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        text-align: left;
+        line-height: 35px;
+        font-style: normal;
+        font-weight: 300;
+        color: var(--title-color);
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 18px;
+      }
+      @media only screen and (max-width: 550px) {
+        .BCCTB__content__subTitle {
+          font-size: 23px;
+          padding: 15px 0px;
+        }
+        .BCCTB__content__text {
+          font-size: 16px;
+        }
+        padding: 0 30px;
+      }
+    }
+  }
+  .main__content__sideMenu {
+    display: flex;
+    min-width: 220px;
+    width: 38.2%;
+    .main__content__sideMenu__content {
+      width: 100%;
+      margin: 70px 0 0 30px;
+    }
+    .main__content__sideMenu__content__title {
+      display: block;
+      width: 100%;
+      line-height: 28px;
+      padding: 10px 0 5px 5px;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      color: var(--subtitle-bg);
+      text-decoration: none;
+      font-variant: normal;
+      font-size: 18px;
+    }
+    .main__content__sideMenu__content__btn {
+      display: flex;
+      padding: 4px 12px;
+      background-color: var(--border-bottom-color);
+      margin-bottom: 5px;
+      border-radius: 7px;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      color: var(--title-color);
+      text-decoration: none;
+      font-variant: normal;
+      font-size: 16px;
+      margin: 5px;
+      transition: 0.3s;
+      .ion-android-home {
+        padding-right: 5px;
+        content: "\f38f";
+      }
+      .ion-android-document {
+        padding-right: 5px;
+        ::before {
+          content: "\f381";
+        }
+      }
+      .ion-android-person {
+        padding-right: 5px;
+        ::before {
+          content: "\f3a0";
+        }
+      }
+      .main__content__sideMenu__content__btn__title {
+      }
+      &:hover {
+        color: var(--second-button-hover-color);
+        background-color: var(--subject-blue);
+        padding: 6px 12px;
+        margin: 0 0;
+      }
+    }
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+}

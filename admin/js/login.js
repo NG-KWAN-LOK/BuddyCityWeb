@@ -97,9 +97,9 @@ function Timeout() {
 function ReCalculate() {
   clearTimeout(oTimerId);
   if (user != "") {
-    // oTimerId = setTimeout(function () {
-    //   Timeout(1);
-    // }, 1 * 5 * 1000);
+    oTimerId = setTimeout(function () {
+      Timeout(1);
+    }, 1 * 5 * 1000);
   }
 }
 document.onmousedown = ReCalculate;
