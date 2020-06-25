@@ -2,7 +2,8 @@ function closeLayer(x) {
   x.classList.toggle("change");
   residentPopUpLayer.style.display = "none";
   window.history.pushState({}, 0, "index.html");
-  document.title = "居民名冊丨Buddy-INFO Buddy市指南)";
+  document.title =
+    languageContainer.ResidentList_title + "｜" + languageContainer.title;
 }
 
 function chooseCharacter(characterId) {
@@ -62,7 +63,11 @@ function chooseCharacter(characterId) {
         );
         window.history.pushState({}, 0, "?characterId=" + characterId);
         document.title =
-          `${characteInfo.user_name}` + "丨" + languageContainer.title;
+          `${characteInfo.user_name}` +
+          "丨" +
+          languageContainer.ResidentList_title +
+          "｜" +
+          languageContainer.title;
       } else {
         if (languageContainer.lang === "chi") {
           tempInfo = {
@@ -77,7 +82,12 @@ function chooseCharacter(characterId) {
             notFound: "ページが見つかりません",
           };
         }
-        document.title = tempInfo.notFound + "丨" + languageContainer.title;
+        document.title =
+          tempInfo.notFound +
+          "丨" +
+          languageContainer.ResidentList_title +
+          "｜" +
+          languageContainer.title;
         document.getElementsByClassName(
           "residentPopUpLayer__container__data"
         )[0].style.display = "none";

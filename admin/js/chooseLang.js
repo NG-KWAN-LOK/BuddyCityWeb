@@ -11,7 +11,7 @@ function setLanguage(languageIndex) {
     languageContainer = L_JP;
   }
   console.log("languageContainer: " + languageContainer.title);
-  document.title = languageContainer.title;
+  //document.title = languageContainer.title;
   document.getElementById("topFooterLang_topHome").innerHTML =
     languageContainer.topFooterLang_topHome;
   document.getElementById("topFooterLang_topOnlineMap").innerHTML =

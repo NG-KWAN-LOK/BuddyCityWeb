@@ -2,7 +2,8 @@ function closeLayer(x) {
   x.classList.toggle("change");
   buildingPopUpLayer.style.display = "none";
   window.history.pushState({}, 0, "index.html");
-  document.title = languageContainer.title;
+  document.title =
+    languageContainer.BuildingList_title + "｜" + languageContainer.title;
 }
 
 function chooseDistrict(districtId) {
@@ -146,7 +147,12 @@ function chooseBuilding(districtId, buildingId) {
           0,
           "?districtId=" + districtId + "&buildingId=" + buildingId
         );
-        document.title = tempInfo.name + "丨" + languageContainer.title;
+        document.title =
+          tempInfo.name +
+          "丨" +
+          languageContainer.BuildingList_title +
+          "丨" +
+          languageContainer.title;
       } else {
         if (languageContainer.lang === "chi") {
           tempInfo = {
@@ -161,7 +167,12 @@ function chooseBuilding(districtId, buildingId) {
             notFound: "ページが見つかりません",
           };
         }
-        document.title = tempInfo.notFound + "丨" + languageContainer.title;
+        document.title =
+          tempInfo.notFound +
+          "丨" +
+          languageContainer.BuildingList_title +
+          "丨" +
+          languageContainer.title;
         document.getElementsByClassName(
           "buildingPopUpLayer__buildingData__container__data"
         )[0].style.display = "none";

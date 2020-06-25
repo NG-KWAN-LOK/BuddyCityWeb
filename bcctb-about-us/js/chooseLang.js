@@ -11,7 +11,10 @@ function setLanguage(languageIndex) {
     languageContainer = L_JP;
   }
   console.log("languageContainer: " + languageContainer.title);
-  document.title = languageContainer.title;
+  document.title =
+    languageContainer.main__content__sideMenu__content__title +
+    "｜" +
+    languageContainer.title;
   document.getElementById("topFooterLang_topHome").innerHTML =
     languageContainer.topFooterLang_topHome;
   document.getElementById("topFooterLang_topOnlineMap").innerHTML =
@@ -60,11 +63,19 @@ function setLanguage(languageIndex) {
     languageContainer.BCCTB__content__text__5;
   document.getElementById("BCCTB__content__text__6").innerHTML =
     languageContainer.BCCTB__content__text__6;
-  document.getElementById("main__content__sideMenu__content__btn__title__backhome").innerHTML =
+  document.getElementById("main__content__sideMenu__content__title").innerHTML =
+    languageContainer.main__content__sideMenu__content__title;
+  document.getElementById(
+    "main__content__sideMenu__content__btn__title__backhome"
+  ).innerHTML =
     languageContainer.main__content__sideMenu__content__btn__title__backhome;
-  document.getElementById("main__content__sideMenu__content__btn__title__tnc").innerHTML =
+  document.getElementById(
+    "main__content__sideMenu__content__btn__title__tnc"
+  ).innerHTML =
     languageContainer.main__content__sideMenu__content__btn__title__tnc;
-  document.getElementById("main__content__sideMenu__content__btn__title__admin").innerHTML =
+  document.getElementById(
+    "main__content__sideMenu__content__btn__title__admin"
+  ).innerHTML =
     languageContainer.main__content__sideMenu__content__btn__title__admin;
   //document.getElementById("").innerHTML = L_zhTW[16];
 }
