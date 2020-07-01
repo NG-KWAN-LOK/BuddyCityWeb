@@ -1,6 +1,7 @@
 ### Gitbub page = https://ng-kwan-lok.github.io/BuddyCityWeb/ ###
 
 ## 網頁之結構 ##
+release:2020/07/01
 * mainpage 主頁
   * Top nav
     * Menu
@@ -9,25 +10,30 @@
         * 以popup 形式顯示每個城市建築物名的資料
       * 居民名冊
         * 以popup 形式顯示每個玩家的資料
-      * Buddy市觀光局 [未完成]
+      * Buddy市觀光局
         * Buddy市觀光局的介紹
+        * 管理員頁面
+          * 管理員登入
     * Language
       * 正體中文
-      * 英文 [未完成]
-      * 日本文 [未完成]
+      * 英文
+      * 日文
   * main
     * Discovery Buddy市的基本資料
     * Reality Project 風景畫廊
   * footer
-    * BUDDY CITY旅遊局紹介[未完成]
+    * BUDDY CITY旅遊局紹介
       * Buddy市觀光局的介紹
-  * 服務條款 [未完成]
+      * 管理員頁面
+          * 管理員登入
+  * 服務條款 [連到互聯網]
     * 服務條款及使用細則
   * Dynmap
     * 網頁地圖核心引擎
      
 
 ## 目錄之結構 ##
+release:2020/04/30
 * ./
   * image [放main page圖]
   * js [放javascript]
