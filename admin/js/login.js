@@ -20,9 +20,8 @@ async function logout(eventCode = 0) {
         if (eventCode === 0) {
           alert("登出成功");
         } else if (eventCode === 1) {
-          alert("您已閒置超過5秒，系統自動登出");
-        }
-        else {
+          alert("您已閒置超過5分鐘，系統自動登出");
+        } else {
           console.log("Login Inited");
         }
         user = "";
@@ -50,7 +49,7 @@ firebase.auth().onAuthStateChanged(async function (user) {
       },
       (rej) => {
         console.log(rej);
-        return true;
+        return false;
       }
     );
     if (userIsAdmin === true) {
@@ -99,7 +98,7 @@ function ReCalculate() {
   if (user != "") {
     oTimerId = setTimeout(function () {
       Timeout(1);
-    }, 1 * 5 * 1000);
+    }, 5 * 60 * 1000);
   }
 }
 document.onmousedown = ReCalculate;
